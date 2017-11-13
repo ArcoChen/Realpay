@@ -1,0 +1,186 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-06 09:26:48,370
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:26:48,370
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:26:58,992
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:27:28,617
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:27:29,150
+线程：[15]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:27:42,166
+线程：[21]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:27:43,145
+线程：[22]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:27:56,705
+线程：[23]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:27:57,661
+线程：[24]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:28:33,342
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:28:33,342
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:37:11,723
+线程：[29]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The underlying connection was closed: The connection was closed unexpectedly.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:37:11,731
+线程：[25]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The underlying connection was closed: The connection was closed unexpectedly.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:37:46,208
+线程：[25]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The underlying connection was closed: The connection was closed unexpectedly.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:37:46,216
+线程：[29]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The underlying connection was closed: The connection was closed unexpectedly.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 09:39:32,477
+线程：[29]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-06 16:54:38,495
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 16:54:46,348
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 17:12:25,044
+线程：[19]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-06 17:12:26,653
+线程：[26]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————

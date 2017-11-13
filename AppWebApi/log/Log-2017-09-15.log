@@ -1,0 +1,242 @@
+﻿
+----------------------header--------------------------
+
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-09-15 14:26:55,029
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+时间：2017-09-15 14:27:07,757
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+时间：2017-09-15 14:27:38,709
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+时间：2017-09-15 14:27:39,793
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 14:29:58,870
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 94
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 14:32:29,069
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 14:34:45,157
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 14:43:49,969
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 14:45:58,734
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 97
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 14:57:10,495
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 97
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+时间：2017-09-15 14:57:32,843
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 97
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+时间：2017-09-15 14:57:45,066
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 97
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:00:56,561
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 98
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:03:30,932
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 98
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:06:08,896
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 98
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:06:55,203
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 97
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:08:29,364
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 97
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:10:10,060
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 104
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:13:14,721
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 15:29:53,989
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+时间：2017-09-15 15:30:07,811
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 96
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 16:51:36,926
+线程：[34]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.VerifyAuthCode(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 156
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-15 17:39:09,827
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.VerifyAuthCode(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 156
+——————————

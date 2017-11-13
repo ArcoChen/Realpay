@@ -1,0 +1,5 @@
+D:\yx\Web\YgCommon\bin\Debug\YgAdCommon.dll
+D:\yx\Web\YgCommon\bin\Debug\YgAdCommon.pdb
+D:\yx\Web\YgCommon\obj\Debug\YgAdCommon.dll
+D:\yx\Web\YgCommon\obj\Debug\YgAdCommon.pdb
+D:\yx\Web\YgCommon\obj\Debug\YgAdCommon.csprojResolveAssemblyReference.cache

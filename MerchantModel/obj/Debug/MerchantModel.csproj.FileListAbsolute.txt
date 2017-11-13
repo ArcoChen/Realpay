@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\RelievePay1023\MerchantModel\bin\Debug\MerchantModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\MerchantModel\bin\Debug\MerchantModel.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\MerchantModel\obj\Debug\MerchantModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay1023\MerchantModel\obj\Debug\MerchantModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\MerchantModel\obj\Debug\MerchantModel.pdb

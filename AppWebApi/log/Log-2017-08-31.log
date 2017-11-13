@@ -1,0 +1,148 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-08-31 11:39:19,456
+线程：[17]
+类型：ERROR
+标题：Error
+内容：System.AggregateException: 发生一个或多个错误。 ---> System.ArgumentException: 提供的“HttpContent”实例无效。该实例没有以“multipart/”开头的内容类型标头。
+参数名: content
+   在 System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser.ValidateArguments(HttpContent content, Int64 maxMessageSize, Boolean throwOnError)
+   在 System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser..ctor(HttpContent content, MultipartStreamProvider streamProvider, Int64 maxMessageSize, Int32 maxBodyPartHeaderSize)
+   在 System.Net.Http.HttpContentMultipartExtensions.<ReadAsMultipartAsync>d__0`1.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 AppWebApi.Controllers.CommodityReportController.<>c__DisplayClass2_0.<<SubmitReportInfo>b__0>d.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 152
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   在 System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   在 System.Threading.Tasks.Task.Wait()
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 152
+---> (内部异常 #0) System.ArgumentException: 提供的“HttpContent”实例无效。该实例没有以“multipart/”开头的内容类型标头。
+参数名: content
+   在 System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser.ValidateArguments(HttpContent content, Int64 maxMessageSize, Boolean throwOnError)
+   在 System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser..ctor(HttpContent content, MultipartStreamProvider streamProvider, Int64 maxMessageSize, Int32 maxBodyPartHeaderSize)
+   在 System.Net.Http.HttpContentMultipartExtensions.<ReadAsMultipartAsync>d__0`1.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 AppWebApi.Controllers.CommodityReportController.<>c__DisplayClass2_0.<<SubmitReportInfo>b__0>d.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 152<---
+
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-31 17:00:07,478
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-31 17:11:50,410
+线程：[17]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-31 17:13:53,752
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-31 17:19:12,066
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————
+时间：2017-08-31 17:19:46,053
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-31 17:43:16,796
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:行号 200
+——————————
+时间：2017-08-31 17:44:18,682
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————
+时间：2017-08-31 17:47:11,086
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————
+时间：2017-08-31 17:49:56,889
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 168
+——————————

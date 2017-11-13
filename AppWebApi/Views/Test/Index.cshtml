@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <input type="text" id="PhoneNumber" />
+    <button id="GetCode">AuthCode</button>
+    <input type="text" id="AuthCode" />
+    <button id="Submit">Submit</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $("#GetCode").click(function () {
+            var PostData = {
+                "SOURCE": "PacketRecord",
+                "CREDENTIALS": "0",
+                "TERMINAL": "1",
+                "INDEX": "20170504155415",
+                "METHOD": "GetAuthCode",
+                "DATA":"13006606393"
+            }
+            var data = JSON.stringify(PostData);
+            alert(data);
+            $.ajax({
+                url: "http://192.168.1.198:59697/api/CommodityRedPacket/PacketRecord",
+                type: "post",
+                data: PostData,
+                success: function (data) {
+                    var obj = eval('(' + data + ')');
+                    console.log(obj);
+                }
+            })
+        })
+    </script>
+    <script>
+        $("#Submit").click(function () {
+            var postData = {
+                "PhoneNumber": $("#PhoneNumber").val(),
+                "Verification": $("#AuthCode").val()
+            };
+
+            $.ajax({
+                url: "/api/UserCheck/UserRegister",
+                type: "post",
+                data: postData,
+                success: function () {
+                    alert("2");
+                }
+            })
+        });
+    </script>
+</body>
+</html>
+
+

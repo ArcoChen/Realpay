@@ -1,0 +1,81 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-19 10:44:42,360
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-19 10:44:43,193
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-19 10:44:44,072
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-19 10:44:44,426
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-19 10:44:45,144
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-19 10:45:59,335
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 72
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-19 16:11:46,282
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentException: Value must not be empty
+Parameter name: key
+   at CacheManager.Core.Utility.Guard.NotNullOrEmpty(String value, String name)
+   at CacheManager.Core.Utility.Guard.NotNullOrWhiteSpace(String value, String name)
+   at CacheManager.Core.Internal.BaseCache`1.GetCacheItem(String key)
+   at CacheManager.Core.Internal.BaseCache`1.Get(String key)
+   at AppWebApi.Controllers.UserCheckController.VerifyAuthCode(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 159
+——————————

@@ -1,0 +1,33 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-14 17:19:49,192
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (403) Forbidden.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at AppWebApi.Controllers.CommodityReportController.GetCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 116
+——————————
+时间：2017-09-14 17:20:29,696
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (403) Forbidden.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at AppWebApi.Controllers.CommodityReportController.GetCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 116
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-14 17:23:52,976
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 183
+——————————

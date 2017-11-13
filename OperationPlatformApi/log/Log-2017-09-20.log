@@ -1,0 +1,202 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-20 09:32:29,940
+线程：[14]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-20 09:32:35,012
+线程：[14]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-20 09:33:22,314
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-20 09:33:28,612
+线程：[14]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-20 09:36:52,919
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-09-20 09:58:41,574
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 124
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-20 09:59:04,803
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 124
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-20 09:59:22,555
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 124
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-20 10:01:09,306
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 124
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-20 10:05:37,372
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 124
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-20 15:50:34,462
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————
+时间：2017-09-20 15:53:33,858
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————
+时间：2017-09-20 15:53:33,883
+线程：[19]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————
+时间：2017-09-20 15:55:16,969
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————
+时间：2017-09-20 16:02:07,738
+线程：[18]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————
+时间：2017-09-20 16:02:47,925
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-20 16:11:16,340
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————
+时间：2017-09-20 16:11:16,342
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductManageController.CommodityInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 96
+——————————

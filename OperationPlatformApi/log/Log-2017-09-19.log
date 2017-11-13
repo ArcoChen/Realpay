@@ -1,0 +1,78 @@
+﻿
+----------------------header--------------------------
+
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-09-19 15:29:27,062
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-19 15:30:39,856
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-19 15:33:40,807
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-19 15:35:24,297
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-19 15:48:53,209
+线程：[25]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+时间：2017-09-19 15:52:05,713
+线程：[27]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at OperationPlatformApi.Controllers.RedpacketManageController.EnumEndRedList(RedpacketManageModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\RedpacketManageController.cs:line 137
+——————————
+
+----------------------header--------------------------
+
+
+----------------------footer--------------------------

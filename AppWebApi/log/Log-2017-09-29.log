@@ -1,0 +1,11 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-29 09:51:38,347
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.InvalidOperationException: Cannot access child value on Newtonsoft.Json.Linq.JProperty.
+   at Newtonsoft.Json.Linq.JToken.get_Item(Object key)
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay0926\AppWebApi\Controllers\ChangeUserInfoController.cs:line 54
+——————————

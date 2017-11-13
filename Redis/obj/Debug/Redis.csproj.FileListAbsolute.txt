@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\RelievePay\Redis\bin\Debug\StackExchange.Redis.dll
+C:\Users\Administrator\Desktop\RelievePay\Redis\bin\Debug\StackExchange.Redis.xml
+C:\Users\Administrator\Desktop\RelievePay\Redis\bin\Debug\Redis.dll
+C:\Users\Administrator\Desktop\RelievePay\Redis\bin\Debug\Redis.pdb
+C:\Users\Administrator\Desktop\RelievePay\Redis\obj\Debug\Redis.dll
+C:\Users\Administrator\Desktop\RelievePay\Redis\obj\Debug\Redis.pdb

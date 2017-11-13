@@ -1,0 +1,8 @@
+C:\Users\Administrator\Desktop\RelievePay0926\OperationPlatformModel\bin\Release\OperationPlatformModel.dll
+C:\Users\Administrator\Desktop\RelievePay0926\OperationPlatformModel\bin\Release\OperationPlatformModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0926\OperationPlatformModel\obj\Release\OperationPlatformModel.dll
+C:\Users\Administrator\Desktop\RelievePay0926\OperationPlatformModel\obj\Release\OperationPlatformModel.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformModel\bin\Release\OperationPlatformModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformModel\bin\Release\OperationPlatformModel.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformModel\obj\Release\OperationPlatformModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformModel\obj\Release\OperationPlatformModel.pdb

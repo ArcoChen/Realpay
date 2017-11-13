@@ -1,0 +1,14 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-14 10:12:05,107
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.ProductManageController.BrandInformation(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductManageController.cs:line 49
+——————————
+
+----------------------footer--------------------------

@@ -1,0 +1,205 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-20 09:31:19,479
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+时间：2017-09-20 09:31:30,786
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+时间：2017-09-20 09:32:01,603
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-20 09:39:55,467
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+时间：2017-09-20 09:40:36,502
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+时间：2017-09-20 09:41:38,247
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-20 09:43:15,735
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+时间：2017-09-20 09:43:24,601
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-20 09:49:14,275
+线程：[8]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+时间：2017-09-20 09:50:18,226
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-20 09:55:44,847
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: R. Path 'result[0]', line 1, position 14.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   at Newtonsoft.Json.JsonTextReader.ReadInternal()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 120
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————

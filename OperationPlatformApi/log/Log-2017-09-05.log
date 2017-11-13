@@ -1,0 +1,487 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-05 10:09:28,812
+线程：[28]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 10:09:28,812
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 10:11:37,680
+线程：[32]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 10:11:37,692
+线程：[33]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 10:11:44,783
+线程：[31]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 10:11:44,791
+线程：[35]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 10:11:46,542
+线程：[21]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 10:11:46,551
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-05 14:52:43,089
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:52:48,007
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:52:53,041
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:53:05,003
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:53:18,323
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:53:29,674
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:53:32,860
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:53:46,750
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:53:52,788
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:54:13,504
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:54:22,476
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:55:56,101
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:58:35,028
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 14:59:03,274
+线程：[17]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+时间：2017-09-05 15:02:53,926
+线程：[15]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.BusinessDetailInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 298
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-05 16:00:28,434
+线程：[49]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:00:44,388
+线程：[50]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:00:46,742
+线程：[47]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:00:48,991
+线程：[48]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:00:52,010
+线程：[47]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:01:52,681
+线程：[50]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:02:27,593
+线程：[50]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:02:36,520
+线程：[50]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:03:18,281
+线程：[52]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+时间：2017-09-05 16:03:27,032
+线程：[51]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.FilteSQLStr(String Str) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 15
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 240
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-05 16:06:16,201
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The underlying connection was closed: The connection was closed unexpectedly.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-05 16:07:16,830
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The underlying connection was closed: The connection was closed unexpectedly.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-05 16:08:43,518
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The underlying connection was closed: The connection was closed unexpectedly.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-05 16:10:36,883
+线程：[15]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The request was aborted: The operation has timed out.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-05 16:10:37,840
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-05 16:10:38,245
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-05 16:14:46,868
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-05 16:15:29,052
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-05 16:15:56,259
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.195:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 85
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————

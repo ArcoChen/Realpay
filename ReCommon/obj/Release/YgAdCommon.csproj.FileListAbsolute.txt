@@ -1,0 +1,4 @@
+D:\yx\Web\YgCommon\bin\Release\YgAdCommon.dll
+D:\yx\Web\YgCommon\bin\Release\YgAdCommon.pdb
+D:\yx\Web\YgCommon\obj\Release\YgAdCommon.dll
+D:\yx\Web\YgCommon\obj\Release\YgAdCommon.pdb

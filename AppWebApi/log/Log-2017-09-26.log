@@ -1,0 +1,86 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-26 09:48:46,914
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+时间：2017-09-26 09:49:22,488
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 120
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-26 17:26:13,641
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-26 17:26:21,341
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-26 17:26:21,349
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-26 17:26:21,406
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-26 17:26:21,410
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————
+时间：2017-09-26 17:27:48,924
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at AppWebApi.Controllers.UserLoginController.UserLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 70
+——————————

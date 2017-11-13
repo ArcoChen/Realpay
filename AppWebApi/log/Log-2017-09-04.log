@@ -1,0 +1,45 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-04 10:36:56,178
+线程：[19]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 远程服务器返回错误: (500) 内部服务器错误。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:行号 93
+   在 AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:行号 155
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-04 15:30:10,624
+线程：[100]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:行号 93
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:行号 207
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-04 16:55:40,221
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:行号 207
+——————————
+时间：2017-09-04 16:55:44,113
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:行号 207
+——————————

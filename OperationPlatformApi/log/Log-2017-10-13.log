@@ -1,0 +1,10 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-10-13 15:07:21,158
+线程：[39]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0926\OperationPlatformApi\Controllers\MerchantManageController.cs:行号 230
+——————————

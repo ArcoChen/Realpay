@@ -1,0 +1,16 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-08-30 10:20:38,939
+线程：[30]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 无法连接到远程服务器 ---> System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.179:8080
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:行号 84
+   在 AppWebApi.Controllers.CommodityReportController.GetCommodityInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 113
+——————————

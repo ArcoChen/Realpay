@@ -1,0 +1,18 @@
+﻿
+----------------------header--------------------------
+
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-10-17 15:55:45,830
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.ArgumentException: 参数无效。
+   在 System.Drawing.Image.FromStream(Stream stream, Boolean useEmbeddedColorManagement, Boolean validateImageData)
+   在 System.Drawing.Image.FromStream(Stream stream)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay0926\ReCommon\CharConversion.cs:行号 195
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0926\AppWebApi\Controllers\CommodityReportController.cs:行号 167
+——————————

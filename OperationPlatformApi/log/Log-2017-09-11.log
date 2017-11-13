@@ -1,0 +1,89 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-11 15:24:05,734
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData)
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-09-11 16:00:51,459
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-11 16:01:07,011
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-11 16:01:50,290
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-11 16:02:26,767
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-11 16:05:31,312
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-11 16:06:52,001
+线程：[14]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-11 16:07:53,194
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————
+时间：2017-09-11 16:08:31,444
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 93
+   at OperationPlatformApi.Controllers.MerchantManageController.EnumBusinessList(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\MerchantManageController.cs:line 245
+——————————

@@ -1,0 +1,8 @@
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\bin\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\bin\Debug\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\obj\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\obj\Debug\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\bin\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\bin\Debug\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Debug\RedisModel.pdb

@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\bin\Release\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\bin\Release\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\obj\Release\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0926\RedisModel\obj\Release\RedisModel.pdb

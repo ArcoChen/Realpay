@@ -1,0 +1,4 @@
+D:\yx\Web\YgCommon\bin\Debug\YgCommon.dll
+D:\yx\Web\YgCommon\bin\Debug\YgCommon.pdb
+D:\yx\Web\YgCommon\obj\Debug\YgCommon.dll
+D:\yx\Web\YgCommon\obj\Debug\YgCommon.pdb

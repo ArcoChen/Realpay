@@ -1,0 +1,77 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-08-29 16:52:19,103
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 远程服务器返回错误: (500) 内部服务器错误。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:行号 92
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 161
+——————————
+时间：2017-08-29 16:52:56,998
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 远程服务器返回错误: (500) 内部服务器错误。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:行号 92
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 161
+——————————
+时间：2017-08-29 16:54:23,564
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 基础连接已经关闭: 连接被意外关闭。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:行号 92
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 161
+——————————
+时间：2017-08-29 17:08:09,829
+线程：[14]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: 操作超时
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:行号 92
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 161
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-29 17:23:17,805
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 192
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 151
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-29 17:32:49,514
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:行号 192
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 151
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-29 17:40:37,676
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.InvalidCastException: 无法将类型为“Newtonsoft.Json.Linq.JArray”的对象强制转换为类型“Newtonsoft.Json.Linq.JObject”。
+   在 AppWebApi.Controllers.CommodityReportController.SubmitReportInfo(ProductInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:行号 157
+——————————

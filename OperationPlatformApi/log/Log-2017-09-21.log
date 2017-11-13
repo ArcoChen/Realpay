@@ -1,0 +1,36 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-21 10:39:15,670
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductCodeManageController.EnumCodeList(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductCodeManageController.cs:line 51
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-21 10:41:19,137
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductCodeManageController.EnumCodeList(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductCodeManageController.cs:line 50
+——————————
+时间：2017-09-21 10:41:47,043
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 123
+   at OperationPlatformApi.Controllers.ProductCodeManageController.EnumCodeList(ProductCodeModel model) in C:\Users\Administrator\Desktop\RelievePay\OperationPlatformApi\Controllers\ProductCodeManageController.cs:line 50
+——————————

@@ -1,0 +1,315 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-08-21 09:39:39,917
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 09:41:27,946
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 09:51:17,266
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+时间：2017-08-21 09:55:30,557
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+时间：2017-08-21 09:56:22,580
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 10:54:58,607
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+时间：2017-08-21 10:55:12,639
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 11:00:23,042
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 133
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 11:17:20,755
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 85
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 11:26:25,300
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 88
+——————————
+时间：2017-08-21 11:27:56,842
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 88
+——————————
+时间：2017-08-21 11:29:34,915
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.179:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 84
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 110
+——————————
+时间：2017-08-21 11:31:31,800
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 88
+——————————
+时间：2017-08-21 11:43:41,204
+线程：[15]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 88
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 12:28:20,449
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.179:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 84
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 159
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 15:28:11,853
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+时间：2017-08-21 15:30:36,219
+线程：[32]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 142
+——————————
+时间：2017-08-21 15:33:30,443
+线程：[35]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.1.179:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 84
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 159
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 16:06:38,705
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 94
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 16:19:14,936
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 94
+——————————
+时间：2017-08-21 16:21:01,487
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 94
+——————————
+时间：2017-08-21 16:21:04,694
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 94
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 16:31:49,485
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 92
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 160
+——————————
+时间：2017-08-21 16:33:32,669
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+时间：2017-08-21 16:36:04,544
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 92
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 160
+——————————
+时间：2017-08-21 16:38:12,083
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+时间：2017-08-21 16:41:38,629
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+时间：2017-08-21 16:42:45,387
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+时间：2017-08-21 16:51:12,127
+线程：[30]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ReCommon.FilteParameter.CheckPhoneIsAble(String input) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\FilteParameter.cs:line 209
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 151
+——————————
+时间：2017-08-21 17:00:32,660
+线程：[14]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 17:02:51,734
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+时间：2017-08-21 17:02:52,229
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 92
+   at AppWebApi.Controllers.UserCheckController.AccountProving(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 160
+——————————
+时间：2017-08-21 17:03:30,449
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 17:16:55,501
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————
+
+----------------------header--------------------------
+
+时间：2017-08-21 17:42:07,684
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.CommodityReportController.ShowCommodityInfo(ProductInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\CommodityReportController.cs:line 98
+——————————

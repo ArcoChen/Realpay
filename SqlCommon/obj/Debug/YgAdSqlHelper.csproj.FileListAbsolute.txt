@@ -1,0 +1,16 @@
+D:\yx\Web\SqlComm\bin\Debug\YgAdSqlHelper.dll
+D:\yx\Web\SqlComm\bin\Debug\YgAdSqlHelper.pdb
+D:\yx\Web\SqlComm\obj\Debug\YgAdSqlHelper.dll
+D:\yx\Web\SqlComm\obj\Debug\YgAdSqlHelper.pdb
+D:\yx\Web\SqlComm\obj\Debug\YgAdSqlHelper.csprojResolveAssemblyReference.cache
+D:\yx\Web\SqlComm\bin\Debug\Newtonsoft.Json.dll
+D:\yx\Web\SqlComm\bin\Debug\YgAdModel.dll
+D:\yx\Web\SqlComm\bin\Debug\YgAdModel.pdb
+D:\yx\Web\SqlComm\bin\Debug\Newtonsoft.Json.xml
+D:\yx\Web\SqlComm\bin\Debug\YgAdCommon.dll
+D:\yx\Web\SqlComm\bin\Debug\YgAdCommon.pdb
+D:\yx\Web\SqlComm\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+D:\yx\Web\SqlComm\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+D:\yx\Web\SqlComm\bin\Debug\Microsoft.SqlServer.Smo.dll
+D:\yx\Web\SqlComm\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+D:\yx\Web\SqlComm\bin\Debug\Microsoft.SqlServer.SqlEnum.dll

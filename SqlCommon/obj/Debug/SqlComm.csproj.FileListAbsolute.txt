@@ -1,0 +1,4 @@
+D:\yx\Web\SqlComm\bin\Debug\SqlComm.dll
+D:\yx\Web\SqlComm\bin\Debug\SqlComm.pdb
+D:\yx\Web\SqlComm\obj\Debug\SqlComm.dll
+D:\yx\Web\SqlComm\obj\Debug\SqlComm.pdb

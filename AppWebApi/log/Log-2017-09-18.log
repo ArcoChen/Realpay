@@ -1,0 +1,190 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-09-18 10:23:38,064
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 112
+——————————
+时间：2017-09-18 10:23:49,518
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserLoginController.MobileLogin(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserLoginController.cs:line 112
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-18 10:55:06,866
+线程：[24]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   at System.Drawing.Image.Save(String filename, ImageFormat format)
+   at ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\CharConversion.cs:line 210
+   at AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 211
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-18 11:33:54,709
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.UserCheckController.VerifyAuthCode(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\UserCheckController.cs:line 161
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-18 15:27:26,949
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 56
+——————————
+时间：2017-09-18 15:28:39,039
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 69
+——————————
+时间：2017-09-18 15:30:36,845
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 69
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-18 15:39:10,910
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 70
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-18 15:54:31,834
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 72
+——————————
+时间：2017-09-18 15:54:35,951
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:50,493
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:50,736
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:50,927
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:51,084
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:53,361
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:53,542
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:53,760
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:53,977
+线程：[11]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+时间：2017-09-18 15:54:58,872
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 58
+——————————
+
+----------------------header--------------------------
+
+时间：2017-09-18 17:27:39,823
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 72
+——————————
+时间：2017-09-18 17:27:53,274
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: Index and count must refer to a location within the string.
+Parameter name: count
+   at System.String.Remove(Int32 startIndex, Int32 count)
+   at ReCommon.ApiHelper.HttpRequest(String userName, String Password, String Url, String PostData) in C:\Users\Administrator\Desktop\RelievePay\ReCommon\ApiHelper.cs:line 118
+   at AppWebApi.Controllers.ChangeUserInfoController.ChangePhoneNumber(UserInfoModel model) in C:\Users\Administrator\Desktop\RelievePay\AppWebApi\Controllers\ChangeUserInfoController.cs:line 72
+——————————
