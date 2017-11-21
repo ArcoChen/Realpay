@@ -15,6 +15,5 @@ C:\Users\Administrator\Desktop\RelievePay0926\Verification\obj\Debug\Verificatio
 C:\Users\Administrator\Desktop\RelievePay0926\Verification\obj\Debug\Verification.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\Verification\bin\Debug\Verification.dll
 C:\Users\Administrator\Desktop\RelievePay1023\Verification\bin\Debug\Verification.pdb
-C:\Users\Administrator\Desktop\RelievePay1023\Verification\obj\Debug\Verification.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\Verification\obj\Debug\Verification.dll
 C:\Users\Administrator\Desktop\RelievePay1023\Verification\obj\Debug\Verification.pdb

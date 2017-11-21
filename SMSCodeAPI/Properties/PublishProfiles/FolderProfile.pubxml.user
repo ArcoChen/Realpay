@@ -98,10 +98,10 @@
       <publishTime>07/02/2017 04:06:34</publishTime>
     </File>
     <File Include="bin/CacheManager.dll">
-      <publishTime>09/26/2017 19:50:01</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/CacheManager.pdb">
-      <publishTime>09/26/2017 19:50:01</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/CacheManager.SystemRuntimeCaching.dll">
       <publishTime>07/02/2017 04:06:48</publishTime>
@@ -236,10 +236,16 @@
       <publishTime>01/09/2016 13:50:06</publishTime>
     </File>
     <File Include="bin/ReCommon.dll">
-      <publishTime>09/27/2017 14:30:13</publishTime>
+      <publishTime>11/17/2017 15:47:05</publishTime>
     </File>
     <File Include="bin/ReCommon.pdb">
-      <publishTime>09/27/2017 14:30:13</publishTime>
+      <publishTime>11/17/2017 15:47:05</publishTime>
+    </File>
+    <File Include="bin/RedisModel.dll">
+      <publishTime>11/16/2017 17:41:35</publishTime>
+    </File>
+    <File Include="bin/RedisModel.pdb">
+      <publishTime>11/16/2017 17:41:35</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/27/2016 14:50:24</publishTime>
@@ -332,16 +338,16 @@
       <publishTime>11/20/2015 16:35:32</publishTime>
     </File>
     <File Include="bin/SMSCode.dll">
-      <publishTime>09/27/2017 08:34:01</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/SMSCode.pdb">
-      <publishTime>09/27/2017 08:34:01</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/SMSCodeAPI.dll">
-      <publishTime>09/27/2017 15:23:55</publishTime>
+      <publishTime>11/17/2017 15:47:09</publishTime>
     </File>
     <File Include="bin/SMSCodeAPI.pdb">
-      <publishTime>09/27/2017 15:23:55</publishTime>
+      <publishTime>11/17/2017 15:47:09</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>01/28/2015 04:02:42</publishTime>
@@ -461,7 +467,7 @@
       <publishTime>09/26/2017 16:55:12</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>09/26/2017 17:04:35</publishTime>
+      <publishTime>11/13/2017 09:05:36</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>09/26/2017 16:55:14</publishTime>
@@ -503,7 +509,7 @@
       <publishTime>09/26/2017 16:55:12</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/27/2017 08:34:07</publishTime>
+      <publishTime>11/17/2017 15:47:10</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -184,14 +184,14 @@
     <Compile Include="Controllers\FaultToleranceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarketChannelController.cs" />
+    <Compile Include="Controllers\MerchantAdvertisingManageController.cs" />
     <Compile Include="Controllers\MerchantInfoManageController.cs" />
     <Compile Include="Controllers\MerchantInfoReturnController.cs" />
+    <Compile Include="Controllers\MerchantRedPacketManageController.cs" />
     <Compile Include="Controllers\PartnerLogisticsController.cs" />
-    <Compile Include="Controllers\ProductCodeInfoController.cs" />
     <Compile Include="Controllers\PseudoCodeIdentController.cs" />
-    <Compile Include="Controllers\SalesPromotionApplyController.cs" />
-    <Compile Include="Controllers\SalesPromotionInfoController.cs" />
     <Compile Include="Controllers\TerminalManageController.cs" />
+    <Compile Include="Controllers\UserCheckController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -277,6 +277,10 @@
     <ProjectReference Include="..\ReCommon\ReCommon.csproj">
       <Project>{c041ae61-9692-4389-bcd2-a27864d2cb60}</Project>
       <Name>ReCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedisModel\RedisModel.csproj">
+      <Project>{f4e8cc02-b82f-4faf-ab2c-57f0b5ffa610}</Project>
+      <Name>RedisModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

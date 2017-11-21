@@ -25,15 +25,15 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ProductCodeInfo(FaultToleranceModel model)
+        public HttpResponseMessage FaultToleranceTable(FaultToleranceModel model)
         {
             string Result = string.Empty;
 
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -53,7 +53,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -71,15 +71,15 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> SalesRecordTable(FaultToleranceModel model)
+        public HttpResponseMessage SalesRecordTable(FaultToleranceModel model)
         {
             string Result = string.Empty;
 
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -92,15 +92,15 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
 
                 //去除用户参数中包含的特殊字符
-                model.CodeStart = ParametersFilter.FilterSqlHtml(model.CodeStart, 50);
-                model.CodeEnd = ParametersFilter.FilterSqlHtml(model.CodeEnd, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.CommodityCode = ParametersFilter.FilterSqlHtml(model.CommodityCode, 128);
 
                 var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {

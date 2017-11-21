@@ -7,7 +7,7 @@ using System.Web.Http;
 using RedisHelper;
 using System.Text;
 using ReCommon;
-using AppModel;
+using RedisModel;
 
 namespace RedisAPI.Controllers
 {
@@ -105,7 +105,7 @@ namespace RedisAPI.Controllers
         }
 
         /// <summary>
-        /// 设置key的声明周期
+        /// 设置key的生命周期
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>

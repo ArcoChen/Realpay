@@ -436,6 +436,7 @@ C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Operation
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\OperationPlatformApi.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\OperationPlatformApi.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\CacheManager.Core.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\CacheManager.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\CacheManager.SystemRuntimeCaching.dll
@@ -473,6 +474,7 @@ C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Newtonsof
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\OperationPlatformModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Owin.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\ReCommon.dll
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\RedisModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\SMSCode.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\System.Net.Http.Formatting.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\System.Web.Cors.dll
@@ -487,11 +489,12 @@ C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\System.We
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\System.Web.WebPages.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\System.Web.WebPages.Razor.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\WebGrease.dll
-C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Aliyun.MNS.dll
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\CacheManager.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\OperationPlatformModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\ReCommon.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\RedisModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\CacheManager.Core.xml
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\CacheManager.SystemRuntimeCaching.xml
@@ -535,7 +538,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Microsoft
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\System.Web.Http.Owin.xml
-C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\zh-Hans\Microsoft.Owin.resources.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll

@@ -71,5 +71,10 @@ namespace MerchantModel
         /// </summary>
         public string SalesReturnNumber { get; set; }
 
+        /// <summary>
+        /// 条形码
+        /// </summary>
+        public string BarCode { get; set; }
+
     }
 }

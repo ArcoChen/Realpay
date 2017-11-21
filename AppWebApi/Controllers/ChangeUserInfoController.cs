@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using RedisModel;
 
 namespace AppWebApi.Controllers
 {
@@ -24,7 +25,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ChangePhoneNumber(UserInfoModel model)
+        public async Task<HttpResponseMessage> ChangePhoneNumber(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -83,25 +84,49 @@ namespace AppWebApi.Controllers
                 //    Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
                 //} 
                 #endregion
-                //实例化Redis请求参数
-                BaseModel redis = new BaseModel();
+                #region 实例化redis请求参数
+                ////实例化Redis请求参数
+                //RedisModel.BaseModel redis = new RedisModel.BaseModel();
 
-                redis.RedisIP = "127.0.0.1";
-                redis.RedisPort = "6379";
-                redis.RedisPassword = "yg50";
-                redis.RedisKey = "AuthCode_" + model.NewPhoneNumber;
-                redis.RedisValue = model.Verification;
-                redis.LifeCycle = "60";
-                redis.RedisFunction = "StringGet";
+                //redis.RedisIP = "127.0.0.1";
+                //redis.RedisPort = "6379";
+                //redis.RedisPassword = "yg50";
+                //redis.RedisKey = "AuthCode_" + model.NewPhoneNumber;
+                //redis.RedisValue = model.Verification;
+                //redis.LifeCycle = "60";
+                //redis.RedisFunction = "StringGet";
 
+                ////获取Redis中的验证码
+                //string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis);
+
+                //if (GetRedisAuthCode == "null")
+                //{
+                //    Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
+                //}
+                //else if (GetRedisAuthCode == model.Verification)
+                //{
+                //    var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
+                //    string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //    //返回结果
+                //    Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                //}
+                //else
+                //{
+                //    Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
+                //} 
+                #endregion
                 //获取Redis中的验证码
-                string GetRedisAuthCode =  ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis);
+                string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
+                JObject json = (JObject)JsonConvert.DeserializeObject(GetRedisAuthCode);
 
-                if (GetRedisAuthCode == "null")
+                if (json["result"].ToString() == "2")
                 {
+
                     Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
                 }
-                else if (GetRedisAuthCode == model.Verification)
+                else if (json["result"].ToString() == "1")
                 {
                     var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 

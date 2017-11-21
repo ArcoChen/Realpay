@@ -77,9 +77,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppModel\AppModel.csproj">
-      <Project>{1245ed00-46ba-4558-bd30-cdde6a786e9a}</Project>
-      <Name>AppModel</Name>
+    <ProjectReference Include="..\RedisModel\RedisModel.csproj">
+      <Project>{f4e8cc02-b82f-4faf-ab2c-57f0b5ffa610}</Project>
+      <Name>RedisModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,7 +14,7 @@ namespace MerchantModel
         /// <summary>
         /// 企业名称
         /// </summary>
-        public string EnterPriseName { get; set; }
+        public string EnterpriseName { get; set; }
 
         /// <summary>
         /// 性别
@@ -45,5 +45,10 @@ namespace MerchantModel
         /// 物流单位联系电话
         /// </summary>
         public string ContactNumber { get; set; }
+
+        /// <summary>
+        /// 旧物流公司
+        /// </summary>
+        public string OldCarrierName { get; set; }
     }
 }

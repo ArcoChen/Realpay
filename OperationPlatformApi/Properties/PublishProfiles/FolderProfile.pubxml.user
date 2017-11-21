@@ -98,19 +98,19 @@
       <publishTime>07/25/2017 11:49:26</publishTime>
     </File>
     <File Include="bin/AppModel.dll">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 16:01:26</publishTime>
     </File>
     <File Include="bin/AppModel.pdb">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 16:01:26</publishTime>
     </File>
     <File Include="bin/CacheManager.Core.dll">
       <publishTime>07/02/2017 04:06:34</publishTime>
     </File>
     <File Include="bin/CacheManager.dll">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/CacheManager.pdb">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/CacheManager.SystemRuntimeCaching.dll">
       <publishTime>07/02/2017 04:06:48</publishTime>
@@ -209,25 +209,31 @@
       <publishTime>08/03/2014 20:33:56</publishTime>
     </File>
     <File Include="bin/OperationPlatformApi.dll">
-      <publishTime>10/26/2017 16:48:19</publishTime>
+      <publishTime>11/17/2017 17:42:57</publishTime>
     </File>
     <File Include="bin/OperationPlatformApi.pdb">
-      <publishTime>10/26/2017 16:48:19</publishTime>
+      <publishTime>11/17/2017 17:42:57</publishTime>
     </File>
     <File Include="bin/OperationPlatformModel.dll">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/OperationPlatformModel.pdb">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/27/2012 13:00:52</publishTime>
     </File>
     <File Include="bin/ReCommon.dll">
-      <publishTime>10/26/2017 16:48:14</publishTime>
+      <publishTime>11/17/2017 17:42:53</publishTime>
     </File>
     <File Include="bin/ReCommon.pdb">
-      <publishTime>10/26/2017 16:48:14</publishTime>
+      <publishTime>11/17/2017 17:42:53</publishTime>
+    </File>
+    <File Include="bin/RedisModel.dll">
+      <publishTime>11/16/2017 17:41:35</publishTime>
+    </File>
+    <File Include="bin/RedisModel.pdb">
+      <publishTime>11/16/2017 17:41:35</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/18/2015 20:19:46</publishTime>
@@ -266,10 +272,10 @@
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/SMSCode.dll">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/SMSCode.pdb">
-      <publishTime>10/26/2017 16:39:40</publishTime>
+      <publishTime>11/13/2017 15:20:31</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>01/28/2015 04:02:42</publishTime>
@@ -659,7 +665,7 @@
       <publishTime>07/25/2017 11:49:03</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/26/2017 16:39:47</publishTime>
+      <publishTime>11/16/2017 17:01:18</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -22,6 +22,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Debug\RedisHelper.dll
 C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Debug\RedisHelper.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Debug\StackExchange.Redis.dll
 C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Debug\StackExchange.Redis.xml
-C:\Users\Administrator\Desktop\RelievePay1023\Redis\obj\Debug\RedisHelper.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\Redis\obj\Debug\RedisHelper.dll
 C:\Users\Administrator\Desktop\RelievePay1023\Redis\obj\Debug\RedisHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\obj\Debug\RedisHelper.csprojResolveAssemblyReference.cache

@@ -33,13 +33,13 @@ C:\Users\Administrator\Desktop\RelievePay0926\ReCommon\obj\Debug\ReCommon.dll
 C:\Users\Administrator\Desktop\RelievePay0926\ReCommon\obj\Debug\ReCommon.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\ReCommon.dll
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\ReCommon.pdb
-C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\log4net.dll
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\StackExchange.Redis.dll
-C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\log4net.xml
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\StackExchange.Redis.xml
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\obj\Debug\ReCommon.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\obj\Debug\ReCommon.dll
 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\obj\Debug\ReCommon.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\bin\Debug\RedisModel.pdb

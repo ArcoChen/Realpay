@@ -5,3 +5,10 @@ C:\Users\Administrator\Desktop\RelievePay0926\Redis\bin\Release\StackExchange.Re
 C:\Users\Administrator\Desktop\RelievePay0926\Redis\obj\Release\RedisHelper.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay0926\Redis\obj\Release\RedisHelper.dll
 C:\Users\Administrator\Desktop\RelievePay0926\Redis\obj\Release\RedisHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Release\RedisHelper.dll
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Release\RedisHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Release\StackExchange.Redis.dll
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\bin\Release\StackExchange.Redis.xml
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\obj\Release\RedisHelper.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\obj\Release\RedisHelper.dll
+C:\Users\Administrator\Desktop\RelievePay1023\Redis\obj\Release\RedisHelper.pdb

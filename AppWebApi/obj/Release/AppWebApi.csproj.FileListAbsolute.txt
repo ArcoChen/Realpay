@@ -418,3 +418,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\zh-Hans\System.Web.H
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\obj\Release\AppWebApi.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\obj\Release\AppWebAPI.dll
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\obj\Release\AppWebAPI.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\RedisModel.pdb

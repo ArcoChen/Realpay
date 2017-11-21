@@ -25,15 +25,15 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> TerminalInfoTable(TerminalModel model)
+        public HttpResponseMessage TerminalInfoTable(TerminalModel model)
         {
             string Result = string.Empty;
 
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -53,7 +53,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -71,15 +71,15 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> UpdateTerminal(TerminalModel model)
+        public HttpResponseMessage UpdateTerminal(TerminalModel model)
         {
             string Result = string.Empty;
 
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -99,7 +99,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -117,15 +117,15 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> AddTerminal(TerminalModel model)
+        public HttpResponseMessage AddTerminal(TerminalModel model)
         {
             string Result = string.Empty;
 
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -145,7 +145,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -163,15 +163,15 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> DeleteTerminal(TerminalModel model)
+        public HttpResponseMessage DeleteTerminal(TerminalModel model)
         {
             string Result = string.Empty;
 
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -192,7 +192,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {

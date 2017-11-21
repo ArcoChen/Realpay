@@ -32,8 +32,8 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -78,8 +78,8 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -124,8 +124,8 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -173,8 +173,8 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //URL请求所需参数
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 

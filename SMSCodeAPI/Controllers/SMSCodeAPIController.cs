@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ReCommon;
-using AppModel;
+using RedisModel;
 using CacheManager;
 using Newtonsoft.Json;
 using System.Text;
@@ -47,9 +47,9 @@ namespace SMSCodeAPI.Controllers
 
                 BaseModel redis = new BaseModel();
 
-                redis.RedisIP = "127.0.0.1";
+                redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
                 redis.RedisPort = "6379";
-                redis.RedisPassword = "yg50";
+                redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
                 redis.LifeCycle = "60";
@@ -87,7 +87,7 @@ namespace SMSCodeAPI.Controllers
         }
 
         /// <summary>
-        /// 审核手机验证码
+        /// 审核手机验证码(0-失败 1-成功 2-超时)
         /// </summary>
         /// <param name="UserMobile">手机号</param>
         /// <param name="Verification">验证码</param>
@@ -119,9 +119,9 @@ namespace SMSCodeAPI.Controllers
 
                 BaseModel redis = new BaseModel();
 
-                redis.RedisIP = "127.0.0.1";
+                redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
                 redis.RedisPort = "6379";
-                redis.RedisPassword = "yg50";
+                redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.LifeCycle = "60";
                 redis.RedisFunction = "StringGet";

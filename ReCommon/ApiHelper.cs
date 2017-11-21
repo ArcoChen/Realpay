@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using AppModel;
+using RedisModel;
 using System.Net.Http;
 
 namespace ReCommon
@@ -178,8 +178,9 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetURL(string ClassName)
         {
+            //string Url = "http://120.78.49.234:8080/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://192.168.1.51:7090/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
-            string Url = "http://192.168.1.195:8080/TServerMethods/Transaction/";
+            string Url = "http://192.168.1.175:8080/TServerMethods/Transaction/";
             return Url;
         }
 
@@ -189,7 +190,7 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetAuthCodeURL()
         {
-            string Url = "http://192.168.1.50:8011/api/SMSCodeAPI/GetAuthCode";
+            string Url = "http://120.78.49.234:8011/api/SMSCodeAPI/GetAuthCode";
             return Url;
         }
 
@@ -199,7 +200,7 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetRedisURL(String FuncationName)
         {
-            string Url = "http://192.168.1.50:8012/api/RedisAPI/" + FuncationName;
+            string Url = "http://120.78.49.234:8012/api/RedisAPI/" + FuncationName;
             return Url;
         }
         #endregion

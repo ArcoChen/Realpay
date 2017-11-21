@@ -135,7 +135,7 @@ namespace AppWebApi.Controllers
                 #endregion
 
                 //实例化Redis请求参数
-                BaseModel redis = new BaseModel();
+                RedisModel.BaseModel redis = new RedisModel.BaseModel();
 
                 redis.RedisIP = "127.0.0.1";
                 redis.RedisPort = "6379";

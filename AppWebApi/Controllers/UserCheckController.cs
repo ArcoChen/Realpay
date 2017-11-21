@@ -15,6 +15,7 @@ using System.Security.Cryptography;
 using CacheManager.Core;
 using CacheManager;
 using System.Threading.Tasks;
+using RedisModel;
 
 namespace AppWebApi.Controllers
 {
@@ -26,7 +27,7 @@ namespace AppWebApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> AccountProving(UserInfoModel model)
+        public async Task<HttpResponseMessage> AccountProving(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -98,7 +99,7 @@ namespace AppWebApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ProvingAccount(UserInfoModel model)
+        public async Task<HttpResponseMessage> ProvingAccount(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -170,7 +171,7 @@ namespace AppWebApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> GetAuthCode(UserInfoModel model)
+        public async Task<HttpResponseMessage> GetAuthCode(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -233,7 +234,7 @@ namespace AppWebApi.Controllers
         /// <param name="SMSCode">验证码</param>
         /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage VerifyAuthCode(UserInfoModel model)
+        public HttpResponseMessage VerifyAuthCode(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -258,45 +259,29 @@ namespace AppWebApi.Controllers
                 model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
                 model.Verification = ParametersFilter.FilterSqlHtml(model.Verification, 6);
 
-                #region 判断缓存验证码
-                ////判断验证码是否正确
-                //if (RuntimeCache.Cache.Get(model.UserMobile) != null)
-                //{
-                //    if (RuntimeCache.Cache.Get(model.UserMobile).ToString() == model.Verification)
-                //    {
-                //        Result = "{\"DATA\":[{\"result\":\"true\"}]}";
-                //        RuntimeCache.Cache.Remove(model.UserMobile);
-                //    }
-                //    else
-                //    {
-                //        Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
-                //    }
-                //}
-                //else
-                //{
-                //    Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
-                //}
+                #region MyRegion
+                ////实例化Redis请求参数
+                //RedisModel.BaseModel redis = new RedisModel.BaseModel();
+
+                //redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
+                //redis.RedisPort = "6379";
+                //redis.RedisPassword = "Yuegang888888";
+                //redis.RedisKey = "AuthCode_" + model.UserMobile;
+                //redis.RedisValue = model.Verification;
+                //redis.LifeCycle = "60";
+                //redis.RedisFunction = "StringGet"; 
                 #endregion
 
-                //实例化Redis请求参数
-                BaseModel redis = new BaseModel();
-
-                redis.RedisIP = "127.0.0.1";
-                redis.RedisPort = "6379";
-                redis.RedisPassword = "yg50";
-                redis.RedisKey = "AuthCode_" + model.UserMobile;
-                redis.RedisValue = model.Verification;
-                redis.LifeCycle = "60";
-                redis.RedisFunction = "StringGet";
-
                 //获取Redis中的验证码
-                string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis);
+                string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(),model);
+                JObject json = (JObject)JsonConvert.DeserializeObject(GetRedisAuthCode);
 
-                if (GetRedisAuthCode == "null")
+                if (json["result"].ToString() == "2")
                 {
+
                     Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
                 }
-                else if (GetRedisAuthCode == model.Verification)
+                else if (json["result"].ToString() == "1")
                 {
                     Result = "{\"DATA\":[{\"result\":\"true\"}]}";
                 }
@@ -314,6 +299,95 @@ namespace AppWebApi.Controllers
 
             return Respend;
         }
+
+        ///// <summary>
+        ///// 验证验证码
+        ///// </summary>
+        ///// <param name="UserMobile">手机号</param>
+        ///// <param name="SMSCode">验证码</param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public HttpResponseMessage VerifyAuthCode(UserInfoModel model)
+        //{
+        //    string Result = string.Empty;
+
+        //    //URL请求所需参数
+        //    //string username = "UserCheck";
+
+        //    try
+        //    {
+        //        //string username = "DataSnapDebugTools";
+        //        string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        //        string password = ConfigurationManager.AppSettings[username];
+        //        string Url = ApiHelper.GetURL(username);
+
+        //        //请求中包含的固定参数
+        //        model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+        //        model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+        //        model.ADDRESS = HttpHelper.IPAddress();
+        //        model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+        //        model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+        //        model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+        //        model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
+        //        model.Verification = ParametersFilter.FilterSqlHtml(model.Verification, 6);
+
+        //        #region 判断缓存验证码
+        //        ////判断验证码是否正确
+        //        //if (RuntimeCache.Cache.Get(model.UserMobile) != null)
+        //        //{
+        //        //    if (RuntimeCache.Cache.Get(model.UserMobile).ToString() == model.Verification)
+        //        //    {
+        //        //        Result = "{\"DATA\":[{\"result\":\"true\"}]}";
+        //        //        RuntimeCache.Cache.Remove(model.UserMobile);
+        //        //    }
+        //        //    else
+        //        //    {
+        //        //        Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
+        //        //    }
+        //        //}
+        //        //else
+        //        //{
+        //        //    Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
+        //        //}
+        //        #endregion
+
+        //        //实例化Redis请求参数
+        //        RedisModel.BaseModel redis = new RedisModel.BaseModel();
+
+        //        redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
+        //        redis.RedisPort = "6379";
+        //        redis.RedisPassword = "Yuegang888888";
+        //        redis.RedisKey = "AuthCode_" + model.UserMobile;
+        //        redis.RedisValue = model.Verification;
+        //        redis.LifeCycle = "60";
+        //        redis.RedisFunction = "StringGet";
+
+        //        //获取Redis中的验证码
+        //        string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis);
+
+        //        if (GetRedisAuthCode == "null")
+        //        {
+        //            Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
+        //        }
+        //        else if (GetRedisAuthCode == model.Verification)
+        //        {
+        //            Result = "{\"DATA\":[{\"result\":\"true\"}]}";
+        //        }
+        //        else
+        //        {
+        //            Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LogHelper.Error(ex.ToString());
+        //    }
+
+        //    HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+        //    return Respend;
+        //}
 
         /// <summary>
         /// 完善用户信息

@@ -284,3 +284,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\zh-Hans\S
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\obj\Release\OperationPlatformApi.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\obj\Release\OperationPlatformApi.dll
 C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\obj\Release\OperationPlatformApi.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\OperationPlatformApi\bin\RedisModel.pdb

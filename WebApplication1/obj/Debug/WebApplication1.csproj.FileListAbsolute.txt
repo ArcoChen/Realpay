@@ -411,7 +411,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\System.Web.Web
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\System.Web.WebPages.dll
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\System.Web.WebPages.Razor.dll
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\WebGrease.dll
-C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\log4net.dll
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\StackExchange.Redis.dll
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\ReCommon.pdb
@@ -448,7 +447,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\Microsoft.Owin
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\log4net.xml
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\StackExchange.Redis.xml
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
@@ -476,3 +474,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\zh-Hans\Micros
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\obj\Debug\AppWebApi.dll
 C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\obj\Debug\AppWebApi.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\WebApplication1\bin\RedisModel.pdb

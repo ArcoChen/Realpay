@@ -268,6 +268,10 @@
       <Project>{c041ae61-9692-4389-bcd2-a27864d2cb60}</Project>
       <Name>ReCommon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RedisModel\RedisModel.csproj">
+      <Project>{f4e8cc02-b82f-4faf-ab2c-57f0b5ffa610}</Project>
+      <Name>RedisModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Redis\RedisHelper.csproj">
       <Project>{e7e7e77f-9fe0-431e-bda5-b55101cee855}</Project>
       <Name>RedisHelper</Name>

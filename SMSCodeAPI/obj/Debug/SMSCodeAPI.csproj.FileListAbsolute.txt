@@ -476,7 +476,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\SMSCodeAPI.dll.conf
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\SMSCodeAPI.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\SMSCodeAPI.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\Antlr3.Runtime.dll
-C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\CacheManager.Core.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\CacheManager.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\CacheManager.SystemRuntimeCaching.dll
@@ -514,7 +513,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\log4net.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\Aliyun.MNS.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\MonAgentListener.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\CacheManager.pdb
-C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\ReCommon.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\CacheManager.Core.xml
@@ -594,3 +592,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\zh-Hans\System.Web.
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\obj\Debug\SMSCodeAPI.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\obj\Debug\SMSCodeAPI.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\obj\Debug\SMSCodeAPI.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\RedisModel.pdb

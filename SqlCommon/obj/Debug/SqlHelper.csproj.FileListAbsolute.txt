@@ -77,14 +77,12 @@ C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\Microsoft.SqlS
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\ReCommon.dll
-C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\log4net.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\Microsoft.SqlServer.Dmf.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\ReCommon.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\log4net.xml
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\zh-CHS\Microsoft.SqlServer.Management.Sdk.Sfc.resources.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\zh-CHS\Microsoft.SqlServer.Dmf.resources.dll
@@ -92,3 +90,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\zh-CHS\Microso
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\obj\Debug\SqlHelper.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\obj\Debug\YgAdSqlHelper.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\obj\Debug\YgAdSqlHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\SqlCommon\bin\Debug\RedisModel.pdb

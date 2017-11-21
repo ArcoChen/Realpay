@@ -368,3 +368,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\RedisApi\bin\zh-Hans\System.Web.We
 C:\Users\Administrator\Desktop\RelievePay1023\RedisApi\obj\Debug\RedisAPI.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\RedisApi\obj\Debug\RedisAPI.dll
 C:\Users\Administrator\Desktop\RelievePay1023\RedisApi\obj\Debug\RedisAPI.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\RedisApi\bin\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay1023\RedisApi\bin\RedisModel.pdb
