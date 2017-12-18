@@ -47,5 +47,10 @@ namespace MerchantModel
         /// 是否举报
         /// </summary>
         public string ReportState { get; set; }
+
+        /// <summary>
+        /// 被举报门店地址
+        /// </summary>
+        public string ReportAddress { get; set; }
     }
 }

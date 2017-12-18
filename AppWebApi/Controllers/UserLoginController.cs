@@ -137,9 +137,9 @@ namespace AppWebApi.Controllers
                 //实例化Redis请求参数
                 RedisModel.BaseModel redis = new RedisModel.BaseModel();
 
-                redis.RedisIP = "127.0.0.1";
+                redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
                 redis.RedisPort = "6379";
-                redis.RedisPassword = "yg50";
+                redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
                 redis.LifeCycle = "60";

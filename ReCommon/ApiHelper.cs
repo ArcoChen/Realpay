@@ -10,6 +10,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using RedisModel;
 using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace ReCommon
 {
@@ -29,66 +30,86 @@ namespace ReCommon
             string Result = string.Empty;
             string str = userName + ":" + Password;
 
+            #region HttpWebRequest
+            //try
+            //{
+            //    #region HttpWebRequest
+            //    //CredentialCache 类存储多个 Internet 资源的凭据
+            //    CredentialCache mycache = new CredentialCache();
+            //    mycache.Add(new Uri(Url), "Basic", new NetworkCredential(userName, Password));
+
+            //    //用于客户端，拼接请求的HTTP报文并发送等（HttpWebRequest这个类非常强大，强大的地方在于它封装了几乎HTTP请求报文里需要用到的东西，以致于能够能够发送任意的HTTP请求并获得服务器响应(Response)信息）
+            //    HttpWebRequest Request = WebRequest.Create(new Uri(Url)) as HttpWebRequest;
+
+            //    Request.Credentials = mycache;
+            //    //string Code = Convert.ToBase64String(new ASCIIEncoding().GetBytes(str));
+            //    Request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(new ASCIIEncoding().GetBytes(str)));
+
+            //    //设置提交方式为post
+            //    Request.Method = "POST";
+
+            //    //设置连接类型
+            //    Request.ContentType = "application/x-www-form-urlencoded";
+
+            //    //请求参数
+            //    byte[] postData = Encoding.UTF8.GetBytes(PostData);
+            //    Request.ContentLength = postData.Length;
+
+            //    //用于将数据写入 Internet 资源的 Stream
+            //    Stream RequestStream = Request.GetRequestStream();
+            //    RequestStream.Write(postData, 0, postData.Length);
+            //    RequestStream.Close();
+
+            //    ////返回请求响应
+            //    using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
+            //    {
+            //        using (Stream receiveStream = Response.GetResponseStream())
+            //        {
+            //            StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
+            //            Result = Reader.ReadToEnd();
+            //        }
+            //    }
+
+            //    Request.Abort();
+            //    #endregion
+
+            //    Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
+
+            //    //截取json字符串
+            //    Result = Result.Remove(0, 12);
+            //    Result = Result.Remove(Result.Length - 3, 3);
+
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.Write(ex.Message);
+            //} 
+            #endregion
+
+            HttpContent httpContent = new StringContent(PostData);
+            HttpClient httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Basic " + Convert.ToBase64String(new ASCIIEncoding().GetBytes(str)));
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
             try
             {
-                #region HttpWebRequest
-                //CredentialCache 类存储多个 Internet 资源的凭据
-                CredentialCache mycache = new CredentialCache();
-                mycache.Add(new Uri(Url), "Basic", new NetworkCredential(userName, Password));
-
-                //用于客户端，拼接请求的HTTP报文并发送等（HttpWebRequest这个类非常强大，强大的地方在于它封装了几乎HTTP请求报文里需要用到的东西，以致于能够能够发送任意的HTTP请求并获得服务器响应(Response)信息）
-                HttpWebRequest Request = WebRequest.Create(new Uri(Url)) as HttpWebRequest;
-
-                Request.Credentials = mycache;
-                //string Code = Convert.ToBase64String(new ASCIIEncoding().GetBytes(str));
-                Request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(new ASCIIEncoding().GetBytes(str)));
-
-                //设置提交方式为post
-                Request.Method = "POST";
-
-                //设置连接类型
-                Request.ContentType = "application/x-www-form-urlencoded";
-
-                //请求参数
-                byte[] postData = Encoding.UTF8.GetBytes(PostData);
-                Request.ContentLength = postData.Length;
-
-                //用于将数据写入 Internet 资源的 Stream
-                Stream RequestStream = Request.GetRequestStream();
-                //StreamWriter myStreamWriter = new StreamWriter(RequestStream, Encoding.GetEncoding("gb2312"));
-                //myStreamWriter.Write(PostData);
-                //myStreamWriter.Close();
-                RequestStream.Write(postData, 0, postData.Length);
-                RequestStream.Close();
-
-                ////返回请求响应
-                using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
-                {
-                    using (Stream receiveStream = Response.GetResponseStream())
-                    {
-                        StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
-                        Result = Reader.ReadToEnd();
-                    }
-                }
-
-                Request.Abort();
-                #endregion
+                HttpResponseMessage response = httpClient.PostAsync(Url, httpContent).Result;
+                Result = response.Content.ReadAsStringAsync().Result;
 
                 Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
 
                 //截取json字符串
                 Result = Result.Remove(0, 12);
                 Result = Result.Remove(Result.Length - 3, 3);
-
+                response = null;
             }
             catch (Exception ex)
             {
-
                 Console.Write(ex.Message);
             }
-            //Result = Result.Replace("\\","");
-            //JObject json = (JObject)JsonConvert.DeserializeObject(Result);
-            //Result = json["result"].ToString();
+
+            httpClient.Dispose();
 
             return Result;
         }
@@ -103,69 +124,84 @@ namespace ReCommon
         {
             string Result = string.Empty;
             var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
             string Str = JsonConvert.SerializeObject(model, JSetting);
+
+            #region HttpWebRequest
+            //try
+            //{
+
+            //    //用于客户端，拼接请求的HTTP报文并发送等（HttpWebRequest这个类非常强大，强大的地方在于它封装了几乎HTTP请求报文里需要用到的东西，以致于能够能够发送任意的HTTP请求并获得服务器响应(Response)信息）
+            //    HttpWebRequest Request = WebRequest.Create(new Uri(Url)) as HttpWebRequest;
+
+            //    //设置提交方式为post
+            //    Request.Method = "POST";
+
+            //    //设置连接类型
+            //    Request.ContentType = "application/json";
+
+            //    //请求参数
+            //    byte[] postData = Encoding.UTF8.GetBytes(Str);
+            //    Request.ContentLength = postData.Length;
+
+            //    //用于将数据写入 Internet 资源的 Stream
+            //    Stream RequestStream = Request.GetRequestStream();
+            //    //StreamWriter myStreamWriter = new StreamWriter(RequestStream, Encoding.GetEncoding("gb2312"));
+            //    //myStreamWriter.Write(PostData);
+            //    //myStreamWriter.Close();
+            //    RequestStream.Write(postData, 0, postData.Length);
+            //    RequestStream.Close();
+
+            //    #region 返回请求
+            //    ////返回请求响应
+            //    //HttpWebResponse Response = (HttpWebResponse)Request.GetResponse();
+            //    //Stream receiveStream = Response.GetResponseStream();
+            //    //StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
+            //    //Result = Reader.ReadToEnd();
+            //    //Reader.Close();
+            //    //receiveStream.Close();
+            //    //Response.Close();
+            //    //Response = null;
+            //    //Request.Abort(); 
+            //    #endregion
+
+            //    ////返回请求响应
+            //    using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
+            //    {
+            //        using (Stream receiveStream = Response.GetResponseStream())
+            //        {
+            //            StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
+            //            Result = Reader.ReadToEnd();
+            //        }
+            //    }
+
+            //    Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
+
+            //    Request = null;
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Console.Write(ex.Message);
+            //} 
+            #endregion
+
+            HttpContent httpContent = new StringContent(Str);
+            HttpClient httpClient = new HttpClient();
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
             try
             {
-
-                //用于客户端，拼接请求的HTTP报文并发送等（HttpWebRequest这个类非常强大，强大的地方在于它封装了几乎HTTP请求报文里需要用到的东西，以致于能够能够发送任意的HTTP请求并获得服务器响应(Response)信息）
-                HttpWebRequest Request = WebRequest.Create(new Uri(Url)) as HttpWebRequest;
-
-                //设置提交方式为post
-                Request.Method = "POST";
-
-                //设置连接类型
-                Request.ContentType = "application/json";
-
-                //请求参数
-                byte[] postData = Encoding.UTF8.GetBytes(Str);
-                Request.ContentLength = postData.Length;
-
-                //用于将数据写入 Internet 资源的 Stream
-                Stream RequestStream = Request.GetRequestStream();
-                //StreamWriter myStreamWriter = new StreamWriter(RequestStream, Encoding.GetEncoding("gb2312"));
-                //myStreamWriter.Write(PostData);
-                //myStreamWriter.Close();
-                RequestStream.Write(postData, 0, postData.Length);
-                RequestStream.Close();
-
-                #region 返回请求
-                ////返回请求响应
-                //HttpWebResponse Response = (HttpWebResponse)Request.GetResponse();
-                //Stream receiveStream = Response.GetResponseStream();
-                //StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
-                //Result = Reader.ReadToEnd();
-                //Reader.Close();
-                //receiveStream.Close();
-                //Response.Close();
-                //Response = null;
-                //Request.Abort(); 
-                #endregion
-
-                ////返回请求响应
-                using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
-                {
-                    using (Stream receiveStream = Response.GetResponseStream())
-                    {
-                        StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
-                        Result = Reader.ReadToEnd();
-                    }
-                }
+                HttpResponseMessage response = httpClient.PostAsync(Url, httpContent).Result;
+                Result = response.Content.ReadAsStringAsync().Result;
 
                 Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
 
             }
             catch (Exception ex)
             {
-
                 Console.Write(ex.Message);
             }
-            //Result = Result.Replace("\\","");
-            //JObject json = (JObject)JsonConvert.DeserializeObject(Result);
-            //Result = json["result"].ToString();
-
-
+            httpClient.Dispose();
             return Result;
         }
         #endregion
@@ -178,9 +214,9 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetURL(string ClassName)
         {
-            //string Url = "http://120.78.49.234:8080/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
+           string Url = "http://120.78.49.234/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://192.168.1.51:7090/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
-            string Url = "http://192.168.1.175:8080/TServerMethods/Transaction/";
+           //string Url = "http://192.168.1.161:8080/TServerMethods/Transaction/";
             return Url;
         }
 
@@ -190,7 +226,7 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetAuthCodeURL()
         {
-            string Url = "http://120.78.49.234:8011/api/SMSCodeAPI/GetAuthCode";
+            string Url = "http://120.78.49.234/SMSCodeApi/api/SMSCodeAPI/GetAuthCode";
             return Url;
         }
 
@@ -200,7 +236,7 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetRedisURL(String FuncationName)
         {
-            string Url = "http://120.78.49.234:8012/api/RedisAPI/" + FuncationName;
+            string Url = "http://120.78.49.234/RedisApi/api/RedisAPI/" + FuncationName;
             return Url;
         }
         #endregion

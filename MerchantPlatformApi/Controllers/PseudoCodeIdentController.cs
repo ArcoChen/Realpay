@@ -22,7 +22,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> PseudoCodeTable(PseudoCodeIdentModel model)
+        public HttpResponseMessage PseudoCodeTable(PseudoCodeIdentModel model)
         {
             string Result = string.Empty;
 
@@ -50,7 +50,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ProductCodeInfo(PseudoCodeIdentModel model)
+        public HttpResponseMessage PseudoCodeInfo(PseudoCodeIdentModel model)
         {
             string Result = string.Empty;
 
@@ -97,7 +97,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {

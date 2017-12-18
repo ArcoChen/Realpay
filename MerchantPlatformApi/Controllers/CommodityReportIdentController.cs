@@ -25,7 +25,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> UndisposedReportTable(PseudoCodeIdentModel model)
+        public HttpResponseMessage UndisposedReportTable(PseudoCodeIdentModel model)
         {
             string Result = string.Empty;
 
@@ -44,6 +44,7 @@ namespace MerchantPlatformApi.Controllers
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
                 model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
 
                 //去除用户参数中包含的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
@@ -53,7 +54,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -71,7 +72,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> DisposedReportTable(CommodityReportIdentModel model)
+        public HttpResponseMessage DisposedReportTable(CommodityReportIdentModel model)
         {
             string Result = string.Empty;
 
@@ -90,6 +91,7 @@ namespace MerchantPlatformApi.Controllers
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
                 model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
 
                 //去除用户参数中包含的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
@@ -99,7 +101,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -117,8 +119,8 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> DisposedReport(CommodityReportIdentModel model)
-        {
+        public HttpResponseMessage DisposedReport(CommodityReportIdentModel model)
+         {
             string Result = string.Empty;
 
             try
@@ -138,17 +140,18 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
-                model.CommodityCode = ParametersFilter.FilterSqlHtml(model.CommodityCode, 100);
-                model.ReportState = ParametersFilter.FilterSqlHtml(model.ReportState, 1);
-                model.ReportProblem = ParametersFilter.FilterSqlHtml(model.ReportProblem, 500);
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+                //model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                //model.CommodityCode = ParametersFilter.FilterSqlHtml(model.CommodityCode, 100);
+                //model.ReportState = ParametersFilter.FilterSqlHtml(model.ReportState, 1);
+                //model.ReportProblem = ParametersFilter.FilterSqlHtml(model.ReportProblem, 500);
 
                 var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -166,7 +169,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> DisposedReportAudit(CommodityReportIdentModel model)
+        public HttpResponseMessage DisposedReportAudit(CommodityReportIdentModel model)
         {
             string Result = string.Empty;
 
@@ -197,7 +200,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {

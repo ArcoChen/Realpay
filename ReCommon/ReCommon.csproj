@@ -63,6 +63,7 @@
     <Compile Include="ApiHelper.cs" />
     <Compile Include="CharConversion.cs" />
     <Compile Include="CommonBarCode.cs" />
+    <Compile Include="EmailHelper.cs" />
     <Compile Include="FilteParameter.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="JsonTransfrom.cs" />

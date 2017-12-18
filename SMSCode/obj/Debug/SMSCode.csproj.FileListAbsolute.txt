@@ -17,3 +17,4 @@ C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\bin\Debug\SMSCode.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\bin\Debug\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\obj\Debug\SMSCode.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\obj\Debug\SMSCode.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\obj\Debug\SMSCode.csprojResolveAssemblyReference.cache

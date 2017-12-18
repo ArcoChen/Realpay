@@ -179,19 +179,23 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\CodeInfoController.cs" />
     <Compile Include="Controllers\CodeServeInfoController.cs" />
+    <Compile Include="Controllers\CommodityInfoController.cs" />
+    <Compile Include="Controllers\CommodityLogisticsInfoController.cs" />
     <Compile Include="Controllers\CommodityReportIdentController.cs" />
+    <Compile Include="Controllers\CommodityStockController.cs" />
     <Compile Include="Controllers\FaultToleranceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarketChannelController.cs" />
     <Compile Include="Controllers\MerchantAdvertisingManageController.cs" />
+    <Compile Include="Controllers\MerchantCheckController.cs" />
     <Compile Include="Controllers\MerchantInfoManageController.cs" />
-    <Compile Include="Controllers\MerchantInfoReturnController.cs" />
     <Compile Include="Controllers\MerchantRedPacketManageController.cs" />
     <Compile Include="Controllers\PartnerLogisticsController.cs" />
     <Compile Include="Controllers\PseudoCodeIdentController.cs" />
+    <Compile Include="Controllers\SoldCodeController.cs" />
     <Compile Include="Controllers\TerminalManageController.cs" />
-    <Compile Include="Controllers\UserCheckController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -50,5 +50,7 @@ namespace MerchantModel
         /// 头像路径
         /// </summary>
         public string UserAvatar { get; set; }
+
+        public string LoginIP { get; set; }
     }
 }

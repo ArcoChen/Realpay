@@ -22,6 +22,6 @@ namespace MerchantModel
 
         public string TERMINAL { get; set; }
 
-
+        public string PageNum { get; set; }
     }
 }

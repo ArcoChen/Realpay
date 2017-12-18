@@ -27,7 +27,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> HeadPortraitUpdate(UserInfoModel model)
+        public HttpResponseMessage HeadPortraitUpdate(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -55,7 +55,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -73,7 +73,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> UserEmailUpdate(UserInfoModel model)
+        public HttpResponseMessage UserEmailUpdate(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -101,7 +101,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -119,7 +119,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> UserMobileUpdate(UserInfoModel model)
+        public HttpResponseMessage UserMobileUpdate(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -147,7 +147,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -165,7 +165,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ModifyOldPasswd(UserInfoModel model)
+        public HttpResponseMessage ModifyOldPasswd(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -193,7 +193,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -211,7 +211,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> UserInfoIdentification(UserInfoModel model)
+        public HttpResponseMessage UserInfoIdentification(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -239,7 +239,7 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -259,7 +259,7 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> EnterpriseInfoUpdate(UserInfoModel model)
+        public HttpResponseMessage EnterpriseInfoUpdate(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -287,7 +287,53 @@ namespace MerchantPlatformApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  商家平台_开通支付（0 – 失败 1 –成功）
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage PaymentOpening(UserInfoModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //URL请求所需参数
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string password = ConfigurationManager.AppSettings[username];
+                string Url = ApiHelper.GetURL(username);
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -307,14 +353,14 @@ namespace MerchantPlatformApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> MobileProving(RedisModel.BaseModel model)
+        public HttpResponseMessage MobileProving(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
                 string password = ConfigurationManager.AppSettings[username];
                 string Url = ApiHelper.GetURL(username);
 
@@ -338,30 +384,62 @@ namespace MerchantPlatformApi.Controllers
 
                 JObject json = (JObject)JsonConvert.DeserializeObject(Result);
 
-                if (json["DATA"][0]["result"].ToString() == "1")
+                if (json["DATA"][0].ToString() == "1")
                 {
 
-                    #region 发送短信
-                    ////生成六位随机验证码
-                    //model.Verification = SMSCode.SMSCode.GetAuthCode(100000, 999999);
+                    string AuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
+                }
+            }
+            catch (Exception ex)
+            {
 
-                    //SMSCode.SMSCode AuthCode = new SMSCode.SMSCode();
+                LogHelper.Error(ex.ToString());
+            }
+            HttpResponseMessage Respond = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+            return Respond;
+        }
 
-                    ////发送短信
-                    //AuthCode.SendMessage(model.UserMobile, model.Verification);
+        /// <summary>
+        /// 验证手机是否注册（注册了发送验证码）
+        /// </summary>
+        /// <param name="UserMobile">手机号</param>
+        /// <returns>验证码</returns>
+        [HttpPost]
+        public HttpResponseMessage ProvingMobile(RedisModel.BaseModel model)
+        {
+            string Result = string.Empty;
 
-                    //if (RuntimeCache.Cache.Get(model.UserMobile) != null)
-                    //{
-                    //    RuntimeCache.Cache.Update(model.UserMobile, v => model.Verification);
-                    //}
-                    //else
-                    //{
-                    //    //缓存验证码
-                    //    RuntimeCache.Cache.Add(model.UserMobile, model.Verification);
-                    //} 
-                    #endregion
+            try
+            {
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string password = ConfigurationManager.AppSettings[username];
+                string Url = ApiHelper.GetURL(username);
 
-                    string AuthCode = await Task<string>.Run(() => ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model));
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除提交的数据中的不安全字符
+                model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
+
+                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+
+                JObject json = (JObject)JsonConvert.DeserializeObject(Result);
+
+                if (json["DATA"][0].ToString() == "0")
+                {
+
+                    string AuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
                 }
             }
             catch (Exception ex)
@@ -428,9 +506,9 @@ namespace MerchantPlatformApi.Controllers
                 //实例化Redis请求参数
                 RedisModel.BaseModel redis = new RedisModel.BaseModel();
 
-                redis.RedisIP = "127.0.0.1";
+                redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
                 redis.RedisPort = "6379";
-                redis.RedisPassword = "yg50";
+                redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
                 redis.LifeCycle = "60";
@@ -450,6 +528,197 @@ namespace MerchantPlatformApi.Controllers
                 else
                 {
                     Result = "{\"DATA\":[{\"result\":\"0\"}]}";
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+        #endregion
+
+        #region 信息返回
+        /// <summary>
+        ///  商家平台_基本信息返回
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage BasicInfoReturn(UserInfoModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //URL请求所需参数
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string password = ConfigurationManager.AppSettings[username];
+                string Url = ApiHelper.GetURL(username);
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+
+                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  商家平台_企业信息返回
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage MerchantInfoReturn(EnterPriseInfoModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //URL请求所需参数
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string password = ConfigurationManager.AppSettings[username];
+                string Url = ApiHelper.GetURL(username);
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+
+                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  商家平台_实名信息返回
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage AutonymInfoReturn(EnterPriseInfoModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //URL请求所需参数
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string password = ConfigurationManager.AppSettings[username];
+                string Url = ApiHelper.GetURL(username);
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+
+                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+        #endregion
+
+        #region 发送验证邮件
+        /// <summary>
+        ///  商家平台_基本信息返回
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage EmailSend(UserInfoModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //URL请求所需参数
+                string username = "MerchantPlatform";
+                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+                string password = ConfigurationManager.AppSettings[username];
+                string Url = ApiHelper.GetURL(username);
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.UserEmail = ParametersFilter.FilterSqlHtml(model.UserEmail, 50);
+                if (FilteParameter.CheckEmail(model.UserEmail))
+                {
+                    ReCommon.EmailHelper.MailSend("kf@zte-yd.com", "YUEgang888888", model.UserEmail);
+                    //返回结果
+                    Result = "{\"DATA\":[\"1\"]}";
+                }
+                else
+                {
+                    Result = "\"邮箱格式错误\"";
                 }
             }
             catch (Exception ex)
