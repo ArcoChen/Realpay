@@ -15,6 +15,15 @@ namespace OperationPlatformApi.Controllers
 {
     public class ActivityManageController : ApiController
     {
+        #region 配置参数
+        //string username = "DataSnapDebugTools";
+        static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        static string password = ConfigurationManager.AppSettings[username];
+        static string Url = ApiHelper.GetURL(username);
+
+        private JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }; 
+        #endregion
+
         /// <summary>
         /// 提交广告申请表
         /// </summary>
@@ -27,11 +36,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -54,8 +58,6 @@ namespace OperationPlatformApi.Controllers
                 //model.IndustryName = ParametersFilter.FilterSqlHtml(model.IndustryName, 10);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -85,11 +87,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -101,8 +98,6 @@ namespace OperationPlatformApi.Controllers
                 model.PushState = ParametersFilter.FilterSqlHtml(model.PushState, 1);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -131,27 +126,27 @@ namespace OperationPlatformApi.Controllers
         {
             string Result = string.Empty;
 
-            //string username = "DataSnapDebugTools";
-            string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-            string password = ConfigurationManager.AppSettings[username];
-            string Url = ApiHelper.GetURL(username);
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.DATA = ParametersFilter.FilterSqlHtml(model.DATA, 50);
 
-            //请求中包含的固定参数
-            model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-            model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
-            model.ADDRESS = HttpHelper.IPAddress();
-            model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-            model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-            model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
-            model.DATA = ParametersFilter.FilterSqlHtml(model.DATA, 50);
+                //序列化
+                string Str = JsonConvert.SerializeObject(model, JSetting);
 
-            //序列化
-            var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
-            string Str = JsonConvert.SerializeObject(model, JSetting);
-
-            //http请求
-            Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                //http请求
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
 
             //返回请求结果
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -170,39 +165,40 @@ namespace OperationPlatformApi.Controllers
         {
             string Result = string.Empty;
 
-            //string username = "DataSnapDebugTools";
-            string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-            string password = ConfigurationManager.AppSettings[username];
-            string Url = ApiHelper.GetURL(username);
 
-            //请求中包含的固定参数
-            model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-            model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
-            model.ADDRESS = HttpHelper.IPAddress();
-            model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-            model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-            model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
-            model.DATA = FilteParameter.FilteSQLStr(model.DATA);
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.DATA = FilteParameter.FilteSQLStr(model.DATA);
 
-            //去除参数中的特殊字符
-            //model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
-            //model.FilePosition = ParametersFilter.FilterSqlHtml(model.FilePosition, 50);
-            //model.LinkPosition = ParametersFilter.FilterSqlHtml(model.LinkPosition, 50);
-            //model.StartTime = ParametersFilter.FilterSqlHtml(model.StartTime, 50);
-            //model.PushNum = ParametersFilter.FilterSqlHtml(model.PushNum, 10);
-            //model.TollAmount = ParametersFilter.FilterSqlHtml(model.TollAmount, 10);
-            //model.ApplyTime = ParametersFilter.FilterSqlHtml(model.ApplyTime, 30);
-            //model.PushState = ParametersFilter.FilterSqlHtml(model.PushState, 1);
-            //model.PositionNumber = ParametersFilter.FilterSqlHtml(model.PositionNumber, 2);
-            //model.IndustryName = ParametersFilter.FilterSqlHtml(model.IndustryName, 10);
+                //去除参数中的特殊字符
+                //model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
+                //model.FilePosition = ParametersFilter.FilterSqlHtml(model.FilePosition, 50);
+                //model.LinkPosition = ParametersFilter.FilterSqlHtml(model.LinkPosition, 50);
+                //model.StartTime = ParametersFilter.FilterSqlHtml(model.StartTime, 50);
+                //model.PushNum = ParametersFilter.FilterSqlHtml(model.PushNum, 10);
+                //model.TollAmount = ParametersFilter.FilterSqlHtml(model.TollAmount, 10);
+                //model.ApplyTime = ParametersFilter.FilterSqlHtml(model.ApplyTime, 30);
+                //model.PushState = ParametersFilter.FilterSqlHtml(model.PushState, 1);
+                //model.PositionNumber = ParametersFilter.FilterSqlHtml(model.PositionNumber, 2);
+                //model.IndustryName = ParametersFilter.FilterSqlHtml(model.IndustryName, 10);
 
-            //序列化
-            var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+                //序列化
+                string Str = JsonConvert.SerializeObject(model, JSetting);
 
-            string Str = JsonConvert.SerializeObject(model, JSetting);
-
-            //http请求
-            Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                //http请求
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
 
             //返回请求结果
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };

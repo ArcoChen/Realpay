@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\bin\Release\MerchantModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\bin\Release\MerchantModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\obj\Release\MerchantModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\obj\Release\MerchantModel.pdb

@@ -345,7 +345,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\System.Web.WebPages.
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\System.Web.WebPages.dll
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\System.Web.WebPages.Razor.dll
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\WebGrease.dll
-C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\Aliyun.MNS.dll
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\CacheManager.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\ReCommon.pdb
@@ -420,3 +419,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\obj\Release\AppWebAPI.dl
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\obj\Release\AppWebAPI.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\RedisModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\aliyun-net-sdk-core.dll
+C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\bin\aliyun-net-sdk-dysmsapi.dll

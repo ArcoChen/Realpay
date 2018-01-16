@@ -1,0 +1,526 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-12-21 08:59:43,582
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Stream stream)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:00:18,558
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Stream stream)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 193
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:01:44,574
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentException: 参数无效。
+   在 System.Drawing.Image.FromStream(Stream stream, Boolean useEmbeddedColorManagement, Boolean validateImageData)
+   在 System.Drawing.Image.FromStream(Stream stream)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 192
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:04:18,674
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 206
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:16:44,617
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.IO.PathTooLongException: 指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符。
+   在 System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:16:56,494
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.IO.PathTooLongException: 指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符。
+   在 System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:23:49,042
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:27:48,570
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:27:59,606
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:31:06,479
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.FormatException: 输入的不是有效的 Base-64 字符串，因为它包含非 Base-64 字符、两个以上的填充字符，或者填充字符间包含非法字符。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:31:18,835
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.FormatException: 输入的不是有效的 Base-64 字符串，因为它包含非 Base-64 字符、两个以上的填充字符，或者填充字符间包含非法字符。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:32:27,448
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:33:26,846
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:34:00,200
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.FormatException: 输入的不是有效的 Base-64 字符串，因为它包含非 Base-64 字符、两个以上的填充字符，或者填充字符间包含非法字符。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:43:41,134
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:44:42,611
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:44:44,464
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:44:45,378
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:44:46,097
+线程：[12]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:44:46,898
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:47:35,501
+线程：[17]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:50:19,384
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 191
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:54:48,298
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 191
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:55:42,444
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 191
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 09:57:00,788
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 191
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 09:57:52,213
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 191
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 10:04:16,087
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 190
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 10:12:21,975
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+时间：2017-12-21 13:10:21,363
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 208
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+时间：2017-12-21 13:10:37,247
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay1023\ReCommon\CharConversion.cs:行号 208
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 434
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 15:11:55,924
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+时间：2017-12-21 15:12:59,640
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 16:16:19,768
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+时间：2017-12-21 16:16:44,998
+线程：[6]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: !. Path '[1][0]', line 1, position 58.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 424
+——————————
+时间：2017-12-21 16:18:36,593
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 16:22:39,515
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 16:25:08,896
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+时间：2017-12-21 16:26:24,294
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+时间：2017-12-21 16:27:01,412
+线程：[15]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+时间：2017-12-21 16:28:37,827
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————
+
+----------------------header--------------------------
+
+时间：2017-12-21 16:29:25,325
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__4.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 445
+——————————

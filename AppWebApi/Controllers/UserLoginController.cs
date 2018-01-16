@@ -17,6 +17,16 @@ namespace AppWebApi.Controllers
 {
     public class UserLoginController : ApiController
     {
+        #region 配置参数
+        //URL请求所需参数
+        static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        //string username = "DataSnapDebugTools";
+        static string password = ConfigurationManager.AppSettings[username];
+        static string Url = ApiHelper.GetURL(username);
+
+        JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        #endregion
+
         /// <summary>
         /// 账号密码登录
         /// </summary>
@@ -29,12 +39,6 @@ namespace AppWebApi.Controllers
 
             try
             {
-                // URL请求所需参数
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                //string username = "DataSnapDebugTools";
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -62,8 +66,6 @@ namespace AppWebApi.Controllers
                         //model.UserEmail = "";
                     }
                 }
-
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
@@ -93,12 +95,6 @@ namespace AppWebApi.Controllers
 
             try
             {
-                // URL请求所需参数
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                //string username = "DataSnapDebugTools";
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -154,8 +150,6 @@ namespace AppWebApi.Controllers
                 }
                 else if (GetRedisAuthCode == model.Verification)
                 {
-                    var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                     string Str = JsonConvert.SerializeObject(model, JSetting);
 
                     Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));

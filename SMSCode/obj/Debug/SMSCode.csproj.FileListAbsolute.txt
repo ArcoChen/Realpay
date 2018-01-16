@@ -18,3 +18,12 @@ C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\bin\Debug\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\obj\Debug\SMSCode.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\obj\Debug\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\obj\Debug\SMSCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\bin\Debug\aliyun-net-sdk-core.dll
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\bin\Debug\aliyun-net-sdk-dybaseapi.dll
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\bin\Debug\aliyun-net-sdk-dysmsapi.dll
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCode\bin\Debug\Aliyun.MNS.dll
+C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\bin\Debug\SMSCode.dll
+C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\bin\Debug\SMSCode.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.dll
+C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.csprojResolveAssemblyReference.cache

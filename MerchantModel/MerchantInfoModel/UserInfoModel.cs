@@ -47,10 +47,35 @@ namespace MerchantModel
         public string OldPassword { get; set; }
 
         /// <summary>
+        /// 用户密码
+        /// </summary>
+        public string UserPasswd { get; set; }
+
+        /// <summary>
         /// 头像路径
         /// </summary>
         public string UserAvatar { get; set; }
 
+        /// <summary>
+        /// 营业执照
+        /// </summary>
+        public string BusinessLicense { get; set; }
+
+        /// <summary>
+        /// 品牌Logo
+        /// </summary>
+        public string BrandLogo { get; set; }
+
+        /// <summary>
+        /// 登录ip
+        /// </summary>
         public string LoginIP { get; set; }
+
+        /// <summary>
+        /// 商品图片
+        /// </summary>
+        public string FilePath { get; set; }
+
+        public string Verification { get; set; }
     }
 }

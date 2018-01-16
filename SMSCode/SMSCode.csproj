@@ -30,8 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aliyun.MNS">
-      <HintPath>..\..\Aliyun.MNS.dll</HintPath>
+    <Reference Include="aliyun-net-sdk-core">
+      <HintPath>..\..\dysmsapi_demo_sdk__net\net\msg_sdk\dll\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-dybaseapi">
+      <HintPath>..\..\dysmsapi_demo_sdk__net\net\msg_sdk\dll\aliyun-net-sdk-dybaseapi.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-dysmsapi">
+      <HintPath>..\..\dysmsapi_demo_sdk__net\net\msg_sdk\dll\aliyun-net-sdk-dysmsapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Aliyun.MNS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dysmsapi_demo_sdk__net\net\msg_sdk\dll\Aliyun.MNS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

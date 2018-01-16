@@ -15,6 +15,15 @@ namespace OperationPlatformApi.Controllers
 {
     public class MerchantManageController : ApiController
     {
+        #region 配置参数
+        //string username = "DataSnapDebugTools";
+        static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        static string password = ConfigurationManager.AppSettings[username];
+        static string Url = ApiHelper.GetURL(username);
+
+        private JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        #endregion
+
         /// <summary>
         /// 修改账号状态
         /// </summary>
@@ -25,11 +34,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -43,8 +47,6 @@ namespace OperationPlatformApi.Controllers
                 //model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -74,11 +76,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -92,8 +89,6 @@ namespace OperationPlatformApi.Controllers
                 //model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -123,11 +118,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -141,8 +131,6 @@ namespace OperationPlatformApi.Controllers
                 //model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -172,11 +160,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -191,8 +174,6 @@ namespace OperationPlatformApi.Controllers
                 //model.PayState = ParametersFilter.FilterSqlHtml(model.PayState,1);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -222,11 +203,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -238,8 +214,6 @@ namespace OperationPlatformApi.Controllers
                 model.UserType = ParametersFilter.FilterSqlHtml(model.UserType, 1);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -269,11 +243,6 @@ namespace OperationPlatformApi.Controllers
 
             try
             {
-                //string username = "DataSnapDebugTools";
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -285,8 +254,6 @@ namespace OperationPlatformApi.Controllers
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求

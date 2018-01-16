@@ -15,34 +15,43 @@ namespace ReCommon
         /// <param name="addresser">发件人地址</param>
         /// <param name="addressPsswd">发件人密码</param>
         /// <param name="recipient">收件人地址</param>
-        public static void MailSend(string addresser, string addressPsswd, string recipient)
+        /// <param name="VerifyCode">随机验证码</param>
+        public static void MailSend(string addresser, string addressPsswd, string recipient, string VerifyCode)
         {
-            MailMessage ActivationMail = new MailMessage();
+            try
+            {
+                MailMessage msg = new MailMessage();
 
-            //服务端邮箱地址
-            ActivationMail.From = new MailAddress(addresser);
+                //服务端邮箱地址
+                msg.From = new MailAddress(addresser, "深圳凯华技术有限公司");
 
-            //收件人
-            ActivationMail.To.Add(new MailAddress(recipient));
+                //收件人
+                msg.To.Add(new MailAddress(recipient));
 
-            //邮件标题
-            ActivationMail.Subject = "激活邮件";
+                msg.SubjectEncoding = Encoding.UTF8;
+                msg.BodyEncoding = Encoding.UTF8;
 
-            //邮件正文
-            StringBuilder Content = new StringBuilder();
-            Content.Append("请单击一下连接完成激活");
-            Content.Append("<a href='http://baidu.com'>激活</a>");
-            ActivationMail.Body = Content.ToString();
-            ActivationMail.IsBodyHtml = false;
+                //邮件标题
+                msg.Subject = "深圳凯华技术有限公司";
 
-            SmtpClient Smtpclient = new SmtpClient("smtp.mxhichina.com", 465);
+                //邮件正文
+                StringBuilder Content = new StringBuilder();
+                //Content.Append("请进行邮箱验证来完成您注册的最后一步,点击下面的链接激活您的帐号：<br><a target='_blank' rel='nofollow' style='color: #0041D3; text-decoration: underline' href='http://www.****.net/regeditOK.aspx'>激活</a>");
+                Content.Append("请进行邮箱验证,点击下面的链接激活您的邮箱：<br><a target='_blank' rel='nofollow' style='color: #0041D3; text-decoration: underline' href=http://192.168.1.198:54152/v/" + VerifyCode + ">http://192.168.1.198:54152/v/" + VerifyCode + "</a>");
+                msg.Body = Content.ToString();
+                msg.IsBodyHtml = true;
 
-            //对发件人进行认证
-            Smtpclient.Credentials = new System.Net.NetworkCredential(addresser, addressPsswd);
-            Smtpclient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            Smtpclient.EnableSsl = true;
+                SmtpClient Smtpclient = new SmtpClient("smtp.mxhichina.com", 25);
 
-            Smtpclient.Send(ActivationMail);
+                //对发件人进行认证
+                Smtpclient.Credentials = new System.Net.NetworkCredential(addresser, addressPsswd);
+                object state = msg;
+                Smtpclient.SendAsync(msg, state);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

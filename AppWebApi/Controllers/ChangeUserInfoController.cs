@@ -19,6 +19,16 @@ namespace AppWebApi.Controllers
 {
     public class ChangeUserInfoController : ApiController
     {
+        #region 配置参数
+        //URL请求所需参数
+        static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        //string username = "DataSnapDebugTools";
+        static string password = ConfigurationManager.AppSettings[username];
+        static string Url = ApiHelper.GetURL(username);
+
+        JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        #endregion
+
         /// <summary>
         /// 修改手机号
         /// </summary>
@@ -31,12 +41,6 @@ namespace AppWebApi.Controllers
 
             try
             {
-                //URL请求所需参数
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                //string username = "DataSnapDebugTools";
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -128,7 +132,6 @@ namespace AppWebApi.Controllers
                 }
                 else if (json["result"].ToString() == "1")
                 {
-                    var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
                     string Str = JsonConvert.SerializeObject(model, JSetting);
 
@@ -161,37 +164,29 @@ namespace AppWebApi.Controllers
         {
             string Result = string.Empty;
 
-            //URL请求所需参数
-            string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-            //string username = "DataSnapDebugTools";
-            string password = ConfigurationManager.AppSettings[username];
-            string Url = ApiHelper.GetURL(username);
-
-            //请求中包含的固定参数
-            model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-            model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
-            model.ADDRESS = HttpHelper.IPAddress();
-            model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-            model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-            model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
-            if (model.TERMINAL == "2")
+            try
             {
-                model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                if (model.TERMINAL == "2")
+                {
+                    model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
+                }
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
             }
-
-            ////去除用户参数中包含的特殊字符
-            //Dictionary<string, string> data = new Dictionary<string, string>();
-            //data.Add("NewPhoneNumber", model.NewPhoneNumber);
-
-            ////请求数据拼接为JSON格式
-            //string Str = JsonTransfrom.SeaRequsetToJson(model.SOURCE, model.CREDENTIALS, HttpHelper.IPAddress(), model.TERMINAL, model.INDEX, model.METHOD, data);
-
-            var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
-            string Str = JsonConvert.SerializeObject(model, JSetting);
-
-            //返回结果
-            Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
 
@@ -210,12 +205,6 @@ namespace AppWebApi.Controllers
 
             try
             {
-                //URL请求所需参数
-                string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                //string username = "DataSnapDebugTools";
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);

@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\bin\Release\PayManageMentModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\bin\Release\PayManageMentModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\obj\Release\PayManageMentModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\obj\Release\PayManageMentModel.pdb

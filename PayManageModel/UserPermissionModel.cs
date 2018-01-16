@@ -37,5 +37,7 @@ namespace PayManageMentModel
         /// 删除（0-允许、1-不允许）
         /// </summary>
         public string DeleteOperation { get; set; }
+
+        public string DATA1 { get; set; }
     }
 }

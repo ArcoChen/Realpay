@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AdvertiseMentModel.cs" />
     <Compile Include="BaseModel.cs" />
+    <Compile Include="PaymentModel.cs" />
     <Compile Include="SearchIdentiticationModel\CodeServiceInfoModel.cs" />
     <Compile Include="MerchantInfoModel\EnterPriseInfoModel.cs" />
     <Compile Include="MerchantInfoModel\MarketModel.cs" />

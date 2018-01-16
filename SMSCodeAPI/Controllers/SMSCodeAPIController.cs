@@ -15,6 +15,8 @@ namespace SMSCodeAPI.Controllers
 {
     public class SMSCodeAPIController : ApiController
     {
+
+        private static JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
         /// <summary>
         /// 获取手机验证码
         /// </summary>
@@ -24,9 +26,6 @@ namespace SMSCodeAPI.Controllers
         public HttpResponseMessage GetAuthCode(BaseModel model)
         {
             string Result = string.Empty;
-            
-            //实例化发送短信类
-            SMSCode.SMSCode AuthCode = new SMSCode.SMSCode();
 
             try
             {
@@ -58,9 +57,8 @@ namespace SMSCodeAPI.Controllers
                 if ((ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis)) == "True")
                 {
                     //发送短信
-                    AuthCode.SendMessage(model.UserMobile, model.Verification);
+                    SMSCode.SMSCode.SendMessage(model.UserMobile, model.Verification);
 
-                    var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
                     Result = JsonConvert.SerializeObject(model, JSetting);
                 }
@@ -123,7 +121,7 @@ namespace SMSCodeAPI.Controllers
                 redis.RedisPort = "6379";
                 redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
-                redis.LifeCycle = "60";
+                redis.LifeCycle = "120";
                 redis.RedisFunction = "StringGet";
                 string CacheCode = (ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis));
                 if (CacheCode == model.Verification)

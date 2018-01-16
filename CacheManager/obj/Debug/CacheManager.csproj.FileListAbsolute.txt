@@ -34,3 +34,12 @@ C:\Users\Administrator\Desktop\RelievePay1023\CacheManager\bin\Debug\CacheManage
 C:\Users\Administrator\Desktop\RelievePay1023\CacheManager\obj\Debug\CacheManager.dll
 C:\Users\Administrator\Desktop\RelievePay1023\CacheManager\obj\Debug\CacheManager.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\CacheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\bin\Debug\CacheManager.dll
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\bin\Debug\CacheManager.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\bin\Debug\CacheManager.Core.dll
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\bin\Debug\CacheManager.SystemRuntimeCaching.dll
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\bin\Debug\CacheManager.Core.xml
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\bin\Debug\CacheManager.SystemRuntimeCaching.xml
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\obj\Debug\CacheManager.dll
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\obj\Debug\CacheManager.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache

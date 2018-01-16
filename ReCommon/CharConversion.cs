@@ -62,6 +62,22 @@ namespace ReCommon
         'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
         };
 
+        /// <summary>
+        /// 生成指定位数随机数
+        /// </summary>
+        /// <param name="Length"></param>
+        /// <returns></returns>
+        public static string GenerateRandomNumber(int Length)
+        {
+            System.Text.StringBuilder newRandom = new System.Text.StringBuilder(62);
+            Random rd = new Random();
+            for (int i = 0; i < Length; i++)
+            {
+                newRandom.Append(constant[rd.Next(62)]);
+            }
+            return newRandom.ToString();
+        }
+
         public static string GetNum(string str, int Num)
         {
             string Result = "";
@@ -187,31 +203,38 @@ namespace ReCommon
             ///截取图片字符串
             if (imgString != null)
             {
-                //string[] imgArray = imgString.Split(new char[] { ',' });
-                //string base64 = imgArray[1];
-                //string imgType = imgArray[0].Substring(12, 3);
+                imgString = imgString.Replace(" ", "+");
                 byte[] bytes = Convert.FromBase64String(imgString);
-                System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
-                System.Drawing.Bitmap b = (System.Drawing.Bitmap)System.Drawing.Image.FromStream(ms);
-
-                ///图片保存位置
-                //string filePath = "/Img/" + System.DateTime.Now.ToString("yyyyMMddHHmmss") + ".jpg";
-                filePath = imgPath + imgName + ".jpg";
-
-                ///保存图片
-                //b.Save(HttpContext.Current.Server.MapPath(filePath), System.Drawing.Imaging.ImageFormat.Jpeg);
-                if (File.Exists(filePath))
+                using (System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes))
                 {
-                    File.Delete(filePath);
-                    b.Save(HttpContext.Current.Server.MapPath(filePath), System.Drawing.Imaging.ImageFormat.Jpeg);
+                    using (Bitmap b = new Bitmap(ms))
+                    {
+                        ///图片保存位置
+                        filePath = imgPath + imgName + ".jpg";
+
+                        ///判断文件夹是否存在
+                        if(Directory.Exists(imgPath)==false)
+                        {
+                            Directory.CreateDirectory(HttpContext.Current.Server.MapPath(imgPath));
+                        }
+
+                        ///保存图片
+                        if (File.Exists(filePath))
+                        {
+                            File.Delete(filePath);
+                            b.Save(HttpContext.Current.Server.MapPath(filePath), System.Drawing.Imaging.ImageFormat.Jpeg);
+                        }
+                        else
+                        {
+                            b.Save(HttpContext.Current.Server.MapPath(filePath), System.Drawing.Imaging.ImageFormat.Jpeg);
+                        }
+                    }
                 }
-                else
-                {
-                    b.Save(HttpContext.Current.Server.MapPath(filePath), System.Drawing.Imaging.ImageFormat.Jpeg);
-                }
-                ms.Close();
 
             }
+
+            filePath = filePath.Replace("~", "");
+
             return filePath;
         }
 

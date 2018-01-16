@@ -6,4 +6,8 @@ C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\bin\Debug\RedisModel.dl
 C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\bin\Debug\RedisModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Debug\RedisModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Debug\RedisModel.pdb
-C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Debug\RedisModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\bin\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\bin\Debug\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\obj\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\obj\Debug\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\obj\Debug\RedisModel.csprojResolveAssemblyReference.cache

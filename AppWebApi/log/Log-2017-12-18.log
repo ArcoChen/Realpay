@@ -1,0 +1,10 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-12-18 16:16:04,332
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController.<AccountProving>d__0.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 61
+——————————

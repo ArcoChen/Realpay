@@ -1,0 +1,15 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-12-22 09:50:33,997
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__5.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 392
+——————————

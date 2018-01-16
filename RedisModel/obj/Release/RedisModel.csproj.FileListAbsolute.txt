@@ -7,3 +7,8 @@ C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\bin\Release\RedisModel.
 C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Release\RedisModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Release\RedisModel.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\RedisModel\obj\Release\RedisModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\bin\Release\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\bin\Release\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\obj\Release\RedisModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\obj\Release\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\RedisModel\obj\Release\RedisModel.pdb

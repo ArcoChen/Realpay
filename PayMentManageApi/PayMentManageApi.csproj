@@ -178,6 +178,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MerchantSettlementManageController.cs" />
+    <Compile Include="Controllers\PayHomeController.cs" />
     <Compile Include="Controllers\SystemMaintainManageController.cs" />
     <Compile Include="Controllers\UserAccountManageController.cs" />
     <Compile Include="Controllers\UserDealtManageController.cs" />
@@ -218,6 +219,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

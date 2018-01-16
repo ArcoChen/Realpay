@@ -110,7 +110,6 @@ namespace ReCommon
             }
 
             httpClient.Dispose();
-
             return Result;
         }
 
@@ -194,7 +193,7 @@ namespace ReCommon
                 HttpResponseMessage response = httpClient.PostAsync(Url, httpContent).Result;
                 Result = response.Content.ReadAsStringAsync().Result;
 
-                Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
+                //Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
 
             }
             catch (Exception ex)
@@ -214,9 +213,9 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetURL(string ClassName)
         {
-           string Url = "http://120.78.49.234/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
-            //string Url = "http://192.168.1.51:7090/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
-           //string Url = "http://192.168.1.161:8080/TServerMethods/Transaction/";
+            string Url = "http://120.78.49.234/MerchantPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = "http://192.168.1.51:8010/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = "http://192.168.1.184:8080/TServerMethods/Transaction/";
             return Url;
         }
 
@@ -238,6 +237,35 @@ namespace ReCommon
         {
             string Url = "http://120.78.49.234/RedisApi/api/RedisAPI/" + FuncationName;
             return Url;
+        }
+        #endregion
+
+        #region json转换
+        /// <summary>
+        /// DATA转json字符串
+        /// </summary>
+        /// <param name="DATA"></param>
+        /// <returns></returns>
+        public static string DATAToJson(string DATA)
+        {
+            JArray json = JsonConvert.DeserializeObject(DATA) as JArray;
+
+            StringBuilder jsonData = new StringBuilder();
+            jsonData.Append("{");
+            for(int i =0;i<json[0].Count();i++)
+            {
+                if(i<json[0].Count()-1)
+                {
+                    jsonData.Append("\"" + json[0][i].ToString() + "\":\"" + json[1][i].ToString() + "\",");
+                }
+                else
+                {
+                    jsonData.Append("\"" + json[0][i].ToString() + "\":\"" + json[1][i].ToString() + "\"");
+                }
+            }
+            jsonData.Append("}");
+
+            return jsonData.ToString();
         }
         #endregion
     }

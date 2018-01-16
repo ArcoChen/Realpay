@@ -48,5 +48,7 @@ namespace PayManageMentModel
         public string EndTime { get; set; }
 
         public string PageNum { get; set; }
+
+        public string Days { get; set; }
     }
 }

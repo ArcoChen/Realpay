@@ -188,13 +188,12 @@
     <Compile Include="Controllers\FaultToleranceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarketChannelController.cs" />
-    <Compile Include="Controllers\MerchantAdvertisingManageController.cs" />
+    <Compile Include="Controllers\MerchantAdvertisingController.cs" />
     <Compile Include="Controllers\MerchantCheckController.cs" />
     <Compile Include="Controllers\MerchantInfoManageController.cs" />
-    <Compile Include="Controllers\MerchantRedPacketManageController.cs" />
-    <Compile Include="Controllers\PartnerLogisticsController.cs" />
+    <Compile Include="Controllers\MerchantPaymentController.cs" />
+    <Compile Include="Controllers\MerchantRedPacketController.cs" />
     <Compile Include="Controllers\PseudoCodeIdentController.cs" />
-    <Compile Include="Controllers\SoldCodeController.cs" />
     <Compile Include="Controllers\TerminalManageController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -233,6 +232,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

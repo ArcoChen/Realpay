@@ -277,7 +277,6 @@
     <Compile Include="Controllers\UserCheckController.cs" />
     <Compile Include="Controllers\UserLoginController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="Controllers\WalletInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -422,6 +421,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Avatar\" />
     <Folder Include="UserAvatar\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,9 @@
 C:\Users\Administrator\Desktop\RelievePay1023\PayManageModel\bin\Debug\PayManageMentModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\PayManageModel\bin\Debug\PayManageMentModel.pdb
-C:\Users\Administrator\Desktop\RelievePay1023\PayManageModel\obj\Debug\PayManageMentModel.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\PayManageModel\obj\Debug\PayManageMentModel.dll
 C:\Users\Administrator\Desktop\RelievePay1023\PayManageModel\obj\Debug\PayManageMentModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\bin\Debug\PayManageMentModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\bin\Debug\PayManageMentModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\obj\Debug\PayManageMentModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\obj\Debug\PayManageMentModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\obj\Debug\PayManageMentModel.csprojResolveAssemblyReference.cache

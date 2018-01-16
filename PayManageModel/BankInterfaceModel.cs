@@ -62,5 +62,9 @@ namespace PayManageMentModel
         /// 编辑时间
         /// </summary>
         public string RegisterTime { get; set; }
+
+        public string PageNum { get; set; }
+
+        public string UserAccount { get; set; }
     }
 }

@@ -15,6 +15,14 @@ namespace PayMentManageApi.Controllers
 {
     public class UserAccountManageController : ApiController
     {
+        #region 配置参数
+        //static string username = "DataSnapDebugTools";
+        static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        static string password = ConfigurationManager.AppSettings[username];
+        static string Url = ApiHelper.GetURL(username);
+
+        JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        #endregion
 
         /// <summary>
         /// 支付管理平台_用户列表查询
@@ -28,11 +36,6 @@ namespace PayMentManageApi.Controllers
 
             try
             {
-                string username = "DataSnapDebugTools";
-                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -47,10 +50,9 @@ namespace PayMentManageApi.Controllers
                 model.StartTime = ParametersFilter.FilterSqlHtml(model.StartTime, 50);
                 model.EndTime = ParametersFilter.FilterSqlHtml(model.EndTime, 50);
                 model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 5);
+                model.UserState = ParametersFilter.FilterSqlHtml(model.UserState, 1);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -80,11 +82,6 @@ namespace PayMentManageApi.Controllers
 
             try
             {
-                string username = "DataSnapDebugTools";
-                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -97,8 +94,6 @@ namespace PayMentManageApi.Controllers
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -128,11 +123,6 @@ namespace PayMentManageApi.Controllers
 
             try
             {
-                string username = "DataSnapDebugTools";
-                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -145,8 +135,6 @@ namespace PayMentManageApi.Controllers
                 ////去除参数中的特殊字符
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -176,11 +164,6 @@ namespace PayMentManageApi.Controllers
 
             try
             {
-                string username = "DataSnapDebugTools";
-                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -193,8 +176,6 @@ namespace PayMentManageApi.Controllers
                 ////去除参数中的特殊字符
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -224,11 +205,6 @@ namespace PayMentManageApi.Controllers
 
             try
             {
-                string username = "DataSnapDebugTools";
-                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -245,8 +221,6 @@ namespace PayMentManageApi.Controllers
                 model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 5);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
@@ -276,11 +250,6 @@ namespace PayMentManageApi.Controllers
 
             try
             {
-                string username = "DataSnapDebugTools";
-                //string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
-                string password = ConfigurationManager.AppSettings[username];
-                string Url = ApiHelper.GetURL(username);
-
                 //请求中包含的固定参数
                 model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
                 model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
@@ -297,8 +266,6 @@ namespace PayMentManageApi.Controllers
                 model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 5);
 
                 //序列化
-                var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求

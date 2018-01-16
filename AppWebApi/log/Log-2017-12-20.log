@@ -1,0 +1,48 @@
+﻿
+----------------------header--------------------------
+
+时间：2017-12-20 17:23:22,532
+线程：[14]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: m. Path '', line 0, position 0.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 AppWebApi.Controllers.UserCheckController.<AccountProving>d__0.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 59
+——————————
+时间：2017-12-20 17:23:31,817
+线程：[8]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: m. Path '', line 0, position 0.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 AppWebApi.Controllers.UserCheckController.<AccountProving>d__0.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 59
+——————————
+时间：2017-12-20 17:23:48,390
+线程：[8]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: m. Path '', line 0, position 0.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 AppWebApi.Controllers.UserCheckController.<AccountProving>d__0.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay1023\AppWebApi\Controllers\UserCheckController.cs:行号 59
+——————————

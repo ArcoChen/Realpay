@@ -87,5 +87,7 @@ namespace MerchantModel
         /// 旧密码
         /// </summary>
         public string OldPasswd { get; set; }
+
+        public string UpdateType { get; set; }
     }
 }

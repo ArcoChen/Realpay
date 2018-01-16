@@ -511,7 +511,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\System.Web.WebPages
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\System.Web.WebPages.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\System.Web.WebPages.Razor.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\WebGrease.dll
-C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\Aliyun.MNS.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\MonAgentListener.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\CacheManager.pdb
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\ReCommon.pdb
@@ -594,3 +593,5 @@ C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\zh-Hans\System.Web.
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\obj\Release\SMSCodeAPI.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\obj\Release\SMSCodeAPI.dll
 C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\obj\Release\SMSCodeAPI.pdb
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\aliyun-net-sdk-core.dll
+C:\Users\Administrator\Desktop\RelievePay1023\SMSCodeAPI\bin\aliyun-net-sdk-dysmsapi.dll
