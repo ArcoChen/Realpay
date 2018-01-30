@@ -579,9 +579,6 @@ C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\AppWebAPI.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\AppWebAPI.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\Antlr3.Runtime.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\AppModel.dll
-C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\CacheManager.Core.dll
-C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\CacheManager.dll
-C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\CacheManager.SystemRuntimeCaching.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\EntityFramework.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\EntityFramework.SqlServer.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\log4net.dll
@@ -631,13 +628,10 @@ C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\System.Web.WebPages.
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\WebGrease.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\aliyun-net-sdk-core.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\aliyun-net-sdk-dysmsapi.dll
-C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\CacheManager.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\ReCommon.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\RedisModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\SMSCode.pdb
-C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\CacheManager.Core.xml
-C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\CacheManager.SystemRuntimeCaching.xml
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\log4net.xml
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -704,3 +698,5 @@ C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\zh-Hans\System.Web.H
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\obj\Debug\AppWebApi.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\obj\Debug\AppWebAPI.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\obj\Debug\AppWebAPI.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\FileStreamHelper.dll
+C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\bin\FileStreamHelper.pdb

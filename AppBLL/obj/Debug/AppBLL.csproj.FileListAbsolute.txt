@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\AppBLL.dll
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\AppBLL.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\ReCommon.dll
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\RedisModel.dll
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\log4net.dll
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\ReCommon.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\RedisModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\bin\Debug\log4net.xml
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\obj\Debug\AppBLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\obj\Debug\AppBLL.dll
+C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\obj\Debug\AppBLL.pdb

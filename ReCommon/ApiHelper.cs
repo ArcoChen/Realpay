@@ -87,8 +87,10 @@ namespace ReCommon
             //} 
             #endregion
 
+            #region HttpClient
             HttpContent httpContent = new StringContent(PostData);
             HttpClient httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0");
             httpClient.DefaultRequestHeaders.Add("Authorization", "Basic " + Convert.ToBase64String(new ASCIIEncoding().GetBytes(str)));
             httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
@@ -110,6 +112,7 @@ namespace ReCommon
             }
 
             httpClient.Dispose();
+            #endregion
             return Result;
         }
 
@@ -186,6 +189,7 @@ namespace ReCommon
 
             HttpContent httpContent = new StringContent(Str);
             HttpClient httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0");
             httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
             try
@@ -213,9 +217,13 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetURL(string ClassName)
         {
-            string Url = "http://120.78.49.234/MerchantPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = "http://119.23.35.37/App/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = "http://172.18.5.250/OperatingPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
+            string Url = "http://172.18.5.250/MerchantPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = "http://172.18.5.250/PayManagePlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://192.168.1.51:8010/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
-            //string Url = "http://192.168.1.184:8080/TServerMethods/Transaction/";
+            //string Url = "http://192.168.1.167:8080/TServerMethods/Transaction/";
+
             return Url;
         }
 
@@ -225,7 +233,8 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetAuthCodeURL()
         {
-            string Url = "http://120.78.49.234/SMSCodeApi/api/SMSCodeAPI/GetAuthCode";
+            //string Url = "http://120.78.49.234/SMSCodeApi/api/SMSCodeAPI/GetAuthCode";
+            string Url = "http://172.18.5.247/SMSCodeApi/api/SMSCodeAPI/GetAuthCode";
             return Url;
         }
 
@@ -235,7 +244,8 @@ namespace ReCommon
         /// <returns></returns>
         public static string GetRedisURL(String FuncationName)
         {
-            string Url = "http://120.78.49.234/RedisApi/api/RedisAPI/" + FuncationName;
+            //string Url = "http://120.78.49.234/RedisApi/api/RedisAPI/" + FuncationName;
+            string Url = "http://172.18.5.247/RedisApi/api/RedisAPI/" + FuncationName;
             return Url;
         }
         #endregion
@@ -252,9 +262,9 @@ namespace ReCommon
 
             StringBuilder jsonData = new StringBuilder();
             jsonData.Append("{");
-            for(int i =0;i<json[0].Count();i++)
+            for (int i = 0; i < json[0].Count(); i++)
             {
-                if(i<json[0].Count()-1)
+                if (i < json[0].Count() - 1)
                 {
                     jsonData.Append("\"" + json[0][i].ToString() + "\":\"" + json[1][i].ToString() + "\",");
                 }
@@ -267,6 +277,45 @@ namespace ReCommon
 
             return jsonData.ToString();
         }
+
+        /// <summary>
+        /// 获取DATA中指定的键值对，并返回为字典
+        /// </summary>
+        /// <param name="strArray">指定key数组</param>
+        /// <param name="jsonData">json数据</param>
+        /// <param name="OtherData">DATA外数据</param>
+        /// <returns>dic字典</returns>
+        public static Dictionary<string,string> SpecificData(string[] strArray, string jsonData)
+        {
+            ///解析DATA字符串
+            JObject json = JObject.Parse(jsonData);
+
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+
+            ///遍历strArray，循环加入键值对
+            for (int i = 0; i < strArray.Length; i++)
+            {
+                dic.Add(strArray[i], json[strArray[i]].ToString());
+            }
+            return dic;
+
+            
+            
+        }
+
+        /// <summary>
+        /// 字典转为字符串
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dic"></param>
+        /// <returns></returns>
+        public static string DictionaryToStr<T>(Dictionary<T,T> dic)
+        {
+            ///反序列化为json字符串
+            string jsonStr = JsonConvert.SerializeObject(dic);
+            return jsonStr;
+        }
         #endregion
+
     }
 }

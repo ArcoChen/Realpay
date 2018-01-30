@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\bin\Debug\FileStreamHelper.dll
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\bin\Debug\FileStreamHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\obj\Debug\FileStreamHelper.dll
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\obj\Debug\FileStreamHelper.pdb

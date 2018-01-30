@@ -32,7 +32,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage>  GetBusinessInfo(UserInfoModel model)
+        public HttpResponseMessage  GetBusinessInfo(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -52,7 +52,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -70,7 +70,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public  async Task<HttpResponseMessage> SubmitPayment(UserInfoModel model)
+        public  HttpResponseMessage SubmitPayment(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -92,7 +92,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {

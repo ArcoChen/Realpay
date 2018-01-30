@@ -12,8 +12,6 @@ using Newtonsoft.Json;
 using System.Web;
 using Newtonsoft.Json.Linq;
 using System.Security.Cryptography;
-using CacheManager.Core;
-using CacheManager;
 using System.Threading.Tasks;
 using RedisModel;
 
@@ -37,7 +35,7 @@ namespace AppWebApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> AccountProving(RedisModel.BaseModel model)
+        public HttpResponseMessage AccountProving(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -62,7 +60,7 @@ namespace AppWebApi.Controllers
 
                 if (json["DATA"][0]["result"].ToString() == "false")
                 {
-                    string AuthCode = await Task<string>.Run(() => ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model));
+                    string AuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
                 }
             }
             catch (Exception ex)
@@ -80,7 +78,7 @@ namespace AppWebApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ProvingAccount(RedisModel.BaseModel model)
+        public HttpResponseMessage ProvingAccount(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -105,28 +103,7 @@ namespace AppWebApi.Controllers
 
                 if (json["DATA"][0]["result"].ToString() == "true")
                 {
-
-                    #region 发送短信
-                    ////生成六位随机验证码
-                    //model.Verification = SMSCode.SMSCode.GetAuthCode(100000, 999999);
-
-                    //SMSCode.SMSCode AuthCode = new SMSCode.SMSCode();
-
-                    ////发送短信
-                    //AuthCode.SendMessage(model.UserMobile, model.Verification);
-
-                    //if (RuntimeCache.Cache.Get(model.UserMobile) != null)
-                    //{
-                    //    RuntimeCache.Cache.Update(model.UserMobile, v => model.Verification);
-                    //}
-                    //else
-                    //{
-                    //    //缓存验证码
-                    //    RuntimeCache.Cache.Add(model.UserMobile, model.Verification);
-                    //} 
-                    #endregion
-
-                    string AuthCode = await Task<string>.Run(() => ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model));
+                    string AuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
                 }
             }
             catch (Exception ex)
@@ -144,7 +121,7 @@ namespace AppWebApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> GetAuthCode(RedisModel.BaseModel model)
+        public HttpResponseMessage GetAuthCode(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -164,7 +141,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //请求验证码
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model));
+                Result = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
             }
             catch (Exception ex)
             {
@@ -211,7 +188,7 @@ namespace AppWebApi.Controllers
                 redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
-                redis.LifeCycle = "60";
+                redis.LifeCycle = "120";
                 redis.RedisFunction = "StringGet";
 
                 //获取Redis中的验证码
@@ -335,7 +312,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> UserInfo(UserInfoModel model)
+        public HttpResponseMessage UserInfo(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -354,7 +331,7 @@ namespace AppWebApi.Controllers
                 string datatojson = ApiHelper.DATAToJson(model.DATA);
 
                 string ImgName = JObject.Parse(datatojson)["UserAccount"].ToString();
-
+                
                 //URL编码
                 model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
 
@@ -366,7 +343,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
 
                 ////解析返回结果
                 JObject jsons = (JObject)JsonConvert.DeserializeObject(Result);
@@ -392,7 +369,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> PaymentPassword(UserInfoModel model)
+        public HttpResponseMessage PaymentPassword(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -415,7 +392,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -434,7 +411,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ForgetPasswd(UserInfoModel model)
+        public HttpResponseMessage ForgetPasswd(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -456,7 +433,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -475,7 +452,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ModifyPasswd(ProductInfoModel model)
+        public HttpResponseMessage ModifyPasswd(ProductInfoModel model)
         {
 
             string Result = string.Empty;
@@ -497,7 +474,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
 
             }
             catch (Exception ex)
@@ -518,7 +495,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> PasswdProving(UserInfoModel model)
+        public HttpResponseMessage PasswdProving(UserInfoModel model)
         {
 
             string Result = string.Empty;
@@ -539,7 +516,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
 
             }
             catch (Exception ex)

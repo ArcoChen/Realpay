@@ -30,6 +30,6 @@ C:\Users\Administrator\Desktop\RelievePay1023\AppModel\obj\Debug\AppModel.csproj
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\bin\Debug\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\bin\Debug\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Administrator\Desktop\RelievePay0108\AppModel\obj\Debug\AppModel.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\obj\Debug\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\obj\Debug\AppModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\AppModel\obj\Debug\AppModel.csprojResolveAssemblyReference.cache

@@ -214,6 +214,7 @@ namespace PayMentManageApi.Controllers
 
                 ////去除参数中的特殊字符
                 model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+                model.DATA1 = ParametersFilter.StripSQLInjection(model.DATA1);
 
                 //序列化
                 string Str = JsonConvert.SerializeObject(model, JSetting);

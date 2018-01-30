@@ -31,7 +31,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> TipReceivePacket(ProductInfoModel model)
+        public HttpResponseMessage TipReceivePacket(ProductInfoModel model)
         {
             string Result = string.Empty;
 
@@ -51,7 +51,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -69,7 +69,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> PacketRecord(RedPacketModel model)
+        public HttpResponseMessage PacketRecord(RedPacketModel model)
         {
             string Result = string.Empty;
 
@@ -91,7 +91,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {

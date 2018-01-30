@@ -128,7 +128,7 @@ namespace MerchantPlatformApi.Controllers
 
                 string imgString = model.FilePath.Split(new char[] { ',' })[1];
 
-                model.FilePath = CharConversion.SaveImg(imgString, model.UserAccount, "~/img/");
+                model.FilePath = CharConversion.SaveImg(imgString, ReDateTime.GetTimeStamp(), "~/img/");
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
 
                 string Str = JsonConvert.SerializeObject(model, JSetting);

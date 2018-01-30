@@ -1,0 +1,81 @@
+﻿
+----------------------header--------------------------
+
+时间：2018-01-23 12:10:30,769
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.TypeInitializationException: “AppWebApi.Controllers.UserCheckController”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController..cctor() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 26
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 AppWebApi.Controllers.UserCheckController.<>c__DisplayClass8_0.<UserInfo>b__0() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__8.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+——————————
+时间：2018-01-23 12:10:35,816
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.TypeInitializationException: “AppWebApi.Controllers.UserCheckController”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController..cctor() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 26
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 AppWebApi.Controllers.UserCheckController.<>c__DisplayClass8_0.<UserInfo>b__0() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__8.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+——————————
+时间：2018-01-23 12:10:48,407
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.TypeInitializationException: “AppWebApi.Controllers.UserCheckController”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController..cctor() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 26
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 AppWebApi.Controllers.UserCheckController.<>c__DisplayClass8_0.<UserInfo>b__0() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__8.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+——————————
+时间：2018-01-23 12:11:21,958
+线程：[5]
+类型：ERROR
+标题：Error
+内容：System.TypeInitializationException: “AppWebApi.Controllers.UserCheckController”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController..cctor() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 26
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 AppWebApi.Controllers.UserCheckController.<>c__DisplayClass8_0.<UserInfo>b__0() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__8.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+——————————
+
+----------------------header--------------------------
+
+时间：2018-01-23 12:12:43,026
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.TypeInitializationException: “AppWebApi.Controllers.UserCheckController”的类型初始值设定项引发异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController..cctor() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 26
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 AppWebApi.Controllers.UserCheckController.<>c__DisplayClass8_0.<UserInfo>b__0() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+   在 System.Threading.Tasks.Task`1.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 AppWebApi.Controllers.UserCheckController.<UserInfo>d__8.MoveNext() 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 369
+——————————

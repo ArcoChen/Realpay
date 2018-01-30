@@ -141,7 +141,7 @@ namespace MerchantPlatformApi.Controllers
                 redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
-                redis.LifeCycle = "60";
+                redis.LifeCycle = "120";
                 redis.RedisFunction = "StringGet";
 
                 //获取Redis中的验证码
@@ -149,7 +149,7 @@ namespace MerchantPlatformApi.Controllers
 
                 if (GetRedisAuthCode == "null")
                 {
-                    Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
+                    Result = "{\"DATA\":{\"result\":\"2\"}}";
                 }
                 else if (GetRedisAuthCode == model.Verification)
                 {
@@ -159,7 +159,7 @@ namespace MerchantPlatformApi.Controllers
                 }
                 else
                 {
-                    Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
+                    Result = "{\"DATA\":{\"result\":\"0\"}}";
                 }
 
             }

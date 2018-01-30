@@ -18,8 +18,8 @@ namespace MerchantPlatformApi.Controllers
     {
         #region 配置参数
         //URL请求所需参数
-        //static string username = "MerchantPlatform";
-        static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+        static string username = "MerchantPlatform";
+        //static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         static string password = ConfigurationManager.AppSettings[username];
         static string Url = ApiHelper.GetURL(username);
 

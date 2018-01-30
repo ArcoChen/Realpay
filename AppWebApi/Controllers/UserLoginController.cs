@@ -10,7 +10,6 @@ using System.Configuration;
 using Newtonsoft.Json;
 using System.Text;
 using System.Web;
-using CacheManager;
 using System.Threading.Tasks;
 
 namespace AppWebApi.Controllers
@@ -33,7 +32,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> UserLogin(UserInfoModel model)
+        public HttpResponseMessage UserLogin(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -70,7 +69,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -89,7 +88,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> MobileLogin(UserInfoModel model)
+        public HttpResponseMessage MobileLogin(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -152,7 +151,7 @@ namespace AppWebApi.Controllers
                 {
                     string Str = JsonConvert.SerializeObject(model, JSetting);
 
-                    Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                    Result = ApiHelper.HttpRequest(username, password, Url, Str);
                 }
                 else
                 {

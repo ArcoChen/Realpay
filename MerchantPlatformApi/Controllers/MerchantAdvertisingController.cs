@@ -51,7 +51,7 @@ namespace MerchantPlatformApi.Controllers
                 
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
                 string imgString = model.FilePosition.Split(new char[] { ',' })[1];
-                model.FilePosition = CharConversion.SaveImg(imgString, model.UserAccount, "~/ADImg/");
+                model.FilePosition = CharConversion.SaveImg(imgString, ReDateTime.GetTimeStamp(), "~/ADImg/");
 
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 

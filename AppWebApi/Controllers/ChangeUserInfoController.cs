@@ -1,5 +1,4 @@
 ﻿using AppModel;
-using CacheManager;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ReCommon;
@@ -35,7 +34,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ChangePhoneNumber(RedisModel.BaseModel model)
+        public HttpResponseMessage ChangePhoneNumber(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
 
@@ -136,7 +135,7 @@ namespace AppWebApi.Controllers
                     string Str = JsonConvert.SerializeObject(model, JSetting);
 
                     //返回结果
-                    Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                    Result = ApiHelper.HttpRequest(username, password, Url, Str);
                 }
                 else
                 {
@@ -160,7 +159,7 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<HttpResponseMessage> ChangeUserEmail(UserInfoModel model)
+        public HttpResponseMessage ChangeUserEmail(UserInfoModel model)
         {
             string Result = string.Empty;
 
@@ -181,7 +180,7 @@ namespace AppWebApi.Controllers
                 string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = await Task<string>.Run(() => ApiHelper.HttpRequest(username, password, Url, Str));
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
             }
             catch (Exception ex)
             {
@@ -219,7 +218,7 @@ namespace AppWebApi.Controllers
                 }
 
                 //保存用户头像
-                model.UserAvatar = CharConversion.SaveImg(model.UserAvatar, model.UserAccount, "/Avatar/");
+                model.UserAvatar = CharConversion.SaveImg(model.UserAvatar, model.UserAccount, "~/Avatar/");
 
 
                 //返回结果

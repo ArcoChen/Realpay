@@ -51,7 +51,7 @@ namespace SMSCodeAPI.Controllers
                 redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
-                redis.LifeCycle = "60";
+                redis.LifeCycle = "120";
                 redis.RedisFunction = "StringSet";
 
                 if ((ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis)) == "True")

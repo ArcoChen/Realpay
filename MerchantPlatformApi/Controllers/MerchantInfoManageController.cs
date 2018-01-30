@@ -544,25 +544,6 @@ namespace MerchantPlatformApi.Controllers
                 model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
                 model.Verification = ParametersFilter.FilterSqlHtml(model.Verification, 6);
 
-                #region 判断缓存验证码
-                ////判断验证码是否正确
-                //if (RuntimeCache.Cache.Get(model.UserMobile) != null)
-                //{
-                //    if (RuntimeCache.Cache.Get(model.UserMobile).ToString() == model.Verification)
-                //    {
-                //        Result = "{\"DATA\":[{\"result\":\"true\"}]}";
-                //        RuntimeCache.Cache.Remove(model.UserMobile);
-                //    }
-                //    else
-                //    {
-                //        Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
-                //    }
-                //}
-                //else
-                //{
-                //    Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
-                //}
-                #endregion
 
                 //实例化Redis请求参数
                 RedisModel.BaseModel redis = new RedisModel.BaseModel();
@@ -572,7 +553,7 @@ namespace MerchantPlatformApi.Controllers
                 redis.RedisPassword = "Yuegang888888";
                 redis.RedisKey = "AuthCode_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
-                redis.LifeCycle = "60";
+                redis.LifeCycle = "120";
                 redis.RedisFunction = "StringGet";
 
                 //获取Redis中的验证码
@@ -853,6 +834,160 @@ namespace MerchantPlatformApi.Controllers
 
                 //获取redis中保存的邮箱信息
                 string Str = ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+        #endregion
+
+        #region 支付信息
+        /// <summary>
+        ///  商家平台_添加支付信息
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage PaymentInfoInsert(PaymentModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  商家平台_关闭支付
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage PaymentClose(PaymentModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  商家平台_开通支付
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage PaymentOpening(PaymentModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  商家平台_支付状态返回
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage PaymentStatu(PaymentModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+
+                //去除用户参数中包含的特殊字符
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, Str);

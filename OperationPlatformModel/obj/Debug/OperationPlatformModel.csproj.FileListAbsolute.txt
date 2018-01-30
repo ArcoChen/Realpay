@@ -19,3 +19,4 @@ C:\Users\Administrator\Desktop\RelievePay0108\OperationPlatformModel\bin\Debug\O
 C:\Users\Administrator\Desktop\RelievePay0108\OperationPlatformModel\bin\Debug\OperationPlatformModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\OperationPlatformModel\obj\Debug\OperationPlatformModel.dll
 C:\Users\Administrator\Desktop\RelievePay0108\OperationPlatformModel\obj\Debug\OperationPlatformModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\OperationPlatformModel\obj\Debug\OperationPlatformModel.csprojResolveAssemblyReference.cache
