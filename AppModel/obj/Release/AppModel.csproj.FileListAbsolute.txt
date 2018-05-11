@@ -28,3 +28,13 @@ C:\Users\Administrator\Desktop\RelievePay0108\AppModel\bin\Release\Newtonsoft.Js
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\obj\Release\AppModel.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\obj\Release\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay0108\AppModel\obj\Release\AppModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\bin\Release\AppModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\bin\Release\AppModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\bin\Release\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\obj\Release\AppModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\obj\Release\AppModel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\obj\Release\AppModel.csproj.CopyComplete
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\obj\Release\AppModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\obj\Release\AppModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\bin\Release\ObjectModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\AppModel\bin\Release\ObjectModel.pdb

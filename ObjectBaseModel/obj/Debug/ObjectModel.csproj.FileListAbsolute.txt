@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\bin\Debug\ObjectModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\bin\Debug\ObjectModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\obj\Debug\ObjectModel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\obj\Debug\ObjectModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\obj\Debug\ObjectModel.pdb

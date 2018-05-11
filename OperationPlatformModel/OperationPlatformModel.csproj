@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivityManageModel.cs" />
+    <Compile Include="BaseModel.cs" />
     <Compile Include="EnterpriseInfoModel.cs" />
+    <Compile Include="MallModel.cs" />
     <Compile Include="PlatformReportModel.cs" />
     <Compile Include="PlatformServiceModel.cs" />
     <Compile Include="ProductCodeModel.cs" />
@@ -49,6 +51,12 @@
     <Compile Include="SystemMaintainModel.cs" />
     <Compile Include="UserInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectBaseModel\ObjectModel.csproj">
+      <Project>{f937483a-da36-48a3-8e4c-1823131baaa9}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

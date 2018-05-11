@@ -65,6 +65,5 @@ namespace PayManageMentModel
 
         public string PageNum { get; set; }
 
-        public string UserAccount { get; set; }
     }
 }

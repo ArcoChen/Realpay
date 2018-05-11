@@ -8,10 +8,6 @@ namespace PayManageMentModel
 {
     public class SettlementRermModel:BaseModel
     {
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 结算机构名称

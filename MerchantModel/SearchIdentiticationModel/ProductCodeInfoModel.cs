@@ -11,10 +11,6 @@ namespace MerchantModel
     /// </summary>
     public class ProductCodeInfoModel : BaseModel
     {
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 商品名称

@@ -6,26 +6,8 @@ using System.Threading.Tasks;
 
 namespace OperationPlatformModel
 {
-    public class UserInfoModel
+    public class UserInfoModel:BaseModel
     {
-        public string SOURCE { get; set; }
-
-        public string CREDENTIALS { get; set; }
-
-        public string TERMINAL { get; set; }
-
-        public string INDEX { get; set; }
-
-        public string METHOD { get; set; }
-
-        public string ADDRESS { get; set; }
-
-        public string DATA { get; set; }
-
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 用户密码
@@ -52,15 +34,6 @@ namespace OperationPlatformModel
         /// </summary>
         public string IDNumber { get; set; }
 
-        /// <summary>
-        /// 用户手机号
-        /// </summary>
-        public string UserMobile { get; set; }
-
-        /// <summary>
-        /// 手机验证码
-        /// </summary>
-        public string Verification { get; set; }
 
         /// <summary>
         /// 电子邮箱

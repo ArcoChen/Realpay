@@ -14,11 +14,6 @@ namespace PayManageMentModel
         public string DealNumber { get; set; }
 
         /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
-
-        /// <summary>
         /// 交易类型（0-消费、1-提现、2-红包、3-结算）
         /// </summary>
         public string DealType { get; set; }

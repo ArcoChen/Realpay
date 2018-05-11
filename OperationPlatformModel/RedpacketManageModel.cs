@@ -6,26 +6,9 @@ using System.Threading.Tasks;
 
 namespace OperationPlatformModel
 {
-    public class RedpacketManageModel
+    public class RedpacketManageModel:BaseModel
     {
-        public string SOURCE { get; set; }
 
-        public string CREDENTIALS { get; set; }
-
-        public string TERMINAL { get; set; }
-
-        public string INDEX { get; set; }
-
-        public string METHOD { get; set; }
-
-        public string ADDRESS { get; set; }
-
-        public string DATA { get; set; }
-
-        /// <summary>
-        /// 所属账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 企业名称

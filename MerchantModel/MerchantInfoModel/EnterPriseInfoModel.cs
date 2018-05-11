@@ -84,9 +84,5 @@ namespace MerchantModel
         /// </summary>
         public string Certification { get; set; }
 
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
     }
 }

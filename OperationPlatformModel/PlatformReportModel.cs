@@ -6,31 +6,13 @@ using System.Threading.Tasks;
 
 namespace OperationPlatformModel
 {
-    public class PlatformReportModel
+    public class PlatformReportModel:BaseModel
     {
-        public string SOURCE { get; set; }
-
-        public string CREDENTIALS { get; set; }
-
-        public string TERMINAL { get; set; }
-
-        public string INDEX { get; set; }
-
-        public string METHOD { get; set; }
-
-        public string ADDRESS { get; set; }
-
-        public string DATA { get; set; }
 
         /// <summary>
         /// 被举报商品码
         /// </summary>
         public string CommodityCode { get; set; }
-
-        /// <summary>
-        /// 被举报商家
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 举报时间

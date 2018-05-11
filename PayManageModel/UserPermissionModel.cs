@@ -19,11 +19,6 @@ namespace PayManageMentModel
         public string SubitemName { get; set; }
 
         /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
-
-        /// <summary>
         /// 浏览（0-允许、1-不允许）
         /// </summary>
         public string TourOperation { get; set; }

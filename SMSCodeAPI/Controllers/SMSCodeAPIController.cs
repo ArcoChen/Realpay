@@ -31,12 +31,12 @@ namespace SMSCodeAPI.Controllers
             {
 
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除提交的数据中的不安全字符
                 model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
@@ -46,15 +46,15 @@ namespace SMSCodeAPI.Controllers
 
                 BaseModel redis = new BaseModel();
 
-                redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
-                redis.RedisPort = "6379";
-                redis.RedisPassword = "Yuegang888888";
-                redis.RedisKey = "AuthCode_" + model.UserMobile;
+                redis.RedisIP = SingleXmlInfo.GetInstance().GetWebApiConfig("redisAddress");
+                redis.RedisPort = SingleXmlInfo.GetInstance().GetWebApiConfig("redisPort");
+                redis.RedisPassword = SingleXmlInfo.GetInstance().GetWebApiConfig("redisPassword");
+                redis.RedisKey = "User_Account_Auth_" + model.UserMobile;
                 redis.RedisValue = model.Verification;
                 redis.LifeCycle = "120";
                 redis.RedisFunction = "StringSet";
 
-                if ((ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis)) == "True")
+                if ((ApiHelper.HttpRequest(ApiHelper.GetRedisURL("redisIp","redis",redis.RedisFunction), redis)) == "True")
                 {
                     //发送短信
                     SMSCode.SMSCode.SendMessage(model.UserMobile, model.Verification);
@@ -91,7 +91,7 @@ namespace SMSCodeAPI.Controllers
         /// <param name="Verification">验证码</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public HttpResponseMessage SMSVerification(BaseModel model)
+        public HttpResponseMessage VerifyAuthCode(BaseModel model)
         {
             string Result = string.Empty;
 
@@ -102,28 +102,26 @@ namespace SMSCodeAPI.Controllers
             {
 
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除提交的数据中的不安全字符
                 model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
-
-                //生成六位随机验证码
-                model.Verification = SMSCode.SMSCode.GetAuthCode(100000, 999999);
+                model.Verification = ParametersFilter.FilterSqlHtml(model.Verification, 6);
 
                 BaseModel redis = new BaseModel();
 
-                redis.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
-                redis.RedisPort = "6379";
-                redis.RedisPassword = "Yuegang888888";
-                redis.RedisKey = "AuthCode_" + model.UserMobile;
+                redis.RedisIP = SingleXmlInfo.GetInstance().GetWebApiConfig("redisAddress");
+                redis.RedisPort = SingleXmlInfo.GetInstance().GetWebApiConfig("redisPort");
+                redis.RedisPassword = SingleXmlInfo.GetInstance().GetWebApiConfig("redisPassword");
+                redis.RedisKey = "User_Account_Auth_" + model.UserMobile;
                 redis.LifeCycle = "120";
                 redis.RedisFunction = "StringGet";
-                string CacheCode = (ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis));
+                string CacheCode = (ApiHelper.HttpRequest(ApiHelper.GetRedisURL("redisIp","redis",redis.RedisFunction), redis));
                 if (CacheCode == model.Verification)
                 {
                     Result = "{\"result\":\"1\"}";

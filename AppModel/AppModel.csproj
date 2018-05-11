@@ -49,10 +49,15 @@
     <Compile Include="PaymentModel.cs" />
     <Compile Include="ProductInfoModel.cs" />
     <Compile Include="RedPacketModel.cs" />
-    <Compile Include="RequestModel.cs" />
     <Compile Include="UserInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WalletModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectBaseModel\ObjectModel.csproj">
+      <Project>{f937483a-da36-48a3-8e4c-1823131baaa9}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

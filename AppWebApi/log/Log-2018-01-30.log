@@ -1,0 +1,172 @@
+﻿
+----------------------header--------------------------
+
+时间：2018-01-30 17:08:17,558
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: \. Path '[0]', line 1, position 2.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+
+----------------------header--------------------------
+
+时间：2018-01-30 17:13:37,848
+线程：[6]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: U. Path '[0][3]', line 1, position 47.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+时间：2018-01-30 17:13:57,951
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: U. Path '[0][3]', line 1, position 47.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+时间：2018-01-30 17:14:20,890
+线程：[12]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: U. Path '[0][3]', line 1, position 47.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+时间：2018-01-30 17:15:15,015
+线程：[5]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: U. Path '[0][3]', line 1, position 47.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+时间：2018-01-30 17:16:12,501
+线程：[6]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: U. Path '[0][3]', line 1, position 47.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+时间：2018-01-30 17:18:31,911
+线程：[6]
+类型：ERROR
+标题：Error
+内容：Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: U. Path '[0][3]', line 1, position 47.
+   在 Newtonsoft.Json.JsonTextReader.ParsePostValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Int32 initialDepth, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.JsonWriter.WriteToken(JsonReader reader, Boolean writeChildren, Boolean writeDateConstructorAsDate)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJToken(JsonReader reader, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+时间：2018-01-30 17:18:34,645
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   在 ReCommon.ApiHelper.DATAToJson(String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\ApiHelper.cs:行号 261
+   在 AppBLL.UserCheckBLL.UserInfo_Redis(String UserAvatar, String DATA) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppBLL\UserCheckBLL.cs:行号 14
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 331
+——————————
+时间：2018-01-30 17:20:02,816
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 351
+——————————

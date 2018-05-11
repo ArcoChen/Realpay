@@ -1,0 +1,53 @@
+﻿
+----------------------header--------------------------
+
+时间：2018-01-31 09:25:01,094
+线程：[13]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 368
+——————————
+
+----------------------header--------------------------
+
+时间：2018-01-31 09:29:06,793
+线程：[10]
+类型：ERROR
+标题：Error
+内容：System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Newtonsoft.Json.Linq.JContainer.GetItem(Int32 index)
+   在 Newtonsoft.Json.Linq.JArray.get_Item(Object key)
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 371
+——————————
+时间：2018-01-31 09:29:51,930
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\CharConversion.cs:行号 229
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 373
+——————————
+
+----------------------header--------------------------
+
+时间：2018-01-31 09:49:58,452
+线程：[8]
+类型：ERROR
+标题：Error
+内容：System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 ReCommon.CharConversion.SaveImg(String imgString, String imgName, String imgPath) 位置 C:\Users\Administrator\Desktop\RelievePay0108\ReCommon\CharConversion.cs:行号 229
+   在 AppWebApi.Controllers.UserCheckController.UserInfo(UserInfoModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0108\AppWebApi\Controllers\UserCheckController.cs:行号 373
+——————————

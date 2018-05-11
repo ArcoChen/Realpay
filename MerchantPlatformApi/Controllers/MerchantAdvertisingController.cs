@@ -1,4 +1,5 @@
-﻿using MerchantModel;
+﻿using ImageModel;
+using MerchantModel;
 using Newtonsoft.Json;
 using ReCommon;
 using System;
@@ -21,9 +22,7 @@ namespace MerchantPlatformApi.Controllers
         //static string username = "MerchantPlatform";
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL(username);
-
-        private JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        static string Url = ApiHelper.GetURL("merchant",username);
         #endregion
 
         /// <summary>
@@ -39,24 +38,35 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
                 model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
                 
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
                 string imgString = model.FilePosition.Split(new char[] { ',' })[1];
-                model.FilePosition = CharConversion.SaveImg(imgString, ReDateTime.GetTimeStamp(), "~/ADImg/");
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
+                //图片Model
+                ImgModel imgModel = new ImgModel();
+
+                imgModel.ImgIp = ApiHelper.ImgURL();
+                imgModel.ImgDisk = SingleXmlInfo.GetInstance().GetWebApiConfig("imgDisk");
+                imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
+                imgModel.ImgAttribute = "advertisement";
+                imgModel.UserAccount = model.UserAccount;
+                imgModel.ImgName = ReDateTime.GetTimeStamp();
+                imgModel.ImgString = imgString;
+
+                model.FilePosition = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
+                model.FilePosition = model.FilePosition.Replace("\"", "");
 
                 //返回结果
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -81,21 +91,19 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
                 model.PositionNumber = ParametersFilter.FilterSqlHtml(model.PositionNumber, 3);
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
+                Result =  ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -120,21 +128,19 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
                 //model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 1);
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
+                Result =  ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -159,21 +165,19 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
                 //model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 1);
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
+                Result =  ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -198,21 +202,19 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
                 //model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 1);
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
+                Result =  ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -237,20 +239,107 @@ namespace MerchantPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  商家平台_返回广告列表(未通过)
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage AdvertisingNotPass(AdvertiseMentModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+                //去除用户参数中包含的特殊字符
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 10);
 
                 //返回结果
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        ///  广告推送修改
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage AdvertisingUpdate(AdvertiseMentModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+                //去除用户参数中包含的特殊字符
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 24);
+                string imgString = model.FilePosition.Split(new char[] { ',' })[1];
+
+                //图片Model
+                ImgModel imgModel = new ImgModel();
+
+                imgModel.ImgIp = ApiHelper.ImgURL();
+                imgModel.ImgDisk = SingleXmlInfo.GetInstance().GetWebApiConfig("imgDisk");
+                imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
+                imgModel.ImgAttribute = "advertisement";
+                imgModel.UserAccount = model.UserAccount;
+                imgModel.ImgName = ReDateTime.GetTimeStamp();
+                imgModel.ImgString = imgString;
+
+                model.FilePosition = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
+                model.FilePosition = model.FilePosition.Replace("\"", "");
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {

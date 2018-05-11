@@ -8,10 +8,6 @@ namespace MerchantModel
 {
     public class CommodityReportIdentModel:BaseModel
     {
-        /// <summary>
-        /// 所属门店
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 举报累计

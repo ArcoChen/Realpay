@@ -73,10 +73,6 @@ namespace MerchantModel
         /// </summary>
         public string LoginLastIP { get; set; }
 
-        /// <summary>
-        /// 用户名
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 密码

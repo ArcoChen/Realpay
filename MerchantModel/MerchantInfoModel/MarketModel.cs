@@ -26,10 +26,6 @@ namespace MerchantModel
         /// </summary>
         public string IDNumber { get; set; }
         
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 物流公司名

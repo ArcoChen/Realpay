@@ -1,0 +1,17 @@
+﻿
+----------------------header--------------------------
+
+时间：2018-04-08 10:01:55,642
+线程：[6]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController.AccountProving(BaseModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0408\AppWebApi\Controllers\UserCheckController.cs:行号 62
+——————————
+时间：2018-04-08 10:02:25,782
+线程：[7]
+类型：ERROR
+标题：Error
+内容：System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AppWebApi.Controllers.UserCheckController.AccountProving(BaseModel model) 位置 C:\Users\Administrator\Desktop\RelievePay0408\AppWebApi\Controllers\UserCheckController.cs:行号 62
+——————————

@@ -19,9 +19,7 @@ namespace OperationPlatformApi.Controllers
         //string username = "DataSnapDebugTools";
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL(username);
-
-        private JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }; 
+        static string Url = ApiHelper.GetURL("operation", username);
         #endregion
 
         /// <summary>
@@ -37,12 +35,12 @@ namespace OperationPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
                 model.DATA = FilteParameter.FilteSQLStr(model.DATA);
 
                 ////去除参数中的特殊字符
@@ -57,11 +55,8 @@ namespace OperationPlatformApi.Controllers
                 //model.PositionNumber = ParametersFilter.FilterSqlHtml(model.PositionNumber, 2);
                 //model.IndustryName = ParametersFilter.FilterSqlHtml(model.IndustryName, 10);
 
-                //序列化
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //http请求
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -88,20 +83,18 @@ namespace OperationPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 model.PushState = ParametersFilter.FilterSqlHtml(model.PushState, 1);
 
-                //序列化
-                string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //http请求
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -129,19 +122,16 @@ namespace OperationPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
                 model.DATA = ParametersFilter.FilterSqlHtml(model.DATA, 50);
 
-                //序列化
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //http请求
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -169,12 +159,12 @@ namespace OperationPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
                 model.DATA = FilteParameter.FilteSQLStr(model.DATA);
 
                 //去除参数中的特殊字符
@@ -189,11 +179,8 @@ namespace OperationPlatformApi.Controllers
                 //model.PositionNumber = ParametersFilter.FilterSqlHtml(model.PositionNumber, 2);
                 //model.IndustryName = ParametersFilter.FilterSqlHtml(model.IndustryName, 10);
 
-                //序列化
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //http请求
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {

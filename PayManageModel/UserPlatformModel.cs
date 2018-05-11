@@ -8,7 +8,6 @@ namespace PayManageMentModel
 {
     public class UserPlatformModel:BaseModel
     {
-        public string UserAccount { get; set; }
 
         public string UserPasswd { get; set; }
 
@@ -17,8 +16,6 @@ namespace PayManageMentModel
         public string UserType { get; set; }
 
         public string UserName { get; set; }
-
-        public string UserMobile { get; set; }
 
         public string RegisterTime { get; set; }
 

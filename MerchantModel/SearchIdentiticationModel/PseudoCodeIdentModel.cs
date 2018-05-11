@@ -8,10 +8,6 @@ namespace MerchantModel
 {
     public class PseudoCodeIdentModel : BaseModel
     {
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 商品名称

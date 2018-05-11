@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.1": {
+      "consoleapp1/1.0.0": {
+        "dependencies": {
+          "AppBLL": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleApp1.dll": {}
+        }
+      },
+      "appbll/1.0.0": {
+        "dependencies": {
+          "ReCommon": "1.0.0"
+        },
+        "runtime": {
+          "AppBLL.dll": {}
+        }
+      },
+      "recommon/1.0.0": {
+        "dependencies": {
+          "RedisModel": "1.0.0"
+        },
+        "runtime": {
+          "ReCommon.dll": {}
+        }
+      },
+      "redismodel/1.0.0": {
+        "runtime": {
+          "RedisModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "consoleapp1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "appbll/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "recommon/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "redismodel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

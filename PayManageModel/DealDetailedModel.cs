@@ -19,11 +19,6 @@ namespace PayManageMentModel
         public string DealStatement { get; set; }
 
         /// <summary>
-        /// 收款用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
-
-        /// <summary>
         /// 收款银行账号
         /// </summary>
         public string PayAccount { get; set; }

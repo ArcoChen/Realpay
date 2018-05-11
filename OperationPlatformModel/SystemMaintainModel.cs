@@ -6,21 +6,8 @@ using System.Threading.Tasks;
 
 namespace OperationPlatformModel
 {
-    public class SystemMaintainModel
+    public class SystemMaintainModel:BaseModel
     {
-        public string SOURCE { get; set; }
-
-        public string CREDENTIALS { get; set; }
-
-        public string TERMINAL { get; set; }
-
-        public string INDEX { get; set; }
-
-        public string METHOD { get; set; }
-
-        public string ADDRESS { get; set; }
-
-        public string DATA { get; set; }
 
         /// <summary>
         /// 品牌名称
@@ -41,11 +28,6 @@ namespace OperationPlatformModel
         /// 品牌编码
         /// </summary>
         public string BrandCode { get; set; }
-
-        /// <summary>
-        /// 所属用户
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 品牌信息

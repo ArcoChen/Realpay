@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <url>
+    <!--C++地址-->
+    <serverIp>http://119.23.35.37/</serverIp>
+    
+    <!--图片上传地址-->
+    <imgUploadIp>http://120.78.49.234/</imgUploadIp>
+    
+    <!--图片访问地址-->
+    <imgIp>http://120.78.49.234/</imgIp>
+    
+    <!--手机验证码地址-->
+    <smsCodeIp>http://120.78.49.234/</smsCodeIp>
+    
+    <!--缓存地址-->
+    <redisIp>http://120.78.49.234/</redisIp>
+  </url>
+  <platform>
+    <!--App-->
+    <app>App</app>
+    
+    <!--商家平台-->
+    <merchant>MerchantPlatform</merchant>
+    
+    <!--运营平台-->
+    <operation>OperatingPlatform</operation>
+    
+    <!--支付管理平台-->
+    <paymanage>PayManagePlatform</paymanage>
+  </platform>
+  <webapi>
+    <redis>RedisApi</redis>
+    <imgUpload>ImgUploadApi</imgUpload>
+    <sms>SMSCodeApi</sms>
+  </webapi>
+  <imgModel>
+    <imgDisk>C</imgDisk>
+    <imgRoot>Images</imgRoot>
+  </imgModel>
+  <redisModel>
+    <redisAddress>r-wz9c03c34034e434554.redis.rds.aliyuncs.com</redisAddress>
+    <redisPort>6379</redisPort>
+    <redisPassword>Yuegang888888</redisPassword>
+  </redisModel>
+</root>

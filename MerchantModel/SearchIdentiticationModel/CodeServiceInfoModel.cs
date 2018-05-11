@@ -37,11 +37,6 @@ namespace MerchantModel
         public string PayState { get; set; }
 
         /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
-
-        /// <summary>
         /// 包装码
         /// </summary>
         public string PackingCode { get; set; }

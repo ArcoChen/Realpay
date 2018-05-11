@@ -27,3 +27,10 @@ C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\bin\Release\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Release\SMSCode.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Release\SMSCode.dll
 C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Release\SMSCode.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\bin\Release\SMSCode.dll
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\bin\Release\SMSCode.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Release\SMSCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Release\SMSCode.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Release\SMSCode.csproj.CopyComplete
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Release\SMSCode.dll
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Release\SMSCode.pdb

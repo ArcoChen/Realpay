@@ -2,3 +2,17 @@ C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\bin\Release\Merchant
 C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\bin\Release\MerchantModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\obj\Release\MerchantModel.dll
 C:\Users\Administrator\Desktop\RelievePay0108\MerchantModel\obj\Release\MerchantModel.pdb
+D:\WorkShop\Desktop\RelievePay0108\MerchantModel\bin\Release\MerchantModel.dll
+D:\WorkShop\Desktop\RelievePay0108\MerchantModel\bin\Release\MerchantModel.pdb
+D:\WorkShop\Desktop\RelievePay0108\MerchantModel\obj\Release\MerchantModel.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0108\MerchantModel\obj\Release\MerchantModel.dll
+D:\WorkShop\Desktop\RelievePay0108\MerchantModel\obj\Release\MerchantModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\bin\Release\MerchantModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\bin\Release\MerchantModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\obj\Release\MerchantModel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\obj\Release\MerchantModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\obj\Release\MerchantModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\obj\Release\MerchantModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\bin\Release\ObjectModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\bin\Release\ObjectModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\obj\Release\MerchantModel.csproj.CopyComplete

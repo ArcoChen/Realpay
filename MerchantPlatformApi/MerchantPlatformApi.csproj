@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -187,13 +188,18 @@
     <Compile Include="Controllers\CommodityReportIdentController.cs" />
     <Compile Include="Controllers\CommodityStockController.cs" />
     <Compile Include="Controllers\FaultToleranceController.cs" />
+    <Compile Include="Controllers\H5MallController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanboerBusinessPositionController.cs" />
+    <Compile Include="Controllers\MallManageController.cs" />
     <Compile Include="Controllers\MarketChannelController.cs" />
     <Compile Include="Controllers\MerchantAdvertisingController.cs" />
     <Compile Include="Controllers\MerchantCheckController.cs" />
     <Compile Include="Controllers\MerchantInfoManageController.cs" />
     <Compile Include="Controllers\MerchantRedPacketController.cs" />
+    <Compile Include="Controllers\MallManageOPController.cs" />
     <Compile Include="Controllers\PseudoCodeIdentController.cs" />
+    <Compile Include="Controllers\SalesStatisticsController.cs" />
     <Compile Include="Controllers\TerminalManageController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -232,6 +238,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="WebApiConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -257,6 +266,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\LanboerBusinessPosition\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -274,9 +284,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ImageModel\ImageModel.csproj">
+      <Project>{50edf8bd-3525-4b14-b170-2ae564df3548}</Project>
+      <Name>ImageModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MerchantModel\MerchantModel.csproj">
       <Project>{bad05475-3dfb-4f59-b8c6-ab8d477843bf}</Project>
       <Name>MerchantModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectBaseModel\ObjectModel.csproj">
+      <Project>{f937483a-da36-48a3-8e4c-1823131baaa9}</Project>
+      <Name>ObjectModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\ReCommon\ReCommon.csproj">
       <Project>{c041ae61-9692-4389-bcd2-a27864d2cb60}</Project>
@@ -290,6 +308,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -311,6 +332,9 @@
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:54152/" workingDir="" />
+          </servers>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

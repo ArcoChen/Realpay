@@ -22,11 +22,6 @@ namespace MerchantModel
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// 所属门店
-        /// </summary>
-        public string UserAccount { get; set; }
-
-        /// <summary>
         /// 门店地址
         /// </summary>
         public string UserAddress { get; set; }

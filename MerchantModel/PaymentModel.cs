@@ -8,10 +8,6 @@ namespace MerchantModel
 {
     public class PaymentModel:BaseModel
     {
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 支付方式
@@ -32,5 +28,10 @@ namespace MerchantModel
         /// 私钥
         /// </summary>
         public string PrivateKey { get; set; }
+
+        /// <summary>
+        /// 支付机构（０ － 微信， 1 - 支付宝）
+        /// </summary>
+        public string Status { get; set; }
     }
 }

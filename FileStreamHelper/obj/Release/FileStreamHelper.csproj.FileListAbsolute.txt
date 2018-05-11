@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\bin\Release\FileStreamHelper.dll
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\bin\Release\FileStreamHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\obj\Release\FileStreamHelper.dll
+C:\Users\Administrator\Desktop\RelievePay0108\FileStreamHelper\obj\Release\FileStreamHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\bin\Release\FileStreamHelper.dll
+C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\bin\Release\FileStreamHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Release\FileStreamHelper.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Release\FileStreamHelper.dll
+C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Release\FileStreamHelper.pdb

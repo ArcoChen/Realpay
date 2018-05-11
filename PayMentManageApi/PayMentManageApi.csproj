@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -219,6 +220,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="WebApiConfig.xml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -261,6 +263,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ObjectBaseModel\ObjectModel.csproj">
+      <Project>{f937483a-da36-48a3-8e4c-1823131baaa9}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PayManageModel\PayManageMentModel.csproj">
       <Project>{1056ded9-4135-4b0a-8703-130b2efd62f6}</Project>
       <Name>PayManageMentModel</Name>
@@ -269,6 +275,9 @@
       <Project>{c041ae61-9692-4389-bcd2-a27864d2cb60}</Project>
       <Name>ReCommon</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -43,3 +43,14 @@ C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\bin\Release\CacheMana
 C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\obj\Release\CacheManager.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\obj\Release\CacheManager.dll
 C:\Users\Administrator\Desktop\RelievePay0108\CacheManager\obj\Release\CacheManager.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\bin\Release\CacheManager.dll
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\bin\Release\CacheManager.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\bin\Release\CacheManager.Core.dll
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\bin\Release\CacheManager.SystemRuntimeCaching.dll
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\bin\Release\CacheManager.Core.xml
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\bin\Release\CacheManager.SystemRuntimeCaching.xml
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\obj\Release\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\obj\Release\CacheManager.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\obj\Release\CacheManager.csproj.CopyComplete
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\obj\Release\CacheManager.dll
+C:\Users\Administrator\Desktop\RelievePay0408\CacheManager\obj\Release\CacheManager.pdb

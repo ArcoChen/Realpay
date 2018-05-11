@@ -6,26 +6,9 @@ using System.Threading.Tasks;
 
 namespace OperationPlatformModel
 {
-    public class ProductCodeModel
+    public class ProductCodeModel:BaseModel
     {
-        public string SOURCE { get; set; }
 
-        public string CREDENTIALS { get; set; }
-
-        public string TERMINAL { get; set; }
-
-        public string INDEX { get; set; }
-
-        public string METHOD { get; set; }
-
-        public string ADDRESS { get; set; }
-
-        public string DATA { get; set; }
-
-        /// <summary>
-        /// 所属账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 所属企业
@@ -70,7 +53,7 @@ namespace OperationPlatformModel
         /// <summary>
         /// 批次
         /// </summary>
-        public string Batch { get; set; }
+        public string ApplyBatch { get; set; }
 
         /// <summary>
         /// 开始编码

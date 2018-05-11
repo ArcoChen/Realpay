@@ -31,11 +31,6 @@ namespace AppModel
         public string PaymentPassword { get; set; }
 
         /// <summary>
-        /// 手机验证码
-        /// </summary>
-        public string Verification { get; set; }
-
-        /// <summary>
         /// 身份证
         /// </summary>
         public string IDNumber { get; set; }

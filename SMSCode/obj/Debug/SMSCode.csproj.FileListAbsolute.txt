@@ -27,3 +27,16 @@ C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\bin\Debug\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.dll
 C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0108\SMSCode\bin\Debug\SMSCode.dll
+D:\WorkShop\Desktop\RelievePay0108\SMSCode\bin\Debug\SMSCode.pdb
+D:\WorkShop\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.dll
+D:\WorkShop\Desktop\RelievePay0108\SMSCode\obj\Debug\SMSCode.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\bin\Debug\SMSCode.dll
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\bin\Debug\SMSCode.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Debug\SMSCode.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Debug\SMSCode.csproj.CopyComplete
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Debug\SMSCode.dll
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCode\obj\Debug\SMSCode.pdb

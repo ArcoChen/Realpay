@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using RedisModel;
+using ImageModel;
 
 namespace AppWebApi.Controllers
 {
@@ -23,9 +24,8 @@ namespace AppWebApi.Controllers
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         //string username = "DataSnapDebugTools";
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL(username);
+        static string Url = ApiHelper.GetURL("app", username);
 
-        JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
         #endregion
 
         /// <summary>
@@ -37,32 +37,43 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage ChangePhoneNumber(RedisModel.BaseModel model)
         {
             string Result = string.Empty;
+            bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
+                //if (ReturnCode)
+                //{
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                model.DATA = System.Web.HttpUtility.UrlDecode(model.DATA);
 
-                //获取上传的DATA参数
-                string postData = System.Web.HttpUtility.UrlDecode(model.DATA);
-                Dictionary<string, string> data = new Dictionary<string, string>();
-                var Object = JToken.Parse(postData);
+                string datatojson = ApiHelper.DATAToJson(model.DATA);
+                model.Verification = JObject.Parse(datatojson)["Verification"].ToString();
+                model.NewPhoneNumber = JObject.Parse(datatojson)["NewPhoneNumber"].ToString();
+                model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
 
-                //遍历存入字典
-                for (int i = 0; i < Object.First.Count(); i++)
-                {
-                    data.Add(Object.First[i].ToString(), Object.Last[i].ToString());
-                }
+                #region 注释代码
+                #region MyRegion
+                //string UserAccount = JObject.Parse(datatojson)["UserAccount"].ToString();
+                ////获取上传的DATA参数
+                //string postData = System.Web.HttpUtility.UrlDecode(model.DATA);
+                //Dictionary<string, string> data = new Dictionary<string, string>();
+                //var Object = JToken.Parse(postData);
 
-                model.Verification = data["Verification"].ToString();
-                model.NewPhoneNumber = data["NewPhoneNumber"].ToString();
+                ////遍历存入字典
+                //for (int i = 0; i < Object.First.Count(); i++)
+                //{
+                //    data.Add(Object.First[i].ToString(), Object.Last[i].ToString());
+                //}
 
-
+                //model.Verification = data["Verification"].ToString();
+                //model.NewPhoneNumber = data["NewPhoneNumber"].ToString();
+                #endregion
                 #region 判断缓存验证码
                 ////判断验证码是否正确
                 //if (RuntimeCache.Cache.Get(data["NewPhoneNumber"].ToString()) != null)
@@ -92,7 +103,7 @@ namespace AppWebApi.Controllers
                 //RedisModel.BaseModel redis = new RedisModel.BaseModel();
 
                 //redis.RedisIP = "127.0.0.1";
-                //redis.RedisPort = "6379";
+                //redis.RedisPort = SingleXmlInfo.GetInstance().GetWebApiConfig("redisPort");
                 //redis.RedisPassword = "yg50";
                 //redis.RedisKey = "AuthCode_" + model.NewPhoneNumber;
                 //redis.RedisValue = model.Verification;
@@ -120,10 +131,13 @@ namespace AppWebApi.Controllers
                 //    Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
                 //} 
                 #endregion
+                #endregion
+
                 //获取Redis中的验证码
-                string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
+                string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL("smsCodeIp", "sms", "GetAuthCode"), model);
                 JObject json = (JObject)JsonConvert.DeserializeObject(GetRedisAuthCode);
 
+                #region 判断验证码
                 if (json["result"].ToString() == "2")
                 {
 
@@ -132,15 +146,19 @@ namespace AppWebApi.Controllers
                 else if (json["result"].ToString() == "1")
                 {
 
-                    string Str = JsonConvert.SerializeObject(model, JSetting);
-
                     //返回结果
-                    Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                    Result = ApiHelper.HttpRequest(username, password, Url, model);
                 }
                 else
                 {
                     Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
                 }
+                #endregion
+                //}
+                //else
+                //{
+                //    Result = "{\"RETURNCODE\":\"403\"}";
+                //}
             }
             catch (Exception ex)
             {
@@ -162,25 +180,31 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage ChangeUserEmail(UserInfoModel model)
         {
             string Result = string.Empty;
+            bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
+                //if (ReturnCode)
+                //{
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
                 if (model.TERMINAL == "2")
                 {
                     model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
                 }
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //返回结果
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+                //}
+                //else
+                //{
+                //    Result = "{\"RETURNCODE\":\"403\"}";
+                //}
             }
             catch (Exception ex)
             {
@@ -198,27 +222,42 @@ namespace AppWebApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        public HttpResponseMessage ChangeUserUserAvatar(UserInfoModel model)
+        public HttpResponseMessage ChangeUserAvatar(UserInfoModel model)
         {
             string Result = string.Empty;
+            bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
+                //if (ReturnCode)
+                //{
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
                 if (model.TERMINAL == "2")
                 {
                     model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
                 }
 
+                //图片Model
+                ImgModel imgModel = new ImgModel();
+
+                imgModel.ImgIp = ApiHelper.ImgURL();
+                imgModel.ImgDisk = SingleXmlInfo.GetInstance().GetWebApiConfig("imgDisk");
+                imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
+                imgModel.ImgAttribute = "user";
+                imgModel.UserAccount = model.UserAccount;
+                imgModel.ImgName = "useravatar";
+                imgModel.ImgString = model.UserAvatar;
+
                 //保存用户头像
-                model.UserAvatar = CharConversion.SaveImg(model.UserAvatar, model.UserAccount, "~/Avatar/");
+                model.UserAvatar = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
+                model.UserAvatar = model.UserAvatar.Replace("\"", "");
 
 
                 //返回结果
@@ -230,6 +269,11 @@ namespace AppWebApi.Controllers
                 {
                     Result = "{\"Result\":\"Fail\"}";
                 }
+                //}
+                //else
+                //{
+                //    Result = "{\"RETURNCODE\":\"403\"}";
+                //}
             }
             catch (Exception ex)
             {

@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -299,10 +300,6 @@
     <ProjectReference Include="..\ReCommon\ReCommon.csproj">
       <Project>{c041ae61-9692-4389-bcd2-a27864d2cb60}</Project>
       <Name>ReCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Redis\RedisHelper.csproj">
-      <Project>{e7e7e77f-9fe0-431e-bda5-b55101cee855}</Project>
-      <Name>RedisHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

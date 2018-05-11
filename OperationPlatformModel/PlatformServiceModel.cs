@@ -6,21 +6,8 @@ using System.Threading.Tasks;
 
 namespace OperationPlatformModel
 {
-    public class PlatformServiceModel
+    public class PlatformServiceModel:BaseModel
     {
-        public string SOURCE { get; set; }
-
-        public string CREDENTIALS { get; set; }
-
-        public string TERMINAL { get; set; }
-
-        public string INDEX { get; set; }
-
-        public string METHOD { get; set; }
-
-        public string ADDRESS { get; set; }
-
-        public string DATA { get; set; }
 
         /// <summary>
         /// 服务选项
@@ -72,10 +59,6 @@ namespace OperationPlatformModel
         /// </summary>
         public string ServiceIntroduce { get; set; }
 
-        /// <summary>
-        /// 账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 缴费状态

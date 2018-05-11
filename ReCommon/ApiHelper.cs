@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Text;
-using System.Threading.Tasks;
-using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using RedisModel;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -16,6 +11,10 @@ namespace ReCommon
 {
     public class ApiHelper
     {
+        #region 配置参数
+        private static JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        #endregion
+
         #region HTTPPOST请求
         /// <summary>
         /// httppost请求（带参数）
@@ -122,70 +121,50 @@ namespace ReCommon
         /// <param name="Url">URL地址</param>
         /// <param name="model">Model实体类</param>
         /// <returns></returns>
-        public static string HttpRequest(string Url, BaseModel model)
+        public static string HttpRequest<T>(string userName, string Password, string Url, T model)
         {
+
+            string str = userName + ":" + Password;
             string Result = string.Empty;
-            var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
             string Str = JsonConvert.SerializeObject(model, JSetting);
 
-            #region HttpWebRequest
-            //try
-            //{
+            HttpContent httpContent = new StringContent(Str);
+            HttpClient httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0");
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Basic " + Convert.ToBase64String(new ASCIIEncoding().GetBytes(str)));
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            //    //用于客户端，拼接请求的HTTP报文并发送等（HttpWebRequest这个类非常强大，强大的地方在于它封装了几乎HTTP请求报文里需要用到的东西，以致于能够能够发送任意的HTTP请求并获得服务器响应(Response)信息）
-            //    HttpWebRequest Request = WebRequest.Create(new Uri(Url)) as HttpWebRequest;
+            try
+            {
+                HttpResponseMessage response = httpClient.PostAsync(Url, httpContent).Result;
+                Result = response.Content.ReadAsStringAsync().Result;
+                Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
 
-            //    //设置提交方式为post
-            //    Request.Method = "POST";
+                //截取json字符串
+                Result = Result.Remove(0, 12);
+                Result = Result.Remove(Result.Length - 3, 3);
 
-            //    //设置连接类型
-            //    Request.ContentType = "application/json";
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+            httpClient.Dispose();
+            return Result;
+        }
 
-            //    //请求参数
-            //    byte[] postData = Encoding.UTF8.GetBytes(Str);
-            //    Request.ContentLength = postData.Length;
+        /// <summary>
+        /// httppost请求（带参数）
+        /// </summary>
+        /// <param name="Url">URL地址</param>
+        /// <param name="model">Model实体类</param>
+        /// <returns></returns>
+        public static string HttpRequest<T>(string Url, T model)
+        {
+            string Result = string.Empty;
 
-            //    //用于将数据写入 Internet 资源的 Stream
-            //    Stream RequestStream = Request.GetRequestStream();
-            //    //StreamWriter myStreamWriter = new StreamWriter(RequestStream, Encoding.GetEncoding("gb2312"));
-            //    //myStreamWriter.Write(PostData);
-            //    //myStreamWriter.Close();
-            //    RequestStream.Write(postData, 0, postData.Length);
-            //    RequestStream.Close();
-
-            //    #region 返回请求
-            //    ////返回请求响应
-            //    //HttpWebResponse Response = (HttpWebResponse)Request.GetResponse();
-            //    //Stream receiveStream = Response.GetResponseStream();
-            //    //StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
-            //    //Result = Reader.ReadToEnd();
-            //    //Reader.Close();
-            //    //receiveStream.Close();
-            //    //Response.Close();
-            //    //Response = null;
-            //    //Request.Abort(); 
-            //    #endregion
-
-            //    ////返回请求响应
-            //    using (HttpWebResponse Response = (HttpWebResponse)Request.GetResponse())
-            //    {
-            //        using (Stream receiveStream = Response.GetResponseStream())
-            //        {
-            //            StreamReader Reader = new StreamReader(receiveStream, Encoding.UTF8);
-            //            Result = Reader.ReadToEnd();
-            //        }
-            //    }
-
-            //    Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
-
-            //    Request = null;
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    Console.Write(ex.Message);
-            //} 
-            #endregion
+            string Str = JsonConvert.SerializeObject(model, JSetting);
 
             HttpContent httpContent = new StringContent(Str);
             HttpClient httpClient = new HttpClient();
@@ -196,8 +175,6 @@ namespace ReCommon
             {
                 HttpResponseMessage response = httpClient.PostAsync(Url, httpContent).Result;
                 Result = response.Content.ReadAsStringAsync().Result;
-
-                //Result = System.Web.HttpUtility.UrlDecode(Result, System.Text.Encoding.UTF8);
 
             }
             catch (Exception ex)
@@ -215,26 +192,58 @@ namespace ReCommon
         /// </summary>
         /// <param name="ClassName">类库名</param>
         /// <returns></returns>
-        public static string GetURL(string ClassName)
+        public static string GetURL(string Application, string ClassName)
         {
+            string IP = SingleXmlInfo.GetInstance().GetWebApiConfig("serverIp");
+            Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
+            string Url = IP + Application + "/" + ClassName + ".dll/TServerMethods/Transaction/";
+
+            #region 原地址
             //string Url = "http://119.23.35.37/App/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = "http://172.18.5.250/App/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://172.18.5.250/OperatingPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
-            string Url = "http://172.18.5.250/MerchantPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = "http://172.18.5.250/MerchantPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
+            // string Url = "http://119.23.35.37/MerchantPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://172.18.5.250/PayManagePlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://192.168.1.51:8010/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
-            //string Url = "http://192.168.1.167:8080/TServerMethods/Transaction/";
+            //string Url = "http://192.168.1.181:8080/TServerMethods/Transaction/"; 
+            #endregion
 
             return Url;
         }
 
         /// <summary>
-        /// 获取验证码的URL地址
+        /// 验证码地址
+        /// </summary>
+        /// <param name="FunctionName">方法名</param>
+        /// <returns></returns>
+        public static string GetAuthCodeURL(string UrlName, string Application, string FunctionName)
+        {
+            UrlName = SingleXmlInfo.GetInstance().GetWebApiConfig(UrlName);
+            Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
+            string Url = UrlName + Application + "/api/SMSCodeAPI/" + FunctionName;
+            return Url;
+        }
+
+        /// <summary>
+        /// 图片上传URL地址
         /// </summary>
         /// <returns></returns>
-        public static string GetAuthCodeURL()
+        public static string GetImgUploadURL(string UrlName, string Application)
         {
-            //string Url = "http://120.78.49.234/SMSCodeApi/api/SMSCodeAPI/GetAuthCode";
-            string Url = "http://172.18.5.247/SMSCodeApi/api/SMSCodeAPI/GetAuthCode";
+            UrlName = SingleXmlInfo.GetInstance().GetWebApiConfig(UrlName);
+            Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
+            string Url = UrlName + Application + "/api/imgUpload/Upload";
+            return Url;
+        }
+
+        /// <summary>
+        /// 获取图片保存URL地址
+        /// </summary>
+        /// <returns></returns>
+        public static string ImgURL()
+        {
+            string Url = SingleXmlInfo.GetInstance().GetWebApiConfig("imgIp");
             return Url;
         }
 
@@ -242,10 +251,11 @@ namespace ReCommon
         /// 获取Redis的URL地址
         /// </summary>
         /// <returns></returns>
-        public static string GetRedisURL(String FuncationName)
+        public static string GetRedisURL(string UrlName, string Application, string FuncationName)
         {
-            //string Url = "http://120.78.49.234/RedisApi/api/RedisAPI/" + FuncationName;
-            string Url = "http://172.18.5.247/RedisApi/api/RedisAPI/" + FuncationName;
+            UrlName = SingleXmlInfo.GetInstance().GetWebApiConfig(UrlName);
+            Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
+            string Url = UrlName + Application + "/api/RedisAPI/" + FuncationName;
             return Url;
         }
         #endregion
@@ -285,7 +295,7 @@ namespace ReCommon
         /// <param name="jsonData">json数据</param>
         /// <param name="OtherData">DATA外数据</param>
         /// <returns>dic字典</returns>
-        public static Dictionary<string,string> SpecificData(string[] strArray, string jsonData)
+        public static Dictionary<string, string> SpecificData(string[] strArray, string jsonData)
         {
             ///解析DATA字符串
             JObject json = JObject.Parse(jsonData);
@@ -299,8 +309,8 @@ namespace ReCommon
             }
             return dic;
 
-            
-            
+
+
         }
 
         /// <summary>
@@ -309,7 +319,7 @@ namespace ReCommon
         /// <typeparam name="T"></typeparam>
         /// <param name="dic"></param>
         /// <returns></returns>
-        public static string DictionaryToStr<T>(Dictionary<T,T> dic)
+        public static string DictionaryToStr<T>(Dictionary<T, T> dic)
         {
             ///反序列化为json字符串
             string jsonStr = JsonConvert.SerializeObject(dic);

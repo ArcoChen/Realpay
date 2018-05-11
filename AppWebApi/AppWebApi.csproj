@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -261,7 +262,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AppVersionController.cs" />
+    <Compile Include="Controllers\AdvertisementController.cs" />
     <Compile Include="Controllers\ChangeUserInfoController.cs" />
     <Compile Include="Controllers\ChangeMobileBindController.cs" />
     <Compile Include="Controllers\CommodityPaymentController.cs" />
@@ -377,6 +378,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientReferences.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientDialogs.cshtml" />
     <Content Include="log.config" />
+    <Content Include="WebApiConfig.xml" />
     <None Include="Properties\PublishProfiles\AppWebapi.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -427,6 +429,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AppBLL\AppBLL.csproj">
+      <Project>{a120386a-18a8-4781-8d2c-fae524afa152}</Project>
+      <Name>AppBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AppModel\AppModel.csproj">
       <Project>{1245ed00-46ba-4558-bd30-cdde6a786e9a}</Project>
       <Name>AppModel</Name>
@@ -434,6 +440,14 @@
     <ProjectReference Include="..\FileStreamHelper\FileStreamHelper.csproj">
       <Project>{270aa892-6d28-414c-a576-e15c6d3df1e3}</Project>
       <Name>FileStreamHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageModel\ImageModel.csproj">
+      <Project>{50edf8bd-3525-4b14-b170-2ae564df3548}</Project>
+      <Name>ImageModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectBaseModel\ObjectModel.csproj">
+      <Project>{f937483a-da36-48a3-8e4c-1823131baaa9}</Project>
+      <Name>ObjectModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\ReCommon\ReCommon.csproj">
       <Project>{c041ae61-9692-4389-bcd2-a27864d2cb60}</Project>

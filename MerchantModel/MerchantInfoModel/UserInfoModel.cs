@@ -11,15 +11,6 @@ namespace MerchantModel
     /// </summary>
     public class UserInfoModel:BaseModel
     {
-        /// <summary>
-        /// 用户电话
-        /// </summary>
-        public string UserMobile { get; set; }
-
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 用户姓名

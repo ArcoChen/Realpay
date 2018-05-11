@@ -6,21 +6,8 @@ using System.Threading.Tasks;
 
 namespace OperationPlatformModel
 {
-    public class EnterpriseInfoModel
+    public class EnterpriseInfoModel:BaseModel
     {
-        public string SOURCE { get; set; }
-
-        public string CREDENTIALS { get; set; }
-
-        public string TERMINAL { get; set; }
-
-        public string INDEX { get; set; }
-
-        public string METHOD { get; set; }
-
-        public string ADDRESS { get; set; }
-
-        public string DATA { get; set; }
 
         /// <summary>
         /// 企业名称
@@ -87,9 +74,5 @@ namespace OperationPlatformModel
         /// </summary>
         public string Cerification { get; set; }
 
-        /// <summary>
-        /// 账号
-        /// </summary>
-        public string UserAccount { get; set; }
     }
 }

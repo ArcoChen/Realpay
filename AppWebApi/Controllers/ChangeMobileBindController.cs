@@ -21,9 +21,7 @@ namespace AppWebApi.Controllers
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         //string username = "DataSnapDebugTools";
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL(username);
-
-        JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }; 
+        static string Url = ApiHelper.GetURL( "app", username);
         #endregion
 
         /// <summary>
@@ -35,25 +33,31 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage ChangePhoneNumber(UserInfoModel model)
         {
             string Result = string.Empty;
+            bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
-                //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
-                model.ADDRESS = HttpHelper.IPAddress();
-                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
-                if (model.TERMINAL == "2")
+                if (ReturnCode)
                 {
-                    model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
+                    //请求中包含的固定参数
+                    model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                    model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                    model.ADDRESS = HttpHelper.IPAddress();
+                    model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                    model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                    model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                    if (model.TERMINAL == "2")
+                    {
+                        model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
+                    }
+
+                    //返回结果
+                    Result = ApiHelper.HttpRequest(username, password, Url, model);
                 }
-
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
-                //返回结果
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                else
+                {
+                    Result = "{\"RETURNCODE\":\"403\"}";
+                }
             }
             catch (Exception ex)
             {
@@ -74,23 +78,29 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage NewMobileProving(UserInfoModel model)
         {
             string Result = string.Empty;
+            bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
+                if (ReturnCode)
+                {
+                    //请求中包含的固定参数
+                    model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                    model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                    model.ADDRESS = HttpHelper.IPAddress();
+                    model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                    model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                    model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                    model.NewPhoneNumber = ParametersFilter.FilterSqlHtml(model.NewPhoneNumber, 11);
 
-                //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
-                model.ADDRESS = HttpHelper.IPAddress();
-                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
-                model.NewPhoneNumber = ParametersFilter.FilterSqlHtml(model.NewPhoneNumber, 11);
+                    //返回结果
+                    Result = ApiHelper.HttpRequest(username, password, Url, model);
+                }
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
-                //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, Str);
+                else
+                {
+                    Result = "{\"RETURNCODE\":\"403\"}";
+                }
             }
             catch (Exception ex)
             {

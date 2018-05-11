@@ -61,15 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiHelper.cs" />
+    <Compile Include="AuthHelper.cs" />
     <Compile Include="CharConversion.cs" />
     <Compile Include="CommonBarCode.cs" />
     <Compile Include="EmailHelper.cs" />
     <Compile Include="FilteParameter.cs" />
     <Compile Include="HttpHelper.cs" />
-    <Compile Include="JsonTransfrom.cs" />
     <Compile Include="LogHelper.cs" />
     <Compile Include="ParametersFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleXmlInfo.cs" />
     <Compile Include="ToHtml.cs" />
     <Compile Include="ReDateTime.cs" />
     <Compile Include="ReErrorCode.cs" />
@@ -78,6 +79,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ObjectBaseModel\ObjectModel.csproj">
+      <Project>{f937483a-da36-48a3-8e4c-1823131baaa9}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RedisModel\RedisModel.csproj">
       <Project>{f4e8cc02-b82f-4faf-ab2c-57f0b5ffa610}</Project>
       <Name>RedisModel</Name>

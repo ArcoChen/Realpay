@@ -197,45 +197,57 @@ namespace ReCommon
         /// <param name="imgString">base64字符串</param>
         /// <param name="imgName">图片名称</param>
         /// <param name="imgPath">图片存放地址</param>
-        public static string SaveImg(string imgString, string imgName, string imgPath)
+        public static string SaveImg(string ImgIp, string ImgDisk,string ImgRoot, string UserAccount, string ImgAttribute, string ImgUpLoadDate, string ImgName, string ImgString)
         {
-            string filePath = string.Empty;
+            string ImgPath = string.Empty;
             ///截取图片字符串
-            if (imgString != null)
+            if (ImgString != null)
             {
-                imgString = imgString.Replace(" ", "+");
-                byte[] bytes = Convert.FromBase64String(imgString);
+                if (ImgString.Substring(ImgString.Length - 3, 3) == "jpg")
+                {
+                    return ImgString;
+                }
+                ImgString = ImgString.Replace(" ", "+");
+                byte[] bytes = Convert.FromBase64String(ImgString);
                 using (System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes))
                 {
                     using (Bitmap b = new Bitmap(ms))
                     {
                         ///图片保存位置
-                        filePath = imgPath + imgName + ".jpg";
+                        //filePath = imgPath + imgName + ".jpg";
+                        string FilePath = ImgDisk + ":/"+ImgRoot+"/" + UserAccount + "/" + ImgAttribute + "/" + ImgUpLoadDate + "/";
+                        ImgPath = FilePath + ImgName + ".jpg";
 
                         ///判断文件夹是否存在
-                        if(Directory.Exists(imgPath)==false)
+                        if (Directory.Exists(FilePath) == false)
                         {
-                            Directory.CreateDirectory(HttpContext.Current.Server.MapPath(imgPath));
+                            Directory.CreateDirectory(FilePath);
                         }
 
                         ///保存图片
-                        if (File.Exists(filePath))
+                        if (File.Exists(ImgPath))
                         {
-                            File.Delete(filePath);
-                            b.Save(HttpContext.Current.Server.MapPath(filePath), System.Drawing.Imaging.ImageFormat.Jpeg);
+                            File.Delete(ImgPath);
+                            b.Save(ImgPath, System.Drawing.Imaging.ImageFormat.Jpeg);
                         }
                         else
                         {
-                            b.Save(HttpContext.Current.Server.MapPath(filePath), System.Drawing.Imaging.ImageFormat.Jpeg);
+                            b.Save(ImgPath, System.Drawing.Imaging.ImageFormat.Jpeg);
                         }
                     }
                 }
 
             }
 
-            filePath = filePath.Replace("~", "");
-
-            return filePath;
+            if (ImgUpLoadDate != null)
+            {
+                ImgPath = ImgIp  + UserAccount + "/" + ImgAttribute + "/" + ImgUpLoadDate + "/" + ImgName + ".jpg";
+            }
+            else
+            {
+                ImgPath = ImgIp + UserAccount + "/" + ImgAttribute + "/" + ImgName + ".jpg";
+            }
+            return ImgPath;
         }
 
         /// <summary>
@@ -265,10 +277,6 @@ namespace ReCommon
 
             }
 
-            //using (FileStream fs = new FileStream(@"F:\IP\Img\"+imgName, FileMode.OpenOrCreate, FileAccess.Write))
-            //{
-            //    fs.Write(bytes, 0, bytes.Length);
-            //}
         }
 
         /// <summary>  

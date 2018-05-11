@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -267,6 +268,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActivityManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MallManageOPController.cs" />
     <Compile Include="Controllers\MerchantManageController.cs" />
     <Compile Include="Controllers\PlatformReportManageController.cs" />
     <Compile Include="Controllers\PlatformServiceManageController.cs" />
@@ -381,6 +383,9 @@
     </Content>
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientReferences.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientDialogs.cshtml" />
+    <Content Include="WebApiConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -433,9 +438,9 @@
       <Project>{1245ed00-46ba-4558-bd30-cdde6a786e9a}</Project>
       <Name>AppModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CacheManager\CacheManager.csproj">
-      <Project>{ae6e955e-fd96-4eaa-872d-ebb45ca7fa55}</Project>
-      <Name>CacheManager</Name>
+    <ProjectReference Include="..\ObjectBaseModel\ObjectModel.csproj">
+      <Project>{f937483a-da36-48a3-8e4c-1823131baaa9}</Project>
+      <Name>ObjectModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\OperationPlatformModel\OperationPlatformModel.csproj">
       <Project>{140cbb62-ba92-4543-ae0d-f4c66015ddc3}</Project>
@@ -453,6 +458,9 @@
       <Project>{238ab7bf-87ed-476a-a6e0-a7a41ded3e3e}</Project>
       <Name>SMSCode</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

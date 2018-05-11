@@ -7,12 +7,10 @@ using ReCommon;
 using AppModel;
 using System.Web;
 using System.Configuration;
-using Newtonsoft.Json;
 using System.Text;
 using Newtonsoft.Json.Linq;
-using System.Threading.Tasks;
-using System.IO;
-using System.Net;
+using ImageModel;
+
 
 namespace AppWebApi.Controllers
 {
@@ -23,9 +21,7 @@ namespace AppWebApi.Controllers
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         //string username = "DataSnapDebugTools";
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL(username);
-
-        JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        static string Url = ApiHelper.GetURL("app", username);
         #endregion
 
         /// <summary>
@@ -41,26 +37,19 @@ namespace AppWebApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.CommodityCode = ParametersFilter.FilterSqlHtml(model.CommodityCode, 100);
+                model.CommodityCode = ParametersFilter.FilterSqlHtml(model.CommodityCode, 50);
 
-                //Dictionary<string, string> data = new Dictionary<string, string>();
-                //data.Add("CommodityCode", model.CommodityCode);
-
-                ////请求数据拼接为JSON格式
-                //string Str = JsonTransfrom.SeaRequsetToJson(model.SOURCE, model.CREDENTIALS, HttpHelper.IPAddress(), model.TERMINAL, model.INDEX, model.METHOD, data);
-
-                string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
             }
             catch (Exception ex)
             {
@@ -82,24 +71,43 @@ namespace AppWebApi.Controllers
         {
 
             string Result = string.Empty;
+            bool ReturnCode = AuthHelper.AuthUserStatus(model);
+
             try
             {
+                //if (ReturnCode)
+                //{
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
                 model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
 
                 if (!string.IsNullOrEmpty(model.Screenshot))
                 {
-                    ///截图名称
-                    string imgName = System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                    string datatojson = ApiHelper.DATAToJson(model.DATA);
+
+                    string UserAccount = JObject.Parse(datatojson)["UserAccount"].ToString();
+                    string CommodityCode = JObject.Parse(datatojson)["CommodityCode"].ToString();
+                    string ReportUser = JObject.Parse(datatojson)["ReportUser"].ToString();
+
+                    //图片Model
+                    ImgModel imgModel = new ImgModel();
+
+                    imgModel.ImgIp = ApiHelper.ImgURL();
+                    imgModel.ImgDisk = SingleXmlInfo.GetInstance().GetWebApiConfig("imgDisk");
+                    imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
+                    imgModel.UserAccount = UserAccount;
+                    imgModel.ImgAttribute = "report";
+                    imgModel.ImgName = ReportUser + ReDateTime.GetTimeStamp();
+                    imgModel.ImgString = model.Screenshot;
 
                     //保存图片
-                    model.Screenshot = CharConversion.SaveImg(model.Screenshot, imgName, "~/Screenshot/");
+                    model.Screenshot = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
+                    model.Screenshot = model.Screenshot.Replace("\"", "");
                 }
 
                 if (model.TERMINAL == "2")
@@ -107,11 +115,14 @@ namespace AppWebApi.Controllers
                     model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
                 }
 
-                string Str = JsonConvert.SerializeObject(model, JSetting);
 
                 //返回结果
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
-
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+                //}
+                //else
+                //{
+                //    Result = "{\"RETURNCODE\":\"403\"}";
+                //}
             }
             catch (Exception ex)
             {

@@ -23,9 +23,7 @@ namespace OperationPlatformApi.Controllers
         //static string username = "DataSnapDebugTools";
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL(username);
-
-        private JsonSerializerSettings JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+        static string Url = ApiHelper.GetURL("operation", username);
         #endregion
 
         /// <summary>
@@ -34,32 +32,31 @@ namespace OperationPlatformApi.Controllers
         /// <param name="UserMobile">手机号</param>
         /// <returns>验证码</returns>
         [HttpPost]
-        public HttpResponseMessage GetAuthCode(BaseModel model)
+        public HttpResponseMessage GetAuthCode(OperationPlatformModel.BaseModel model)
         {
             string Result = string.Empty;
 
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除提交的数据中的不安全字符
                 model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
-                
-                string Str = JsonConvert.SerializeObject(model, JSetting);
 
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
+
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
 
                 JObject json = (JObject)JsonConvert.DeserializeObject(Result);
 
                 if (json["DATA"][0]["result"].ToString() == "true")
                 {
-                    string AuthCode =  ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL(), model);
+                    string AuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL("smsCodeIp", "sms", "GetAuthCode"), model);
                 }
             }
             catch (Exception ex)
@@ -84,86 +81,26 @@ namespace OperationPlatformApi.Controllers
             try
             {
                 //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
                 model.ADDRESS = HttpHelper.IPAddress();
                 model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除参数中的特殊字符
                 model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 30);
                 model.UserPasswd = ParametersFilter.FilterSqlHtml(model.UserPasswd, 64);
 
-                //序列化
-                string Str = JsonConvert.SerializeObject(model, JSetting);
-
                 //http请求
-                Result = ApiHelper.HttpRequest(username, password, Url, Str);
-            }
-            catch (Exception ex)
-            {
-                LogHelper.Error(ex.Message);
-            }
-
-            //返回请求结果
-            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
-            return Respend;
-        }
-
-        /// <summary>
-        /// 手机号登录
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public HttpResponseMessage MobileLogin(BaseModel model)
-        {
-            string Result = string.Empty;
-
-            try
-            {
-                //请求中包含的固定参数
-                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 15);
-                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 10);
-                model.ADDRESS = HttpHelper.IPAddress();
-                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 14);
-                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 15);
-
-                //去除参数中的特殊字符
-                model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
-                model.Verification = ParametersFilter.FilterSqlHtml(model.Verification, 6);
-
-                //实例化Redis请求参数
-                BaseModel redis = new BaseModel();
-
-                redis.RedisIP = "127.0.0.1";
-                redis.RedisPort = "6379";
-                redis.RedisPassword = "yg50";
-                redis.RedisKey = "AuthCode_" + model.UserMobile;
-                redis.RedisValue = model.Verification;
-                redis.LifeCycle = "60";
-                redis.RedisFunction = "StringGet";
-
-                //获取Redis中的验证码
-                string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetRedisURL(redis.RedisFunction), redis);
-
-                if (GetRedisAuthCode == "null")
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+                JObject jsons = (JObject)JsonConvert.DeserializeObject(Result);
+                if (jsons["DATA"][0]["login_msg"].ToString() == "Login successful")
                 {
-                    Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
-                }
-                else if (GetRedisAuthCode == model.Verification)
-                {
-                    var JSetting = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
-                    string Str = JsonConvert.SerializeObject(model, JSetting);
-
-                    Result = ApiHelper.HttpRequest(username, password, Url, Str);
-                }
-                else
-                {
-                    Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
+                    model.UserMobile = jsons["DATA"][0]["UserMobile"].ToString();
+                    //返回凭证
+                    jsons["CREDENTIALS"] = AuthHelper.AuthUserSet(model);
+                    Result = JsonConvert.SerializeObject(jsons);
                 }
             }
             catch (Exception ex)
@@ -175,5 +112,66 @@ namespace OperationPlatformApi.Controllers
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
             return Respend;
         }
+
+        ///// <summary>
+        ///// 手机号登录
+        ///// </summary>
+        ///// <param name="model"></param>
+        ///// <returns></returns>
+        //[HttpPost]
+        //public HttpResponseMessage MobileLogin(OperationPlatformModel.BaseModel model)
+        //{
+        //    string Result = string.Empty;
+
+        //    try
+        //    {
+        //        //请求中包含的固定参数
+        //        model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+        //        model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+        //        model.ADDRESS = HttpHelper.IPAddress();
+        //        model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+        //        model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+        //        model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+        //        //去除参数中的特殊字符
+        //        model.UserMobile = ParametersFilter.FilterSqlHtml(model.UserMobile, 11);
+        //        model.Verification = ParametersFilter.FilterSqlHtml(model.Verification, 6);
+
+        //        //获取Redis中的验证码
+        //        string GetRedisAuthCode = ApiHelper.HttpRequest(ApiHelper.GetAuthCodeURL("smsCodeIp", "sms", "VerifyAuthCode"), model);
+
+        //        JObject jsons = (JObject)JsonConvert.DeserializeObject(GetRedisAuthCode);
+
+        //        if (jsons["result"].ToString() == "2")
+        //        {
+        //            Result = "{\"DATA\":[{\"result\":\"验证码已过时\"}]}";
+        //        }
+        //        else if (jsons["result"].ToString() == "1")
+        //        {
+
+        //            Result = ApiHelper.HttpRequest(username, password, Url, model);
+        //            JObject jsonData = (JObject)JsonConvert.DeserializeObject(Result);
+        //            if (jsonData["DATA"][0].ToString() == "1")
+        //            {
+        //                model.UserAccount = jsonData["UserAccount"].ToString();
+        //                //返回凭证
+        //                jsonData["CREDENTIALS"] = AuthHelper.AuthUserSet(model);
+        //                Result = JsonConvert.SerializeObject(jsonData);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Result = "{\"DATA\":[{\"result\":\"验证码错误\"}]}";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LogHelper.Error(ex.Message);
+        //    }
+
+        //    //返回请求结果
+        //    HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+        //    return Respend;
+        //}
     }
 }

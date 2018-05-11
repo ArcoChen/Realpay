@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\bin\Debug\ImageModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\bin\Debug\ImageModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Debug\ImageModel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Debug\ImageModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Debug\ImageModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Debug\ImageModel.csprojResolveAssemblyReference.cache

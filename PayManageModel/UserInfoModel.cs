@@ -8,10 +8,6 @@ namespace PayManageMentModel
 {
     public class UserInfoModel:BaseModel
     {
-        /// <summary>
-        /// 用户账号
-        /// </summary>
-        public string UserAccount { get; set; }
 
         /// <summary>
         /// 用户密码
@@ -47,11 +43,6 @@ namespace PayManageMentModel
         /// 用户身份证
         /// </summary>
         public string IDNumber { get; set; }
-
-        /// <summary>
-        /// 用户手机号
-        /// </summary>
-        public string UserMobile { get; set; }
 
         /// <summary>
         /// 注册时间

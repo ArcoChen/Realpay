@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\bin\Release\ObjectModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\bin\Release\ObjectModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\obj\Release\ObjectModel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\obj\Release\ObjectModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\obj\Release\ObjectModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\ObjectBaseModel\obj\Release\ObjectModel.csprojResolveAssemblyReference.cache
