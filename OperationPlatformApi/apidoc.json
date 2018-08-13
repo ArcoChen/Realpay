@@ -1,0 +1,13 @@
+{
+  "name": "运营平台接口Api",
+  "version": "1.0.0",
+  "description": "OperationPlatformApi",
+  "title": "运营平台接口Api",
+  "url" : "http://120.78.49.234/OperationPlatformApi/", 
+  "sampleUrl": "http://120.78.49.234/OperationPlatformApi/",
+  "forceLanguage":"zh-cn",
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+ }

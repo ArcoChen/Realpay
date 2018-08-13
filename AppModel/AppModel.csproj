@@ -45,10 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressModel.cs" />
     <Compile Include="BaseModel.cs" />
     <Compile Include="PaymentModel.cs" />
     <Compile Include="ProductInfoModel.cs" />
     <Compile Include="RedPacketModel.cs" />
+    <Compile Include="ShoppingCartModel.cs" />
     <Compile Include="UserInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WalletModel.cs" />

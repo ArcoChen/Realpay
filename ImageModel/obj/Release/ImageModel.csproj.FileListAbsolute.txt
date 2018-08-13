@@ -4,3 +4,14 @@ C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Release\ImageModel.
 C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Release\ImageModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Release\ImageModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0408\ImageModel\obj\Release\ImageModel.csprojResolveAssemblyReference.cache
+C:\Users\Chen\Desktop\RelievePay0408\ImageModel\bin\Release\ImageModel.dll
+C:\Users\Chen\Desktop\RelievePay0408\ImageModel\bin\Release\ImageModel.pdb
+C:\Users\Chen\Desktop\RelievePay0408\ImageModel\obj\Release\ImageModel.csprojResolveAssemblyReference.cache
+C:\Users\Chen\Desktop\RelievePay0408\ImageModel\obj\Release\ImageModel.dll
+C:\Users\Chen\Desktop\RelievePay0408\ImageModel\obj\Release\ImageModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\ImageModel\bin\Release\ImageModel.dll
+D:\WorkShop\Desktop\RelievePay0614\ImageModel\bin\Release\ImageModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\ImageModel\obj\Release\ImageModel.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0614\ImageModel\obj\Release\ImageModel.dll
+D:\WorkShop\Desktop\RelievePay0614\ImageModel\obj\Release\ImageModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\ImageModel\obj\Release\ImageModel.csprojAssemblyReference.cache

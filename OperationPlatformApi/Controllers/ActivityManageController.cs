@@ -57,11 +57,15 @@ namespace OperationPlatformApi.Controllers
 
                 //http请求
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             //返回请求结果
@@ -95,11 +99,15 @@ namespace OperationPlatformApi.Controllers
 
                 //http请求
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             //返回请求结果
@@ -132,10 +140,14 @@ namespace OperationPlatformApi.Controllers
 
                 //http请求
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             //返回请求结果
@@ -181,10 +193,14 @@ namespace OperationPlatformApi.Controllers
 
                 //http请求
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             //返回请求结果

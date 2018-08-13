@@ -8,6 +8,7 @@ using Aliyun.MNS.Model;
 using Aliyun.Acs.Core.Profile;
 using Aliyun.Acs.Dysmsapi.Model.V20170525;
 using Aliyun.Acs.Core;
+using Aliyun.Acs.Core.Exceptions;
 
 namespace SMSCode
 {
@@ -81,8 +82,9 @@ namespace SMSCode
         /// </summary>
         /// <param name="phoneNumber">手机号</param>
         /// <param name="SMSCode">验证码</param>
-        public static void SendMessage(string phoneNumber, string SMSCode)
+        public static string SendMessage(string phoneNumber, string SMSCode)
         {
+            string Result = string.Empty;
             IClientProfile profile = DefaultProfile.GetProfile("cn-hanghzou", accessKeyId, accessKeySeret);
             DefaultProfile.AddEndpoint("cn-hanghzou", "cn-hanghzou", product, domain);
             IAcsClient acsClient = new DefaultAcsClient(profile);
@@ -101,14 +103,16 @@ namespace SMSCode
                 //request.OutId = "yourOutId";
                 //请求失败这里会抛ClientException异常
                 SendSmsResponse sendSmsResponse = acsClient.GetAcsResponse(request);
-                System.Console.WriteLine(sendSmsResponse.Message);
+                Result = sendSmsResponse.Code;
             }
             catch (Exception)
             {
 
                 throw;
             }
-        }    
+
+            return Result;
+        }
 
         /// <summary>
         /// 获取验证码
@@ -116,11 +120,48 @@ namespace SMSCode
         /// <param name="minValue">最小取值数</param>
         /// <param name="maxValue">最大取值数</param>
         /// <returns>返回验证码</returns>
-        public static string GetAuthCode(int minValue,int maxValue)
+        public static string GetAuthCode(int minValue, int maxValue)
         {
             Random random = new Random();
             string authCode = random.Next(minValue, maxValue).ToString();
             return authCode;
+        }
+
+        /// <summary>
+        /// 短信查询
+        /// </summary>
+        /// <param name="phoneNumber">手机号</param>
+        /// <param name="SMSCode">验证码</param>
+        public static string querySendDetails(string phoneNumber)
+        {
+            //初始化acsClient,暂不支持region化
+            IClientProfile profile = DefaultProfile.GetProfile("cn-hangzhou", accessKeyId, accessKeySeret);
+            DefaultProfile.AddEndpoint("cn-hangzhou", "cn-hangzhou", product, domain);
+            IAcsClient acsClient = new DefaultAcsClient(profile);
+            //组装请求对象
+            QuerySendDetailsRequest request = new QuerySendDetailsRequest();
+            //必填-号码
+            request.PhoneNumber = phoneNumber;
+            //可选-流水号
+            //request.BizId = bizId;
+            //必填-发送日期 支持30天内记录查询，格式yyyyMMdd       
+            request.SendDate = DateTime.Now.ToString("yyyyMMdd");
+            //必填-页大小
+            request.PageSize = 10;
+            //必填-当前页码从1开始计数
+            request.CurrentPage = 1;
+            QuerySendDetailsResponse querySendDetailsResponse = null;
+            try
+            {
+                querySendDetailsResponse = acsClient.GetAcsResponse(request);
+            }
+            catch (ServerException e)
+            {
+            }
+            catch (ClientException e)
+            {
+            }
+            return querySendDetailsResponse.TotalCount;
         }
     }
 }

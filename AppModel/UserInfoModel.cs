@@ -28,7 +28,7 @@ namespace AppModel
         /// <summary>
         /// 支付密码
         /// </summary>
-        public string PaymentPassword { get; set; }
+        public string PayPasswd { get; set; }
 
         /// <summary>
         /// 身份证

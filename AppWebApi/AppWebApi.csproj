@@ -268,6 +268,8 @@
     <Compile Include="Controllers\CommodityPaymentController.cs" />
     <Compile Include="Controllers\CommodityRedPacketController.cs" />
     <Compile Include="Controllers\CommodityReportController.cs" />
+    <Compile Include="Controllers\GetCommodityInfoController.cs" />
+    <Compile Include="Controllers\H5MallController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserCheckController.cs" />
     <Compile Include="Controllers\UserLoginController.cs" />
@@ -378,7 +380,9 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientReferences.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TestClientDialogs.cshtml" />
     <Content Include="log.config" />
-    <Content Include="WebApiConfig.xml" />
+    <Content Include="WebApiConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\AppWebapi.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -19,3 +19,12 @@ C:\Users\Administrator\Desktop\RelievePay0408\OperationPlatformModel\obj\Release
 C:\Users\Administrator\Desktop\RelievePay0408\OperationPlatformModel\bin\Release\ObjectModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\OperationPlatformModel\bin\Release\ObjectModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0408\OperationPlatformModel\obj\Release\OperationPlatformModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\bin\Release\OperationPlatformModel.dll
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\bin\Release\OperationPlatformModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\bin\Release\ObjectModel.dll
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\bin\Release\ObjectModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\obj\Release\OperationPlatformModel.csprojAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\obj\Release\OperationPlatformModel.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\obj\Release\OperationPlatformModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\obj\Release\OperationPlatformModel.dll
+D:\WorkShop\Desktop\RelievePay0614\OperationPlatformModel\obj\Release\OperationPlatformModel.pdb

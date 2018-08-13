@@ -61,5 +61,26 @@ namespace MerchantModel
         /// 更新时间
         /// </summary>
         public string ActivationTime { get; set; }
+
+        public string COMMODITY_DATA { get; set; }
+
+        public string FilePath { get; set; }
+
+        /// <summary>
+        /// 商品图片 （0-添加 1-删除）
+        /// </summary>
+        public string Status { get; set; }
+        
+        /// <summary>
+        /// 7位商品码
+        /// </summary>
+        public string CommodityNumber { get; set; }
+
+        /// <summary>
+        /// 商品详情图
+        /// </summary>
+        public string CommodityProfile { get; set; }
+
+        public string ImgStatus { get; set; }
     }
 }

@@ -14,3 +14,16 @@ C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\bin\Debug\FileStr
 C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.dll
 C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0408\FileStreamHelper\bin\Debug\FileStreamHelper.dll
+D:\WorkShop\Desktop\RelievePay0408\FileStreamHelper\bin\Debug\FileStreamHelper.pdb
+D:\WorkShop\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.dll
+D:\WorkShop\Desktop\RelievePay0408\FileStreamHelper\obj\Debug\FileStreamHelper.pdb
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\bin\Debug\FileStreamHelper.dll
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\bin\Debug\FileStreamHelper.pdb
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Debug\FileStreamHelper.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Debug\FileStreamHelper.dll
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Debug\FileStreamHelper.pdb
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Debug\FileStreamHelper.csprojAssemblyReference.cache

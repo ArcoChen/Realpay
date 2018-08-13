@@ -50,3 +50,12 @@ C:\Users\Administrator\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.csproj
 C:\Users\Administrator\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.dll
 C:\Users\Administrator\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.pdb
 C:\Users\Administrator\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0408\Redis\bin\Debug\RedisHelper.dll
+D:\WorkShop\Desktop\RelievePay0408\Redis\bin\Debug\RedisHelper.pdb
+D:\WorkShop\Desktop\RelievePay0408\Redis\bin\Debug\StackExchange.Redis.dll
+D:\WorkShop\Desktop\RelievePay0408\Redis\bin\Debug\StackExchange.Redis.xml
+D:\WorkShop\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.dll
+D:\WorkShop\Desktop\RelievePay0408\Redis\obj\Debug\RedisHelper.pdb

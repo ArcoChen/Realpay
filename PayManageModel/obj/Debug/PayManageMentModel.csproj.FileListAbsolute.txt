@@ -21,3 +21,12 @@ C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\obj\Debug\PayManage
 C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\bin\Debug\ObjectModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\bin\Debug\ObjectModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\obj\Debug\PayManageMentModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\bin\Debug\PayManageMentModel.dll
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\bin\Debug\PayManageMentModel.pdb
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\bin\Debug\ObjectModel.dll
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\bin\Debug\ObjectModel.pdb
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\obj\Debug\PayManageMentModel.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\obj\Debug\PayManageMentModel.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\obj\Debug\PayManageMentModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\obj\Debug\PayManageMentModel.dll
+D:\WorkShop\Desktop\RelievePay0408\PayManageModel\obj\Debug\PayManageMentModel.pdb

@@ -28,7 +28,7 @@ namespace ReCommon
             redisModel.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
             redisModel.RedisPort = "6379";
             redisModel.RedisPassword = "Yuegang888888";
-            redisModel.LifeCycle = "600";
+            redisModel.LifeCycle = "86400";
             redisModel.RedisFunction = "StringSet";
 
             if (model.UserAccount != null)
@@ -60,7 +60,7 @@ namespace ReCommon
             redisModel.RedisIP = "r-wz9c03c34034e434554.redis.rds.aliyuncs.com";
             redisModel.RedisPort = "6379";
             redisModel.RedisPassword = "Yuegang888888";
-            redisModel.LifeCycle = "600";
+            redisModel.LifeCycle = "86400";
             redisModel.RedisFunction = "StringGet";
 
             if (model.CREDENTIALS == null)

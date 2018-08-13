@@ -47,5 +47,31 @@ namespace ImageModel
         /// 图片名称
         /// </summary>
         public string ImgName { get; set; }
+
+        /// <summary>
+        /// id
+        /// </summary>
+        public string Id { get; set; }
+
+        /// <summary>
+        /// 类型
+        /// </summary>
+        public string Type { get; set; }
+
+        /// <summary>
+        /// 源地址
+        /// </summary>
+        public string SourceFileName { get; set; }
+
+        /// <summary>
+        /// 保存的新地址
+        /// </summary>
+        public string DestFileName { get; set; }
+
+        /// <summary>
+        /// 7位商品码
+        /// </summary>
+        public string CommodityNumber{ get; set; }
+
     }
 }

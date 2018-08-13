@@ -2,7 +2,7 @@
 <root>
   <url>
     <!--C++地址-->
-    <serverIp>http://119.23.35.37/</serverIp>
+    <serverIp>http://172.18.5.250/</serverIp>
     
     <!--图片上传地址-->
     <imgUploadIp>http://120.78.49.234/</imgUploadIp>

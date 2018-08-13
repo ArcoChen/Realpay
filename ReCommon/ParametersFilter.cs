@@ -426,7 +426,7 @@ namespace ReCommon
             strOutput.Replace(">", "");
             strOutput.Replace("\r\n", "");
             return strOutput;
-        } 
+        }
         #endregion
 
         #region 移除HTML标签
@@ -455,6 +455,20 @@ namespace ReCommon
             if (m.Success)
                 str = m.Result("${url}");
             return str;
+        }
+
+        public static string[] GerImgUrls(string HTMLStr)
+        {
+            Regex M_hvtRegImg = new Regex(@"<img\b[^<>]*?\bsrc[\s\t\r\n]*=[\s\t\r\n]*[""']?[\s\t\r\n]*(?<imgUrl>[^\s\t\r\n""'<>]*)[^<>]*?/?[\s\t\r\n]*>", RegexOptions.IgnoreCase);
+            MatchCollection Matches = M_hvtRegImg.Matches(HTMLStr);
+            int ImgCount = 0;
+            string[] ImgUrlList = new string[Matches.Count];
+
+            foreach (Match match in Matches)
+            {
+                ImgUrlList[ImgCount++] = match.Groups["imgUrl"].Value;
+            }
+            return ImgUrlList;
         }
         #endregion
     }

@@ -153,5 +153,14 @@ namespace MerchantModel
         /// 商家用户账号
         /// </summary>
         public string MUserAccount { get; set; }
+
+        /// <summary>
+        /// 活动状态 0-未审核、1-已通过、2-未通过	
+        /// </summary>
+        public string AuditingState { get; set; }
+
+        public string State { get; set; }
+
+        public string ID { get; set; }
     }
 }

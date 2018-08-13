@@ -275,6 +275,7 @@
     <Compile Include="Controllers\ProductCodeManageController.cs" />
     <Compile Include="Controllers\ProductManageController.cs" />
     <Compile Include="Controllers\RedpacketManageController.cs" />
+    <Compile Include="Controllers\SuperMarketManageController.cs" />
     <Compile Include="Controllers\SystemMaintainManageController.cs" />
     <Compile Include="Controllers\OpUserCheckController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

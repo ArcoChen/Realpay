@@ -48,6 +48,7 @@
     <Compile Include="PlatformServiceModel.cs" />
     <Compile Include="ProductCodeModel.cs" />
     <Compile Include="RedpacketManageModel.cs" />
+    <Compile Include="SuperMarketModel.cs" />
     <Compile Include="SystemMaintainModel.cs" />
     <Compile Include="UserInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

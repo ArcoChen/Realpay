@@ -27,3 +27,12 @@ C:\Users\Administrator\Desktop\RelievePay0408\RedisModel\obj\Release\RedisModel.
 C:\Users\Administrator\Desktop\RelievePay0408\RedisModel\obj\Release\RedisModel.csproj.CopyComplete
 C:\Users\Administrator\Desktop\RelievePay0408\RedisModel\obj\Release\RedisModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\RedisModel\obj\Release\RedisModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\bin\Release\RedisModel.dll
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\bin\Release\RedisModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\bin\Release\ObjectModel.dll
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\bin\Release\ObjectModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\obj\Release\RedisModel.csprojAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\obj\Release\RedisModel.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\obj\Release\RedisModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\obj\Release\RedisModel.dll
+D:\WorkShop\Desktop\RelievePay0614\RedisModel\obj\Release\RedisModel.pdb

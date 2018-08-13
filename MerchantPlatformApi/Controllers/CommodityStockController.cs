@@ -47,15 +47,19 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
-                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 10);  
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 16);  
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -84,16 +88,20 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
-                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 10);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 16);
 
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -123,14 +131,18 @@ namespace MerchantPlatformApi.Controllers
 
                 //去除用户参数中包含的特殊字符
                 model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
-                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 10);
+                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 16);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -163,10 +175,14 @@ namespace MerchantPlatformApi.Controllers
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };

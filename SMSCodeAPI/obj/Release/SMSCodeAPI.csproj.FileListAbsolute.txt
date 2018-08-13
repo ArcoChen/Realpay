@@ -897,3 +897,4 @@ C:\Users\Administrator\Desktop\RelievePay0408\SMSCodeAPI\obj\Release\SMSCodeAPI.
 C:\Users\Administrator\Desktop\RelievePay0408\SMSCodeAPI\obj\Release\SMSCodeAPI.pdb
 C:\Users\Administrator\Desktop\RelievePay0408\SMSCodeAPI\bin\ObjectModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\SMSCodeAPI\bin\ObjectModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\SMSCodeAPI\bin\AegisImplicitMail.dll

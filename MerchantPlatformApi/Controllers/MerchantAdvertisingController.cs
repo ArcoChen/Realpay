@@ -22,7 +22,7 @@ namespace MerchantPlatformApi.Controllers
         //static string username = "MerchantPlatform";
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL("merchant",username);
+        static string Url = ApiHelper.GetURL("merchant", username);
         #endregion
 
         /// <summary>
@@ -47,10 +47,29 @@ namespace MerchantPlatformApi.Controllers
 
                 //去除用户参数中包含的特殊字符
                 model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
-                
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
-                string imgString = model.FilePosition.Split(new char[] { ',' })[1];
 
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+
+                #region base64上传
+                //string ImgString = model.FilePosition.Split(new char[] { ',' })[1];
+
+
+                ////图片Model
+                //ImgModel imgModel = new ImgModel();
+
+                //imgModel.ImgIp = ApiHelper.ImgURL();
+                //imgModel.ImgDisk = SingleXmlInfo.GetInstance().GetWebApiConfig("imgDisk");
+                //imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
+                //imgModel.ImgAttribute = "advertisement";
+                //imgModel.UserAccount = model.UserAccount;
+                //imgModel.ImgName = ReDateTime.GetTimeStamp();
+                //imgModel.ImgString = ImgString;
+
+                //model.FilePosition = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
+                //model.FilePosition = model.FilePosition.Replace("\"", "");
+                #endregion
+
+                #region MyRegion
                 //图片Model
                 ImgModel imgModel = new ImgModel();
 
@@ -59,18 +78,26 @@ namespace MerchantPlatformApi.Controllers
                 imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
                 imgModel.ImgAttribute = "advertisement";
                 imgModel.UserAccount = model.UserAccount;
-                imgModel.ImgName = ReDateTime.GetTimeStamp();
-                imgModel.ImgString = imgString;
 
-                model.FilePosition = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
-                model.FilePosition = model.FilePosition.Replace("\"", "");
+                ///临时文件夹地址
+                imgModel.SourceFileName = model.FilePosition;
+
+                ///保存图片名字
+                imgModel.ImgName = ReDateTime.GetTimeStamp();
+
+                model.FilePosition = ApiHelper.HttpRequest(ApiHelper.MoveImg("imgUploadIp", "imgUpload"), imgModel);
+                #endregion
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -99,15 +126,19 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
                 model.PositionNumber = ParametersFilter.FilterSqlHtml(model.PositionNumber, 3);
 
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, model);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -136,15 +167,19 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
                 //model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 1);
 
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, model);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -173,15 +208,19 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
                 //model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 1);
 
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, model);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -210,15 +249,19 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
                 //model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 1);
 
                 //返回结果
-                Result =  ApiHelper.HttpRequest(username, password, Url, model);
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -247,14 +290,18 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -283,15 +330,19 @@ namespace MerchantPlatformApi.Controllers
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
                 //去除用户参数中包含的特殊字符
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
-                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 10);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+                model.PageNum = ParametersFilter.FilterSqlHtml(model.PageNum, 16);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -321,10 +372,35 @@ namespace MerchantPlatformApi.Controllers
 
                 //去除用户参数中包含的特殊字符
                 model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 24);
-                string imgString = model.FilePosition.Split(new char[] { ',' })[1];
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+                string ImgString = string.Empty;
+
+                #region Base64
+                //if (model.FilePosition.Substring(model.FilePath.Length - 3, 3) != "jpg")
+                //{
+                //    ImgString = model.FilePosition.Split(new char[] { ',' })[1];
+                //}
+                //else
+                //{
+                //    ImgString = model.FilePosition;
+                //}
 
                 //图片Model
+                //ImgModel imgModel = new ImgModel();
+
+                //imgModel.ImgIp = ApiHelper.ImgURL();
+                //imgModel.ImgDisk = SingleXmlInfo.GetInstance().GetWebApiConfig("imgDisk");
+                //imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
+                //imgModel.ImgAttribute = "advertisement";
+                //imgModel.UserAccount = model.UserAccount;
+                //imgModel.ImgName = ReDateTime.GetTimeStamp();
+                //imgModel.ImgString = ImgString;
+
+                //model.FilePosition = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
+                //model.FilePosition = model.FilePosition.Replace("\"", "");
+                #endregion
+
+                #region fileStream
                 ImgModel imgModel = new ImgModel();
 
                 imgModel.ImgIp = ApiHelper.ImgURL();
@@ -332,18 +408,26 @@ namespace MerchantPlatformApi.Controllers
                 imgModel.ImgRoot = SingleXmlInfo.GetInstance().GetWebApiConfig("imgRoot");
                 imgModel.ImgAttribute = "advertisement";
                 imgModel.UserAccount = model.UserAccount;
-                imgModel.ImgName = ReDateTime.GetTimeStamp();
-                imgModel.ImgString = imgString;
 
-                model.FilePosition = ApiHelper.HttpRequest(ApiHelper.GetImgUploadURL("imgUploadIp", "imgUpload"), imgModel);
-                model.FilePosition = model.FilePosition.Replace("\"", "");
+                ///临时文件夹地址
+                imgModel.SourceFileName = model.FilePosition;
+
+                ///保存图片名字
+                imgModel.ImgName = ReDateTime.GetTimeStamp();
+
+                model.FilePosition = ApiHelper.HttpRequest(ApiHelper.MoveImg("imgUploadIp", "imgUpload"), imgModel);
+                #endregion
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };

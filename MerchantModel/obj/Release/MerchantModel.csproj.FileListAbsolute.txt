@@ -16,3 +16,12 @@ C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\obj\Release\Merchant
 C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\bin\Release\ObjectModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\bin\Release\ObjectModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0408\MerchantModel\obj\Release\MerchantModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\bin\Release\MerchantModel.dll
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\bin\Release\MerchantModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\bin\Release\ObjectModel.dll
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\bin\Release\ObjectModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\obj\Release\MerchantModel.csprojAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\obj\Release\MerchantModel.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\obj\Release\MerchantModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\obj\Release\MerchantModel.dll
+D:\WorkShop\Desktop\RelievePay0614\MerchantModel\obj\Release\MerchantModel.pdb

@@ -6,6 +6,8 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Net;
 
 namespace ReCommon
 {
@@ -28,6 +30,9 @@ namespace ReCommon
         {
             string Result = string.Empty;
             string str = userName + ":" + Password;
+
+            ///打印请求日志
+            LogHelper.LogRequest(PostData);
 
             #region HttpWebRequest
             //try
@@ -129,6 +134,9 @@ namespace ReCommon
 
             string Str = JsonConvert.SerializeObject(model, JSetting);
 
+            ///打印请求日志
+            LogHelper.LogRequest(Str);
+
             HttpContent httpContent = new StringContent(Str);
             HttpClient httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0");
@@ -166,6 +174,9 @@ namespace ReCommon
 
             string Str = JsonConvert.SerializeObject(model, JSetting);
 
+            ///打印请求日志
+            LogHelper.LogRequest(Str);
+
             HttpContent httpContent = new StringContent(Str);
             HttpClient httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0");
@@ -184,19 +195,61 @@ namespace ReCommon
             httpClient.Dispose();
             return Result;
         }
+
+        ///// <summary>
+        ///// httppost请求（带参数）
+        ///// </summary>
+        ///// <param name="Url">URL地址</param>
+        ///// <param name="model">Model实体类</param>
+        ///// <returns></returns>
+        //public static async Task<string> HttpRequest<T>(string Url, T model)
+        //{
+        //    string Result = string.Empty;
+
+        //    string Str = JsonConvert.SerializeObject(model, JSetting);
+
+        //    ///打印请求日志
+        //    LogHelper.LogRequest(Str);
+
+        //    HttpContent httpContent = new StringContent(Str);
+        //    HttpClient httpClient = new HttpClient();
+        //    httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0");
+        //    httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+        //    try
+        //    {
+        //        var res = await httpClient.PostAsync(Url, httpContent);
+        //        if (res.StatusCode == HttpStatusCode.OK)
+        //        {
+        //            var response = res.Content.ReadAsStringAsync().Result;
+        //            return response;
+        //        }
+        //        //HttpResponseMessage response = httpClient.PostAsync(Url, httpContent).Result;
+        //        //Result = response.Content.ReadAsStringAsync().Result;
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.Write(ex.Message);
+        //    }
+        //    httpClient.Dispose();
+        //    return Result;
+        //}
         #endregion
 
         #region 访问地址
+
         /// <summary>
-        /// 获取访问的URL地址
+        /// 访问地址
         /// </summary>
+        /// <param name="Application">应用名</param>
         /// <param name="ClassName">类库名</param>
         /// <returns></returns>
         public static string GetURL(string Application, string ClassName)
         {
             string IP = SingleXmlInfo.GetInstance().GetWebApiConfig("serverIp");
             Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
-            string Url = IP + Application + "/" + ClassName + ".dll/TServerMethods/Transaction/";
+            //string Url = IP + Application + "/" + ClassName + ".dll/TServerMethods/Transaction/";
 
             #region 原地址
             //string Url = "http://119.23.35.37/App/" + ClassName + ".dll/TServerMethods/Transaction/";
@@ -206,7 +259,7 @@ namespace ReCommon
             // string Url = "http://119.23.35.37/MerchantPlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://172.18.5.250/PayManagePlatform/" + ClassName + ".dll/TServerMethods/Transaction/";
             //string Url = "http://192.168.1.51:8010/" + ClassName + "/" + ClassName + ".dll/TServerMethods/Transaction/";
-            //string Url = "http://192.168.1.181:8080/TServerMethods/Transaction/"; 
+            string Url = "http://192.168.1.218:8080/TServerMethods/Transaction/"; 
             #endregion
 
             return Url;
@@ -236,6 +289,44 @@ namespace ReCommon
             string Url = UrlName + Application + "/api/imgUpload/Upload";
             return Url;
         }
+
+        /// <summary>
+        /// 将商品图片从临时文件夹移动到指定文件夹地址
+        /// </summary>
+        /// <returns></returns>
+        public static string MoveCommodityImg(string UrlName, string Application)
+        {
+            UrlName = SingleXmlInfo.GetInstance().GetWebApiConfig(UrlName);
+            Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
+            string Url = UrlName + Application + "/api/imgUpload/MoveCommodityImg";
+            return Url;
+        }
+
+        /// <summary>
+        /// 将商品图片从临时文件夹移动到指定文件夹地址
+        /// </summary>
+        /// <returns></returns>
+        public static string MoveImg(string UrlName, string Application)
+        {
+            UrlName = SingleXmlInfo.GetInstance().GetWebApiConfig(UrlName);
+            Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
+            string Url = UrlName + Application + "/api/imgUpload/MoveImg";
+            return Url;
+        }
+
+        /// <summary>
+        /// 删除商品图片URL地址
+        /// </summary>
+        /// <returns></returns>
+        public static string DeleteCommodityImg(string UrlName, string Application)
+        {
+            UrlName = SingleXmlInfo.GetInstance().GetWebApiConfig(UrlName);
+            Application = SingleXmlInfo.GetInstance().GetWebApiConfig(Application);
+            string Url = UrlName + Application + "/api/imgUpload/DeleteCommodityImg";
+            return Url;
+        }
+
+
 
         /// <summary>
         /// 获取图片保存URL地址
@@ -311,6 +402,18 @@ namespace ReCommon
 
 
 
+        }
+
+        public static Dictionary<string, string> DATAToDictionary(string DATA)
+        {
+            JArray json = JsonConvert.DeserializeObject(DATA) as JArray;
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            for (int i = 0; i < json[0].Count(); i++)
+            {
+                dic.Add(json[0][i].ToString(), json[1][i].ToString());
+            }
+
+            return dic;
         }
 
         /// <summary>

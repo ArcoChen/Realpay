@@ -9,6 +9,10 @@ namespace RedisModel
 {
     public class BaseModel : ObjectBaseModel
     {
+        /// <summary>
+        /// 状态码
+        /// </summary>
+        public string Code { get; set; }
 
         /// <summary>
         /// 验证码

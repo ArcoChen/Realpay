@@ -44,17 +44,21 @@ namespace MerchantPlatformApi.Controllers
                 model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
                 model.Status = ParametersFilter.FilterSqlHtml(model.Status, 1);
 
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -90,11 +94,15 @@ namespace MerchantPlatformApi.Controllers
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -123,16 +131,20 @@ namespace MerchantPlatformApi.Controllers
                 model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
                 model.Status = ParametersFilter.FilterSqlHtml(model.Status, 1);
-                model.CommodityNumber = ParametersFilter.FilterSqlHtml(model.CommodityNumber, 7);
+                model.CommodityNumber = ParametersFilter.FilterSqlHtml(model.CommodityNumber, 128);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -161,16 +173,20 @@ namespace MerchantPlatformApi.Controllers
                 model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
                 model.Status = ParametersFilter.FilterSqlHtml(model.Status, 1);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -199,22 +215,27 @@ namespace MerchantPlatformApi.Controllers
                 model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
-                model.DealNumber = ParametersFilter.FilterSqlHtml(model.DealNumber, 30);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+                model.DealNumber = ParametersFilter.FilterSqlHtml(model.DealNumber, 64);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
 
             return Respend;
         }
+
         ///<summary>
         /// 修改物流信息
         /// </summary>
@@ -236,24 +257,284 @@ namespace MerchantPlatformApi.Controllers
                 model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
                 model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
-                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
-                model.DealNumber = ParametersFilter.FilterSqlHtml(model.DealNumber, 30);
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+                model.DealNumber = ParametersFilter.FilterSqlHtml(model.DealNumber, 64);
                 model.Status = ParametersFilter.FilterSqlHtml(model.Status, 1);
-                model.CarrierId = ParametersFilter.FilterSqlHtml(model.CarrierId, 50);
-                model.OddNumbers = ParametersFilter.FilterSqlHtml(model.OddNumbers, 50);
+                model.CarrierId = ParametersFilter.FilterSqlHtml(model.CarrierId, 64);
+                model.OddNumbers = ParametersFilter.FilterSqlHtml(model.OddNumbers, 64);
 
                 //返回结果
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
 
             return Respend;
         }
+
+        /// <summary>
+        /// 商城活动申请
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage MallOddActivitiesApply(MallModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                model.State = ParametersFilter.FilterSqlHtml(model.State, 1);
+                if(model.State=="0")
+                {
+                    model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+                }
+                else if(model.State=="1")
+                {
+                    model.ID = ParametersFilter.StripSQLInjection(model.ID);
+                }
+                
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+            }
+            catch (Exception ex)
+            {
+
+                LogHelper.LogError(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        /// 商城活动信息返回
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage MallOddActivitiesReturn(MallModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 64);
+                model.AuditingState = ParametersFilter.FilterSqlHtml(model.AuditingState, 1);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+            }
+            catch (Exception ex)
+            {
+
+                LogHelper.LogError(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        /// 二级品牌插入
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage SetErIndustry(MallModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+            }
+            catch (Exception ex)
+            {
+
+                LogHelper.LogError(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        /// 分类插入
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage SetAttributeGroup(MallModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+            }
+            catch (Exception ex)
+            {
+
+                LogHelper.LogError(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        /// 商品活动下拉框
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage GetMallCommodityActivities(MallModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount,64);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+            }
+            catch (Exception ex)
+            {
+
+                LogHelper.LogError(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
+        /// <summary>
+        /// 查询属性
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public HttpResponseMessage GerAttributeGroupInfo(MallModel model)
+        {
+            string Result = string.Empty;
+
+            try
+            {
+
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+
+                model.DATA = ParametersFilter.StripSQLInjection(model.DATA);
+
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+            }
+            catch (Exception ex)
+            {
+
+                LogHelper.LogError(ex.ToString());
+            }
+
+            HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
+
+            return Respend;
+        }
+
     }
 }

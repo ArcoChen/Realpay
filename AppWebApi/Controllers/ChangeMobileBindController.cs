@@ -21,7 +21,7 @@ namespace AppWebApi.Controllers
         static string username = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
         //string username = "DataSnapDebugTools";
         static string password = ConfigurationManager.AppSettings[username];
-        static string Url = ApiHelper.GetURL( "app", username);
+        static string Url = ApiHelper.GetURL("app", username);
         #endregion
 
         /// <summary>
@@ -33,35 +33,39 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage ChangePhoneNumber(UserInfoModel model)
         {
             string Result = string.Empty;
-            bool ReturnCode = AuthHelper.AuthUserStatus(model);
+            //bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
-                if (ReturnCode)
+                //if (ReturnCode)
+                //{
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                if (model.TERMINAL == "2")
                 {
-                    //请求中包含的固定参数
-                    model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
-                    model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
-                    model.ADDRESS = HttpHelper.IPAddress();
-                    model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                    model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
-                    model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
-                    if (model.TERMINAL == "2")
-                    {
-                        model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
-                    }
+                    model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
+                }
 
-                    //返回结果
-                    Result = ApiHelper.HttpRequest(username, password, Url, model);
-                }
-                else
-                {
-                    Result = "{\"RETURNCODE\":\"403\"}";
-                }
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+                //}
+                //else
+                //{
+                //    Result = "{\"RETURNCODE\":\"403\"}";
+                //}
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -78,33 +82,37 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage NewMobileProving(UserInfoModel model)
         {
             string Result = string.Empty;
-            bool ReturnCode = AuthHelper.AuthUserStatus(model);
+            //bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
-                if (ReturnCode)
-                {
-                    //请求中包含的固定参数
-                    model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
-                    model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
-                    model.ADDRESS = HttpHelper.IPAddress();
-                    model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                    model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
-                    model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
-                    model.NewPhoneNumber = ParametersFilter.FilterSqlHtml(model.NewPhoneNumber, 11);
+                //if (ReturnCode)
+                //{
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                model.NewPhoneNumber = ParametersFilter.FilterSqlHtml(model.NewPhoneNumber, 11);
 
-                    //返回结果
-                    Result = ApiHelper.HttpRequest(username, password, Url, model);
-                }
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
 
-                else
-                {
-                    Result = "{\"RETURNCODE\":\"403\"}";
-                }
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+                //}
+
+                //else
+                //{
+                //    Result = "{\"RETURNCODE\":\"403\"}";
+                //}
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };

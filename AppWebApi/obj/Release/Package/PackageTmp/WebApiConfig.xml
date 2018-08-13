@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <root>
+  <!--访问地址-->
   <url>
     <!--C++地址-->
     <serverIp>http://119.23.35.37/</serverIp>
@@ -16,6 +17,8 @@
     <!--缓存地址-->
     <redisIp>http://120.78.49.234/</redisIp>
   </url>
+  
+  <!--应用程序-->
   <platform>
     <!--App-->
     <app>App</app>
@@ -29,15 +32,21 @@
     <!--支付管理平台-->
     <paymanage>PayManagePlatform</paymanage>
   </platform>
+  
+  <!--WebApi-->
   <webapi>
     <redis>RedisApi</redis>
     <imgUpload>ImgUploadApi</imgUpload>
     <sms>SMSCodeApi</sms>
   </webapi>
+  
+  <!--图片保存-->
   <imgModel>
     <imgDisk>C</imgDisk>
     <imgRoot>Images</imgRoot>
   </imgModel>
+  
+  <!--Redis缓存-->
   <redisModel>
     <redisAddress>r-wz9c03c34034e434554.redis.rds.aliyuncs.com</redisAddress>
     <redisPort>6379</redisPort>

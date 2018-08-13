@@ -7,3 +7,10 @@ C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\bin\Release\FileS
 C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Release\FileStreamHelper.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Release\FileStreamHelper.dll
 C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Release\FileStreamHelper.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\FileStreamHelper\obj\Release\FileStreamHelper.csprojResolveAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\bin\Release\FileStreamHelper.dll
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\bin\Release\FileStreamHelper.pdb
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Release\FileStreamHelper.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Release\FileStreamHelper.dll
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Release\FileStreamHelper.pdb
+D:\WorkShop\Desktop\RelievePay0614\FileStreamHelper\obj\Release\FileStreamHelper.csprojAssemblyReference.cache

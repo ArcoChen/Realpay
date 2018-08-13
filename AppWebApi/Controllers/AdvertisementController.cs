@@ -32,7 +32,7 @@ namespace AppWebAPI.Controllers
         public HttpResponseMessage Advertisement(UserInfoModel model)
         {
             string Result = string.Empty;
-
+            
             try
             {
                 //请求中包含的固定参数
@@ -48,11 +48,15 @@ namespace AppWebAPI.Controllers
 
                 Result = ApiHelper.HttpRequest(username, password, Url, model);
 
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
+
             }
             catch (Exception ex)
             {
 
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
             HttpResponseMessage Respond = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
             return Respond;

@@ -38,3 +38,13 @@ C:\Users\Administrator\Desktop\RelievePay0408\AppModel\obj\Release\AppModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\AppModel\obj\Release\AppModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0408\AppModel\bin\Release\ObjectModel.dll
 C:\Users\Administrator\Desktop\RelievePay0408\AppModel\bin\Release\ObjectModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\AppModel\bin\Release\AppModel.dll
+D:\WorkShop\Desktop\RelievePay0614\AppModel\bin\Release\AppModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\AppModel\bin\Release\Newtonsoft.Json.dll
+D:\WorkShop\Desktop\RelievePay0614\AppModel\bin\Release\ObjectModel.dll
+D:\WorkShop\Desktop\RelievePay0614\AppModel\bin\Release\ObjectModel.pdb
+D:\WorkShop\Desktop\RelievePay0614\AppModel\obj\Release\AppModel.csprojAssemblyReference.cache
+D:\WorkShop\Desktop\RelievePay0614\AppModel\obj\Release\AppModel.csproj.CoreCompileInputs.cache
+D:\WorkShop\Desktop\RelievePay0614\AppModel\obj\Release\AppModel.csproj.CopyComplete
+D:\WorkShop\Desktop\RelievePay0614\AppModel\obj\Release\AppModel.dll
+D:\WorkShop\Desktop\RelievePay0614\AppModel\obj\Release\AppModel.pdb

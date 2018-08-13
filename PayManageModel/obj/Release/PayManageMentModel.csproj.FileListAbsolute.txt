@@ -2,3 +2,11 @@ C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\bin\Release\PayMana
 C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\bin\Release\PayManageMentModel.pdb
 C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\obj\Release\PayManageMentModel.dll
 C:\Users\Administrator\Desktop\RelievePay0108\PayManageModel\obj\Release\PayManageMentModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\bin\Release\PayManageMentModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\bin\Release\PayManageMentModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\bin\Release\ObjectModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\bin\Release\ObjectModel.pdb
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\obj\Release\PayManageMentModel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\obj\Release\PayManageMentModel.csproj.CopyComplete
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\obj\Release\PayManageMentModel.dll
+C:\Users\Administrator\Desktop\RelievePay0408\PayManageModel\obj\Release\PayManageMentModel.pdb

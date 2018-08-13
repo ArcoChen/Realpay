@@ -33,25 +33,29 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage GetBusinessInfo(UserInfoModel model)
         {
             string Result = string.Empty;
-            bool ReturnCode = AuthHelper.AuthUserStatus(model);
+            //bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
                 //if (ReturnCode)
                 //{
-                    //请求中包含的固定参数
-                    model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 32);
-                    model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
-                    model.ADDRESS = HttpHelper.IPAddress();
-                    model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                    model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
-                    model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 32);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
-                    //去除用户参数中的特殊字符
-                    model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
+                //去除用户参数中的特殊字符
+                model.UserAccount = ParametersFilter.FilterSqlHtml(model.UserAccount, 50);
 
-                    //返回结果
-                    Result = ApiHelper.HttpRequest(username, password, Url, model);
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
                 //}
                 //else
                 //{
@@ -60,7 +64,7 @@ namespace AppWebApi.Controllers
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
@@ -77,27 +81,31 @@ namespace AppWebApi.Controllers
         public HttpResponseMessage SubmitPayment(UserInfoModel model)
         {
             string Result = string.Empty;
-            bool ReturnCode = AuthHelper.AuthUserStatus(model);
+            //bool ReturnCode = AuthHelper.AuthUserStatus(model);
 
             try
             {
                 //if (ReturnCode)
                 //{
-                    //请求中包含的固定参数
-                    model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
-                    model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
-                    model.ADDRESS = HttpHelper.IPAddress();
-                    model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
-                    model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
-                    model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
+                //请求中包含的固定参数
+                model.SOURCE = ParametersFilter.FilterSqlHtml(model.SOURCE, 24);
+                model.CREDENTIALS = ParametersFilter.FilterSqlHtml(model.CREDENTIALS, 24);
+                model.ADDRESS = HttpHelper.IPAddress();
+                model.TERMINAL = ParametersFilter.FilterSqlHtml(model.TERMINAL, 1);
+                model.INDEX = ParametersFilter.FilterSqlHtml(model.INDEX, 24);
+                model.METHOD = ParametersFilter.FilterSqlHtml(model.METHOD, 24);
 
-                    if (model.TERMINAL == "2")
-                    {
-                        model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
-                    }
+                if (model.TERMINAL == "2")
+                {
+                    model.DATA = System.Web.HttpUtility.UrlEncode(model.DATA);
+                }
 
-                    //返回结果
-                    Result = ApiHelper.HttpRequest(username, password, Url, model);
+                //返回结果
+                Result = ApiHelper.HttpRequest(username, password, Url, model);
+
+                ///写日志
+                string RequestAction = "api/" + username + "/" + HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() + "：";
+                LogHelper.LogResopnse(RequestAction + Result);
                 //}
                 //else
                 //{
@@ -106,7 +114,7 @@ namespace AppWebApi.Controllers
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex.ToString());
+                LogHelper.LogError(ex.ToString());
             }
 
             HttpResponseMessage Respend = new HttpResponseMessage { Content = new StringContent(Result, Encoding.GetEncoding("UTF-8"), "application/json") };
